@@ -1,12 +1,5 @@
 import json
-import os
 import urllib.request
-
-# Configuration
-SEASON = "2026"
-WEEK = 1  # Change or automate this to match the current active week
-URL_STATS = f"https://api.sleeper.app/v1/stats/nfl/regular/{SEASON}/{WEEK}"
-URL_PLAYERS = "https://api.sleeper.app/v1/players/nfl"
 
 def fetch_json(url):
     try:
@@ -20,8 +13,8 @@ def fetch_json(url):
 def calculate_ppr_points(stats):
     """
     Calculates 1.0 PPR Fantasy Points based on standard scoring:
-    - Passing: 0.04 pts per yard (1 pt per 25 yds), 4 pts per TD, -2 per INT
-    - Rushing: 0.1 pts per yard (1 pt per 10 yds), 6 pts per TD
+    - Passing: 0.04 pts per yard, 4 pts per TD, -2 per INT
+    - Rushing: 0.1 pts per yard, 6 pts per TD
     - Receiving: 1.0 pt per reception, 0.1 pts per yard, 6 pts per TD
     - Fumbles Lost: -2 pts
     """
@@ -48,9 +41,30 @@ def calculate_ppr_points(stats):
     return round(points, 1)
 
 def main():
-    print(f"Fetching NFL stats for Season {SEASON}, Week {WEEK}...")
-    weekly_stats = fetch_json(URL_STATS)
-    players_meta = fetch_json(URL_PLAYERS)
+    # Dynamically fetch the current NFL state (season and active week)
+    print("Fetching current NFL state from Sleeper API...")
+    state = fetch_json("https://api.sleeper.app/v1/state/nfl")
+    
+    if not state:
+        print("Could not fetch NFL state.")
+        return
+
+    season = str(state.get('season', '2026'))
+    week = state.get('week', 1)
+    season_type = state.get('season_type', 'regular')
+    
+    # Only run during regular season weeks (1-18)
+    if season_type != 'regular' or not isinstance(week, int) or week < 1 or week > 18:
+        print(f"Current state is Season: {season}, Type: {season_type}, Week: {week}. Skipping stats fetch.")
+        return
+
+    print(f"Active NFL Week Detected -> Season: {season}, Week: {week}")
+    
+    url_stats = f"https://api.sleeper.app/v1/stats/nfl/{season_type}/{season}/{week}"
+    url_players = "https://api.sleeper.app/v1/players/nfl"
+    
+    weekly_stats = fetch_json(url_stats)
+    players_meta = fetch_json(url_players)
     
     if not weekly_stats:
         print("No stats returned for this week yet.")
@@ -77,17 +91,16 @@ def main():
             "name": name,
             "pos": pos,
             "team": team if team else 'FA',
-            "bye": 8, # Default or map via nflByeWeeks dictionary if needed
+            "bye": 8,
             "fpts": fpts,
-            "avg": fpts # Simplified to weekly score or season average tracker
+            "avg": fpts
         })
     
-    # Save processed stats into a json file that your app can load
     output_file = "updated_projections.json"
     with open(output_file, "w") as f:
         json.dump(updated_pool, f, indent=4)
         
-    print(f"Successfully processed {len(updated_pool)} players and saved to {output_file}!")
+    print(f"Successfully processed {len(updated_pool)} players for Week {week} and saved to {output_file}!")
 
 if __name__ == "__main__":
     main()
