@@ -3,40 +3,38 @@ import json
 import os
 
 def main():
-    filename = "FantasyPros_Fantasy_Football_Projections_QB.csv"
+    # Updated to look for the comprehensive file across all positions
+    filename = "FantasyPros_Fantasy_Football_Projections.csv"
     
     if not os.path.exists(filename):
-        print(f"ERROR: Could not find {filename}!")
+        print(f"ERROR: Could not find {filename} in the repository!")
+        print("Available files in directory:", os.listdir('.'))
         return
 
     updated_pool = []
-    print(f"Reading players and correct positions from {filename}...")
+    print(f"Reading multi-position projections from {filename}...")
 
     with open(filename, mode='r', encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
         
         for row in reader:
-            name = row.get('Player') or row.get('Player Name') or row.get('Name', '')
+            # Clean up keys for case-insensitivity
+            row_clean = {k.strip().lower(): v for k, v in row.items() if k}
+            
+            name = row_clean.get('player') or row_clean.get('player name') or row_clean.get('name', '')
             name = name.strip()
             if not name:
                 continue
             
-            team = row.get('Team', 'FA').strip().upper()
+            team = row_clean.get('team', 'FA').strip().upper()
             
-            # Dynamically read the actual position from the CSV (POS or Position column)
-            pos = row.get('POS') or row.get('Position')
-            if not pos:
-                # Fallback check based on filename if column is missing
-                if 'QB' in filename: pos = 'QB'
-                elif 'RB' in filename: pos = 'RB'
-                elif 'WR' in filename: pos = 'WR'
-                elif 'TE' in filename: pos = 'TE'
-                else: pos = 'QB'
+            # Read the exact position from the CSV (POS or Position)
+            pos = row_clean.get('pos') or row_clean.get('position', 'QB')
             pos = pos.strip().upper()
             
-            fpts_str = row.get('FPTS') or row.get('PTS') or row.get('Fantasy Points') or '0'
+            fpts_str = row_clean.get('fpts') or row_clean.get('pts') or row_clean.get('fantasy points') or '0'
             try:
-                fpts = float(fpts_str.replace(',', ''))
+                fpts = float(str(fpts_str).replace(',', ''))
             except ValueError:
                 fpts = 0.0
 
@@ -54,7 +52,7 @@ def main():
     with open(output_file, "w", encoding='utf-8') as f:
         json.dump(updated_pool, f, indent=4)
         
-    print(f"Successfully processed {len(updated_pool)} players with correct positions!")
+    print(f"Successfully processed {len(updated_pool)} players across all positions!")
 
 if __name__ == "__main__":
     main()
