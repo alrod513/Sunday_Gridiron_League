@@ -1,0 +1,5312 @@
+[
+    {
+        "id": "jacoby_brissett",
+        "name": "Jacoby Brissett",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 232.4,
+        "avg": 13.7
+    },
+    {
+        "id": "carson_beck",
+        "name": "Carson Beck",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 23.1,
+        "avg": 1.4
+    },
+    {
+        "id": "gardner_minshew_ii",
+        "name": "Gardner Minshew II",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 9.7,
+        "avg": 0.6
+    },
+    {
+        "id": "jeremiyah_love",
+        "name": "Jeremiyah Love",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 255.7,
+        "avg": 15.0
+    },
+    {
+        "id": "tyler_allgeier",
+        "name": "Tyler Allgeier",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 95.6,
+        "avg": 5.6
+    },
+    {
+        "id": "james_conner",
+        "name": "James Conner",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 61.6,
+        "avg": 3.6
+    },
+    {
+        "id": "bam_knight",
+        "name": "Bam Knight",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "trey_benson",
+        "name": "Trey Benson",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "marvin_harrison_jr",
+        "name": "Marvin Harrison Jr.",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 197.3,
+        "avg": 11.6
+    },
+    {
+        "id": "michael_wilson",
+        "name": "Michael Wilson",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 176.6,
+        "avg": 10.4
+    },
+    {
+        "id": "kendrick_bourne",
+        "name": "Kendrick Bourne",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 50.3,
+        "avg": 3.0
+    },
+    {
+        "id": "reggie_virgil",
+        "name": "Reggie Virgil",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 8.1,
+        "avg": 0.5
+    },
+    {
+        "id": "devin_duvernay",
+        "name": "Devin Duvernay",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "jalen_brooks",
+        "name": "Jalen Brooks",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "trey_mcbride",
+        "name": "Trey McBride",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 254.3,
+        "avg": 15.0
+    },
+    {
+        "id": "elijah_higgins",
+        "name": "Elijah Higgins",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 45.5,
+        "avg": 2.7
+    },
+    {
+        "id": "teagan_quitoriano",
+        "name": "Teagan Quitoriano",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 28.8,
+        "avg": 1.7
+    },
+    {
+        "id": "tip_reiman",
+        "name": "Tip Reiman",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 17.7,
+        "avg": 1.0
+    },
+    {
+        "id": "arizona_cardinals",
+        "name": "Arizona Cardinals",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 90.3,
+        "avg": 5.3
+    },
+    {
+        "id": "chad_ryland",
+        "name": "Chad Ryland",
+        "pos": "QB",
+        "team": "ARI",
+        "bye": 8,
+        "fpts": 111.7,
+        "avg": 6.6
+    },
+    {
+        "id": "tua_tagovailoa",
+        "name": "Tua Tagovailoa",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 164.5,
+        "avg": 9.7
+    },
+    {
+        "id": "michael_penix_jr",
+        "name": "Michael Penix Jr.",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 83.6,
+        "avg": 4.9
+    },
+    {
+        "id": "bijan_robinson",
+        "name": "Bijan Robinson",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 370.0,
+        "avg": 21.8
+    },
+    {
+        "id": "brian_robinson_jr",
+        "name": "Brian Robinson Jr.",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 93.1,
+        "avg": 5.5
+    },
+    {
+        "id": "drake_london",
+        "name": "Drake London",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 289.2,
+        "avg": 17.0
+    },
+    {
+        "id": "zachariah_branch",
+        "name": "Zachariah Branch",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 98.6,
+        "avg": 5.8
+    },
+    {
+        "id": "jahan_dotson",
+        "name": "Jahan Dotson",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 75.2,
+        "avg": 4.4
+    },
+    {
+        "id": "olamide_zaccheaus",
+        "name": "Olamide Zaccheaus",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 69.5,
+        "avg": 4.1
+    },
+    {
+        "id": "kyle_pitts_sr",
+        "name": "Kyle Pitts Sr.",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 195.7,
+        "avg": 11.5
+    },
+    {
+        "id": "austin_hooper",
+        "name": "Austin Hooper",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 55.7,
+        "avg": 3.3
+    },
+    {
+        "id": "charlie_woerner",
+        "name": "Charlie Woerner",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 30.7,
+        "avg": 1.8
+    },
+    {
+        "id": "nick_folk",
+        "name": "Nick Folk",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 128.6,
+        "avg": 7.6
+    },
+    {
+        "id": "atlanta_falcons",
+        "name": "Atlanta Falcons",
+        "pos": "QB",
+        "team": "ATL",
+        "bye": 8,
+        "fpts": 104.3,
+        "avg": 6.1
+    },
+    {
+        "id": "lamar_jackson",
+        "name": "Lamar Jackson",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 324.8,
+        "avg": 19.1
+    },
+    {
+        "id": "tyler_huntley",
+        "name": "Tyler Huntley",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 10.6,
+        "avg": 0.6
+    },
+    {
+        "id": "derrick_henry",
+        "name": "Derrick Henry",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 273.1,
+        "avg": 16.1
+    },
+    {
+        "id": "justice_hill",
+        "name": "Justice Hill",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 116.1,
+        "avg": 6.8
+    },
+    {
+        "id": "adam_randall",
+        "name": "Adam Randall",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 66.0,
+        "avg": 3.9
+    },
+    {
+        "id": "rasheen_ali",
+        "name": "Rasheen Ali",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "zay_flowers",
+        "name": "Zay Flowers",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 243.6,
+        "avg": 14.3
+    },
+    {
+        "id": "rashod_bateman",
+        "name": "Rashod Bateman",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 133.4,
+        "avg": 7.8
+    },
+    {
+        "id": "ja'kobi_lane",
+        "name": "Ja'Kobi Lane",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 96.5,
+        "avg": 5.7
+    },
+    {
+        "id": "elijah_sarratt",
+        "name": "Elijah Sarratt",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 59.2,
+        "avg": 3.5
+    },
+    {
+        "id": "devontez_walker",
+        "name": "Devontez Walker",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 35.1,
+        "avg": 2.1
+    },
+    {
+        "id": "lajohntay_wester",
+        "name": "LaJohntay Wester",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "mark_andrews",
+        "name": "Mark Andrews",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 162.9,
+        "avg": 9.6
+    },
+    {
+        "id": "durham_smythe",
+        "name": "Durham Smythe",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 23.6,
+        "avg": 1.4
+    },
+    {
+        "id": "josh_cuevas",
+        "name": "Josh Cuevas",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 16.2,
+        "avg": 1.0
+    },
+    {
+        "id": "tyler_loop",
+        "name": "Tyler Loop",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 132.0,
+        "avg": 7.8
+    },
+    {
+        "id": "baltimore_ravens",
+        "name": "Baltimore Ravens",
+        "pos": "QB",
+        "team": "BAL",
+        "bye": 8,
+        "fpts": 101.9,
+        "avg": 6.0
+    },
+    {
+        "id": "josh_allen",
+        "name": "Josh Allen",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 372.2,
+        "avg": 21.9
+    },
+    {
+        "id": "shane_buechele",
+        "name": "Shane Buechele",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 12.0,
+        "avg": 0.7
+    },
+    {
+        "id": "kyle_allen",
+        "name": "Kyle Allen",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 9.1,
+        "avg": 0.5
+    },
+    {
+        "id": "james_cook_iii",
+        "name": "James Cook III",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 270.2,
+        "avg": 15.9
+    },
+    {
+        "id": "ty_johnson",
+        "name": "Ty Johnson",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 96.3,
+        "avg": 5.7
+    },
+    {
+        "id": "ray_davis",
+        "name": "Ray Davis",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 35.8,
+        "avg": 2.1
+    },
+    {
+        "id": "frank_gore_jr",
+        "name": "Frank Gore Jr.",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 35.0,
+        "avg": 2.1
+    },
+    {
+        "id": "dj_moore",
+        "name": "DJ Moore",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 207.6,
+        "avg": 12.2
+    },
+    {
+        "id": "khalil_shakir",
+        "name": "Khalil Shakir",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 171.8,
+        "avg": 10.1
+    },
+    {
+        "id": "joshua_palmer",
+        "name": "Joshua Palmer",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 69.2,
+        "avg": 4.1
+    },
+    {
+        "id": "keon_coleman",
+        "name": "Keon Coleman",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 59.1,
+        "avg": 3.5
+    },
+    {
+        "id": "skyler_bell",
+        "name": "Skyler Bell",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 42.6,
+        "avg": 2.5
+    },
+    {
+        "id": "tyrell_shavers",
+        "name": "Tyrell Shavers",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 11.0,
+        "avg": 0.6
+    },
+    {
+        "id": "dalton_kincaid",
+        "name": "Dalton Kincaid",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 159.4,
+        "avg": 9.4
+    },
+    {
+        "id": "dawson_knox",
+        "name": "Dawson Knox",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 78.9,
+        "avg": 4.6
+    },
+    {
+        "id": "jackson_hawes",
+        "name": "Jackson Hawes",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 30.6,
+        "avg": 1.8
+    },
+    {
+        "id": "tyler_bass",
+        "name": "Tyler Bass",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 123.5,
+        "avg": 7.3
+    },
+    {
+        "id": "buffalo_bills",
+        "name": "Buffalo Bills",
+        "pos": "QB",
+        "team": "BUF",
+        "bye": 8,
+        "fpts": 107.6,
+        "avg": 6.3
+    },
+    {
+        "id": "bryce_young",
+        "name": "Bryce Young",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 248.8,
+        "avg": 14.6
+    },
+    {
+        "id": "kenny_pickett",
+        "name": "Kenny Pickett",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 11.6,
+        "avg": 0.7
+    },
+    {
+        "id": "chuba_hubbard",
+        "name": "Chuba Hubbard",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 186.4,
+        "avg": 11.0
+    },
+    {
+        "id": "jonathon_brooks",
+        "name": "Jonathon Brooks",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 144.6,
+        "avg": 8.5
+    },
+    {
+        "id": "aj_dillon",
+        "name": "AJ Dillon",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 94.5,
+        "avg": 5.6
+    },
+    {
+        "id": "trevor_etienne",
+        "name": "Trevor Etienne",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 14.9,
+        "avg": 0.9
+    },
+    {
+        "id": "tetairoa_mcmillan",
+        "name": "Tetairoa McMillan",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 227.7,
+        "avg": 13.4
+    },
+    {
+        "id": "john_metchie_iii",
+        "name": "John Metchie III",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 162.7,
+        "avg": 9.6
+    },
+    {
+        "id": "jalen_coker",
+        "name": "Jalen Coker",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 153.3,
+        "avg": 9.0
+    },
+    {
+        "id": "xavier_legette",
+        "name": "Xavier Legette",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 111.6,
+        "avg": 6.6
+    },
+    {
+        "id": "jimmy_horn_jr",
+        "name": "Jimmy Horn Jr.",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 21.4,
+        "avg": 1.3
+    },
+    {
+        "id": "brycen_tremayne",
+        "name": "Brycen Tremayne",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 7.9,
+        "avg": 0.5
+    },
+    {
+        "id": "david_moore",
+        "name": "David Moore",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "ja'tavion_sanders",
+        "name": "Ja'Tavion Sanders",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 67.7,
+        "avg": 4.0
+    },
+    {
+        "id": "tommy_tremble",
+        "name": "Tommy Tremble",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 63.6,
+        "avg": 3.7
+    },
+    {
+        "id": "mitchell_evans",
+        "name": "Mitchell Evans",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 37.6,
+        "avg": 2.2
+    },
+    {
+        "id": "ryan_fitzgerald",
+        "name": "Ryan Fitzgerald",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 107.0,
+        "avg": 6.3
+    },
+    {
+        "id": "carolina_panthers",
+        "name": "Carolina Panthers",
+        "pos": "QB",
+        "team": "CAR",
+        "bye": 8,
+        "fpts": 86.3,
+        "avg": 5.1
+    },
+    {
+        "id": "caleb_williams",
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 300.0,
+        "avg": 17.6
+    },
+    {
+        "id": "tyson_bagent",
+        "name": "Tyson Bagent",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 11.4,
+        "avg": 0.7
+    },
+    {
+        "id": "d'andre_swift",
+        "name": "D'Andre Swift",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 222.7,
+        "avg": 13.1
+    },
+    {
+        "id": "kyle_monangai",
+        "name": "Kyle Monangai",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 155.9,
+        "avg": 9.2
+    },
+    {
+        "id": "roschon_johnson",
+        "name": "Roschon Johnson",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 34.2,
+        "avg": 2.0
+    },
+    {
+        "id": "salvon_ahmed",
+        "name": "Salvon Ahmed",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 23.4,
+        "avg": 1.4
+    },
+    {
+        "id": "rome_odunze",
+        "name": "Rome Odunze",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 209.9,
+        "avg": 12.3
+    },
+    {
+        "id": "luther_burden_iii",
+        "name": "Luther Burden III",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 208.1,
+        "avg": 12.2
+    },
+    {
+        "id": "jahdae_walker",
+        "name": "Jahdae Walker",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 56.0,
+        "avg": 3.3
+    },
+    {
+        "id": "kalif_raymond",
+        "name": "Kalif Raymond",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 46.5,
+        "avg": 2.7
+    },
+    {
+        "id": "zavion_thomas",
+        "name": "Zavion Thomas",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 34.9,
+        "avg": 2.1
+    },
+    {
+        "id": "colston_loveland",
+        "name": "Colston Loveland",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 209.3,
+        "avg": 12.3
+    },
+    {
+        "id": "cole_kmet",
+        "name": "Cole Kmet",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 66.3,
+        "avg": 3.9
+    },
+    {
+        "id": "sam_roush",
+        "name": "Sam Roush",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 17.7,
+        "avg": 1.0
+    },
+    {
+        "id": "cairo_santos",
+        "name": "Cairo Santos",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 132.9,
+        "avg": 7.8
+    },
+    {
+        "id": "chicago_bears",
+        "name": "Chicago Bears",
+        "pos": "QB",
+        "team": "CHI",
+        "bye": 8,
+        "fpts": 102.4,
+        "avg": 6.0
+    },
+    {
+        "id": "joe_burrow",
+        "name": "Joe Burrow",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 310.8,
+        "avg": 18.3
+    },
+    {
+        "id": "joe_flacco",
+        "name": "Joe Flacco",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 10.3,
+        "avg": 0.6
+    },
+    {
+        "id": "josh_johnson",
+        "name": "Josh Johnson",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "chase_brown",
+        "name": "Chase Brown",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 277.7,
+        "avg": 16.3
+    },
+    {
+        "id": "samaje_perine",
+        "name": "Samaje Perine",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 96.2,
+        "avg": 5.7
+    },
+    {
+        "id": "tahj_brooks",
+        "name": "Tahj Brooks",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 18.3,
+        "avg": 1.1
+    },
+    {
+        "id": "ja'marr_chase",
+        "name": "Ja'Marr Chase",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 335.6,
+        "avg": 19.7
+    },
+    {
+        "id": "tee_higgins",
+        "name": "Tee Higgins",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 221.4,
+        "avg": 13.0
+    },
+    {
+        "id": "andrei_iosivas",
+        "name": "Andrei Iosivas",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 89.0,
+        "avg": 5.2
+    },
+    {
+        "id": "mitch_tinsley",
+        "name": "Mitch Tinsley",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 19.5,
+        "avg": 1.1
+    },
+    {
+        "id": "colbie_young",
+        "name": "Colbie Young",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 9.7,
+        "avg": 0.6
+    },
+    {
+        "id": "charlie_jones",
+        "name": "Charlie Jones",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "ke'shawn_williams",
+        "name": "Ke'Shawn Williams",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "mike_gesicki",
+        "name": "Mike Gesicki",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 113.1,
+        "avg": 6.7
+    },
+    {
+        "id": "erick_all_jr",
+        "name": "Erick All Jr.",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 58.5,
+        "avg": 3.4
+    },
+    {
+        "id": "drew_sample",
+        "name": "Drew Sample",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 33.8,
+        "avg": 2.0
+    },
+    {
+        "id": "jack_endries",
+        "name": "Jack Endries",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 31.3,
+        "avg": 1.8
+    },
+    {
+        "id": "tanner_hudson",
+        "name": "Tanner Hudson",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 29.2,
+        "avg": 1.7
+    },
+    {
+        "id": "cam_grandy",
+        "name": "Cam Grandy",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 29.0,
+        "avg": 1.7
+    },
+    {
+        "id": "evan_mcpherson",
+        "name": "Evan McPherson",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 128.7,
+        "avg": 7.6
+    },
+    {
+        "id": "cincinnati_bengals",
+        "name": "Cincinnati Bengals",
+        "pos": "QB",
+        "team": "CIN",
+        "bye": 8,
+        "fpts": 99.5,
+        "avg": 5.9
+    },
+    {
+        "id": "shedeur_sanders",
+        "name": "Shedeur Sanders",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 136.6,
+        "avg": 8.0
+    },
+    {
+        "id": "deshaun_watson",
+        "name": "Deshaun Watson",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 107.9,
+        "avg": 6.3
+    },
+    {
+        "id": "quinshon_judkins",
+        "name": "Quinshon Judkins",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 213.7,
+        "avg": 12.6
+    },
+    {
+        "id": "dylan_sampson",
+        "name": "Dylan Sampson",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 107.8,
+        "avg": 6.3
+    },
+    {
+        "id": "michael_burton",
+        "name": "Michael Burton",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 16.5,
+        "avg": 1.0
+    },
+    {
+        "id": "kc_concepcion",
+        "name": "KC Concepcion",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 145.3,
+        "avg": 8.5
+    },
+    {
+        "id": "jerry_jeudy",
+        "name": "Jerry Jeudy",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 144.5,
+        "avg": 8.5
+    },
+    {
+        "id": "denzel_boston",
+        "name": "Denzel Boston",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 126.2,
+        "avg": 7.4
+    },
+    {
+        "id": "cedric_tillman",
+        "name": "Cedric Tillman",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 54.5,
+        "avg": 3.2
+    },
+    {
+        "id": "isaiah_bond",
+        "name": "Isaiah Bond",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 30.4,
+        "avg": 1.8
+    },
+    {
+        "id": "malachi_corley",
+        "name": "Malachi Corley",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 9.1,
+        "avg": 0.5
+    },
+    {
+        "id": "gage_larvadain",
+        "name": "Gage Larvadain",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "harold_fannin_jr",
+        "name": "Harold Fannin Jr.",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 190.5,
+        "avg": 11.2
+    },
+    {
+        "id": "joe_royer",
+        "name": "Joe Royer",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 20.8,
+        "avg": 1.2
+    },
+    {
+        "id": "jack_stoll",
+        "name": "Jack Stoll",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 7.5,
+        "avg": 0.4
+    },
+    {
+        "id": "blake_whiteheart",
+        "name": "Blake Whiteheart",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "andre_szmyt",
+        "name": "Andre Szmyt",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 102.0,
+        "avg": 6.0
+    },
+    {
+        "id": "cleveland_browns",
+        "name": "Cleveland Browns",
+        "pos": "QB",
+        "team": "CLE",
+        "bye": 8,
+        "fpts": 101.1,
+        "avg": 5.9
+    },
+    {
+        "id": "dak_prescott",
+        "name": "Dak Prescott",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 306.3,
+        "avg": 18.0
+    },
+    {
+        "id": "sam_howell",
+        "name": "Sam Howell",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 10.2,
+        "avg": 0.6
+    },
+    {
+        "id": "joe_milton_iii",
+        "name": "Joe Milton III",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 8.5,
+        "avg": 0.5
+    },
+    {
+        "id": "javonte_williams",
+        "name": "Javonte Williams",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 234.0,
+        "avg": 13.8
+    },
+    {
+        "id": "malik_davis",
+        "name": "Malik Davis",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 65.7,
+        "avg": 3.9
+    },
+    {
+        "id": "jaydon_blue",
+        "name": "Jaydon Blue",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 46.5,
+        "avg": 2.7
+    },
+    {
+        "id": "phil_mafah",
+        "name": "Phil Mafah",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 27.6,
+        "avg": 1.6
+    },
+    {
+        "id": "hunter_luepke",
+        "name": "Hunter Luepke",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 25.0,
+        "avg": 1.5
+    },
+    {
+        "id": "israel_abanikanda",
+        "name": "Israel Abanikanda",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 23.1,
+        "avg": 1.4
+    },
+    {
+        "id": "ceedee_lamb",
+        "name": "CeeDee Lamb",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 273.3,
+        "avg": 16.1
+    },
+    {
+        "id": "george_pickens",
+        "name": "George Pickens",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 252.3,
+        "avg": 14.8
+    },
+    {
+        "id": "ryan_flournoy",
+        "name": "Ryan Flournoy",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 89.4,
+        "avg": 5.3
+    },
+    {
+        "id": "kavontae_turpin",
+        "name": "KaVontae Turpin",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 63.6,
+        "avg": 3.7
+    },
+    {
+        "id": "jonathan_mingo",
+        "name": "Jonathan Mingo",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 8.4,
+        "avg": 0.5
+    },
+    {
+        "id": "jake_ferguson",
+        "name": "Jake Ferguson",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 167.6,
+        "avg": 9.9
+    },
+    {
+        "id": "luke_schoonmaker",
+        "name": "Luke Schoonmaker",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 31.0,
+        "avg": 1.8
+    },
+    {
+        "id": "brevyn_spann-ford",
+        "name": "Brevyn Spann-Ford",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 9.5,
+        "avg": 0.6
+    },
+    {
+        "id": "brandon_aubrey",
+        "name": "Brandon Aubrey",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 153.0,
+        "avg": 9.0
+    },
+    {
+        "id": "dallas_cowboys",
+        "name": "Dallas Cowboys",
+        "pos": "QB",
+        "team": "DAL",
+        "bye": 8,
+        "fpts": 90.6,
+        "avg": 5.3
+    },
+    {
+        "id": "bo_nix",
+        "name": "Bo Nix",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 297.8,
+        "avg": 17.5
+    },
+    {
+        "id": "jarrett_stidham",
+        "name": "Jarrett Stidham",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 11.2,
+        "avg": 0.7
+    },
+    {
+        "id": "rj_harvey",
+        "name": "RJ Harvey",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 177.9,
+        "avg": 10.5
+    },
+    {
+        "id": "jk_dobbins",
+        "name": "J.K. Dobbins",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 170.6,
+        "avg": 10.0
+    },
+    {
+        "id": "jonah_coleman",
+        "name": "Jonah Coleman",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 32.7,
+        "avg": 1.9
+    },
+    {
+        "id": "tyler_badie",
+        "name": "Tyler Badie",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 19.1,
+        "avg": 1.1
+    },
+    {
+        "id": "adam_prentice",
+        "name": "Adam Prentice",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 10.5,
+        "avg": 0.6
+    },
+    {
+        "id": "jaylen_waddle",
+        "name": "Jaylen Waddle",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 209.7,
+        "avg": 12.3
+    },
+    {
+        "id": "courtland_sutton",
+        "name": "Courtland Sutton",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 204.4,
+        "avg": 12.0
+    },
+    {
+        "id": "troy_franklin",
+        "name": "Troy Franklin",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 96.6,
+        "avg": 5.7
+    },
+    {
+        "id": "pat_bryant",
+        "name": "Pat Bryant",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 72.5,
+        "avg": 4.3
+    },
+    {
+        "id": "marvin_mims_jr",
+        "name": "Marvin Mims Jr.",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 66.7,
+        "avg": 3.9
+    },
+    {
+        "id": "michael_bandy",
+        "name": "Michael Bandy",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "evan_engram",
+        "name": "Evan Engram",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 116.7,
+        "avg": 6.9
+    },
+    {
+        "id": "adam_trautman",
+        "name": "Adam Trautman",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 47.6,
+        "avg": 2.8
+    },
+    {
+        "id": "nate_adkins",
+        "name": "Nate Adkins",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 31.7,
+        "avg": 1.9
+    },
+    {
+        "id": "lucas_krull",
+        "name": "Lucas Krull",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 13.5,
+        "avg": 0.8
+    },
+    {
+        "id": "justin_joly",
+        "name": "Justin Joly",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 9.5,
+        "avg": 0.6
+    },
+    {
+        "id": "wil_lutz",
+        "name": "Wil Lutz",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 128.4,
+        "avg": 7.6
+    },
+    {
+        "id": "denver_broncos",
+        "name": "Denver Broncos",
+        "pos": "QB",
+        "team": "DEN",
+        "bye": 8,
+        "fpts": 118.2,
+        "avg": 7.0
+    },
+    {
+        "id": "jared_goff",
+        "name": "Jared Goff",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 287.4,
+        "avg": 16.9
+    },
+    {
+        "id": "teddy_bridgewater",
+        "name": "Teddy Bridgewater",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 11.0,
+        "avg": 0.6
+    },
+    {
+        "id": "jahmyr_gibbs",
+        "name": "Jahmyr Gibbs",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 372.6,
+        "avg": 21.9
+    },
+    {
+        "id": "isiah_pacheco",
+        "name": "Isiah Pacheco",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 115.9,
+        "avg": 6.8
+    },
+    {
+        "id": "jacob_saylors",
+        "name": "Jacob Saylors",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "amon-ra_st_brown",
+        "name": "Amon-Ra St. Brown",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 319.5,
+        "avg": 18.8
+    },
+    {
+        "id": "jameson_williams",
+        "name": "Jameson Williams",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 217.3,
+        "avg": 12.8
+    },
+    {
+        "id": "isaac_teslaa",
+        "name": "Isaac TeSlaa",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 85.0,
+        "avg": 5.0
+    },
+    {
+        "id": "greg_dortch",
+        "name": "Greg Dortch",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 14.1,
+        "avg": 0.8
+    },
+    {
+        "id": "sam_laporta",
+        "name": "Sam LaPorta",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 183.1,
+        "avg": 10.8
+    },
+    {
+        "id": "brock_wright",
+        "name": "Brock Wright",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 50.7,
+        "avg": 3.0
+    },
+    {
+        "id": "tyler_conklin",
+        "name": "Tyler Conklin",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 8.9,
+        "avg": 0.5
+    },
+    {
+        "id": "jake_bates",
+        "name": "Jake Bates",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 135.9,
+        "avg": 8.0
+    },
+    {
+        "id": "detroit_lions",
+        "name": "Detroit Lions",
+        "pos": "QB",
+        "team": "DET",
+        "bye": 8,
+        "fpts": 107.3,
+        "avg": 6.3
+    },
+    {
+        "id": "jordan_love",
+        "name": "Jordan Love",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 267.6,
+        "avg": 15.7
+    },
+    {
+        "id": "tyrod_taylor",
+        "name": "Tyrod Taylor",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 10.9,
+        "avg": 0.6
+    },
+    {
+        "id": "josh_jacobs",
+        "name": "Josh Jacobs",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 256.9,
+        "avg": 15.1
+    },
+    {
+        "id": "chris_brooks",
+        "name": "Chris Brooks",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 66.9,
+        "avg": 3.9
+    },
+    {
+        "id": "marshawn_lloyd",
+        "name": "MarShawn Lloyd",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 43.2,
+        "avg": 2.5
+    },
+    {
+        "id": "christian_watson",
+        "name": "Christian Watson",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 190.8,
+        "avg": 11.2
+    },
+    {
+        "id": "jayden_reed",
+        "name": "Jayden Reed",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 176.0,
+        "avg": 10.4
+    },
+    {
+        "id": "matthew_golden",
+        "name": "Matthew Golden",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 155.8,
+        "avg": 9.2
+    },
+    {
+        "id": "savion_williams",
+        "name": "Savion Williams",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 69.0,
+        "avg": 4.1
+    },
+    {
+        "id": "bo_melton",
+        "name": "Bo Melton",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 11.5,
+        "avg": 0.7
+    },
+    {
+        "id": "skyy_moore",
+        "name": "Skyy Moore",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "tucker_kraft",
+        "name": "Tucker Kraft",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 174.9,
+        "avg": 10.3
+    },
+    {
+        "id": "luke_musgrave",
+        "name": "Luke Musgrave",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 49.9,
+        "avg": 2.9
+    },
+    {
+        "id": "josh_whyle",
+        "name": "Josh Whyle",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 23.6,
+        "avg": 1.4
+    },
+    {
+        "id": "trey_smack",
+        "name": "Trey Smack",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 125.4,
+        "avg": 7.4
+    },
+    {
+        "id": "green_bay_packers",
+        "name": "Green Bay Packers",
+        "pos": "QB",
+        "team": "GB",
+        "bye": 8,
+        "fpts": 95.3,
+        "avg": 5.6
+    },
+    {
+        "id": "cj_stroud",
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 260.7,
+        "avg": 15.3
+    },
+    {
+        "id": "davis_mills",
+        "name": "Davis Mills",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 12.7,
+        "avg": 0.7
+    },
+    {
+        "id": "david_montgomery",
+        "name": "David Montgomery",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 191.9,
+        "avg": 11.3
+    },
+    {
+        "id": "woody_marks",
+        "name": "Woody Marks",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 124.3,
+        "avg": 7.3
+    },
+    {
+        "id": "jawhar_jordan",
+        "name": "Jawhar Jordan",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 50.3,
+        "avg": 3.0
+    },
+    {
+        "id": "british_brooks",
+        "name": "British Brooks",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 2.4,
+        "avg": 0.1
+    },
+    {
+        "id": "nico_collins",
+        "name": "Nico Collins",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 248.5,
+        "avg": 14.6
+    },
+    {
+        "id": "tank_dell",
+        "name": "Tank Dell",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 141.4,
+        "avg": 8.3
+    },
+    {
+        "id": "jayden_higgins",
+        "name": "Jayden Higgins",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 137.9,
+        "avg": 8.1
+    },
+    {
+        "id": "jaylin_noel",
+        "name": "Jaylin Noel",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 74.2,
+        "avg": 4.4
+    },
+    {
+        "id": "xavier_hutchinson",
+        "name": "Xavier Hutchinson",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 64.1,
+        "avg": 3.8
+    },
+    {
+        "id": "justin_watson",
+        "name": "Justin Watson",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 8.5,
+        "avg": 0.5
+    },
+    {
+        "id": "dalton_schultz",
+        "name": "Dalton Schultz",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 148.6,
+        "avg": 8.7
+    },
+    {
+        "id": "marlin_klein",
+        "name": "Marlin Klein",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 44.5,
+        "avg": 2.6
+    },
+    {
+        "id": "cade_stover",
+        "name": "Cade Stover",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 33.1,
+        "avg": 1.9
+    },
+    {
+        "id": "foster_moreau",
+        "name": "Foster Moreau",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 27.6,
+        "avg": 1.6
+    },
+    {
+        "id": "ka'imi_fairbairn",
+        "name": "Ka'imi Fairbairn",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 144.5,
+        "avg": 8.5
+    },
+    {
+        "id": "houston_texans",
+        "name": "Houston Texans",
+        "pos": "QB",
+        "team": "HOU",
+        "bye": 8,
+        "fpts": 120.5,
+        "avg": 7.1
+    },
+    {
+        "id": "daniel_jones",
+        "name": "Daniel Jones",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 274.5,
+        "avg": 16.1
+    },
+    {
+        "id": "anthony_richardson_sr",
+        "name": "Anthony Richardson Sr.",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 21.0,
+        "avg": 1.2
+    },
+    {
+        "id": "riley_leonard",
+        "name": "Riley Leonard",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 13.8,
+        "avg": 0.8
+    },
+    {
+        "id": "jonathan_taylor",
+        "name": "Jonathan Taylor",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 312.5,
+        "avg": 18.4
+    },
+    {
+        "id": "dj_giddens",
+        "name": "DJ Giddens",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 35.9,
+        "avg": 2.1
+    },
+    {
+        "id": "seth_mcgowan",
+        "name": "Seth McGowan",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 23.2,
+        "avg": 1.4
+    },
+    {
+        "id": "alec_pierce",
+        "name": "Alec Pierce",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 207.4,
+        "avg": 12.2
+    },
+    {
+        "id": "josh_downs",
+        "name": "Josh Downs",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 174.3,
+        "avg": 10.3
+    },
+    {
+        "id": "ashton_dulin",
+        "name": "Ashton Dulin",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 78.5,
+        "avg": 4.6
+    },
+    {
+        "id": "nick_westbrook-ikhine",
+        "name": "Nick Westbrook-Ikhine",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 60.1,
+        "avg": 3.5
+    },
+    {
+        "id": "anthony_gould",
+        "name": "Anthony Gould",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 16.2,
+        "avg": 1.0
+    },
+    {
+        "id": "laquon_treadwell",
+        "name": "Laquon Treadwell",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 8.3,
+        "avg": 0.5
+    },
+    {
+        "id": "tyler_warren",
+        "name": "Tyler Warren",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 201.8,
+        "avg": 11.9
+    },
+    {
+        "id": "will_mallory",
+        "name": "Will Mallory",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 29.5,
+        "avg": 1.7
+    },
+    {
+        "id": "mo_alie-cox",
+        "name": "Mo Alie-Cox",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 27.1,
+        "avg": 1.6
+    },
+    {
+        "id": "drew_ogletree",
+        "name": "Drew Ogletree",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 8.7,
+        "avg": 0.5
+    },
+    {
+        "id": "spencer_shrader",
+        "name": "Spencer Shrader",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 76.5,
+        "avg": 4.5
+    },
+    {
+        "id": "blake_grupe",
+        "name": "Blake Grupe",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 73.9,
+        "avg": 4.3
+    },
+    {
+        "id": "indianapolis_colts",
+        "name": "Indianapolis Colts",
+        "pos": "QB",
+        "team": "IND",
+        "bye": 8,
+        "fpts": 94.3,
+        "avg": 5.5
+    },
+    {
+        "id": "trevor_lawrence",
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 304.0,
+        "avg": 17.9
+    },
+    {
+        "id": "nick_mullens",
+        "name": "Nick Mullens",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 9.8,
+        "avg": 0.6
+    },
+    {
+        "id": "bhayshul_tuten",
+        "name": "Bhayshul Tuten",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 208.5,
+        "avg": 12.3
+    },
+    {
+        "id": "chris_rodriguez_jr",
+        "name": "Chris Rodriguez Jr.",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 94.8,
+        "avg": 5.6
+    },
+    {
+        "id": "lequint_allen_jr",
+        "name": "LeQuint Allen Jr.",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 45.8,
+        "avg": 2.7
+    },
+    {
+        "id": "deejay_dallas",
+        "name": "DeeJay Dallas",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "jakobi_meyers",
+        "name": "Jakobi Meyers",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 185.7,
+        "avg": 10.9
+    },
+    {
+        "id": "parker_washington",
+        "name": "Parker Washington",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 178.7,
+        "avg": 10.5
+    },
+    {
+        "id": "brian_thomas_jr",
+        "name": "Brian Thomas Jr.",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 175.4,
+        "avg": 10.3
+    },
+    {
+        "id": "travis_hunter",
+        "name": "Travis Hunter",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 111.7,
+        "avg": 6.6
+    },
+    {
+        "id": "josh_cameron",
+        "name": "Josh Cameron",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "brenton_strange",
+        "name": "Brenton Strange",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 151.4,
+        "avg": 8.9
+    },
+    {
+        "id": "nate_boerkircher",
+        "name": "Nate Boerkircher",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 37.1,
+        "avg": 2.2
+    },
+    {
+        "id": "hunter_long",
+        "name": "Hunter Long",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 15.5,
+        "avg": 0.9
+    },
+    {
+        "id": "tanner_koziol",
+        "name": "Tanner Koziol",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 9.2,
+        "avg": 0.5
+    },
+    {
+        "id": "quintin_morris",
+        "name": "Quintin Morris",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "cam_little",
+        "name": "Cam Little",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 129.9,
+        "avg": 7.6
+    },
+    {
+        "id": "jacksonville_jaguars",
+        "name": "Jacksonville Jaguars",
+        "pos": "QB",
+        "team": "JAX",
+        "bye": 8,
+        "fpts": 99.0,
+        "avg": 5.8
+    },
+    {
+        "id": "patrick_mahomes_ii",
+        "name": "Patrick Mahomes II",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 303.6,
+        "avg": 17.9
+    },
+    {
+        "id": "justin_fields",
+        "name": "Justin Fields",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 12.0,
+        "avg": 0.7
+    },
+    {
+        "id": "chris_oladokun",
+        "name": "Chris Oladokun",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 9.7,
+        "avg": 0.6
+    },
+    {
+        "id": "garrett_nussmeier",
+        "name": "Garrett Nussmeier",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 9.2,
+        "avg": 0.5
+    },
+    {
+        "id": "kenneth_walker_iii",
+        "name": "Kenneth Walker III",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 251.2,
+        "avg": 14.8
+    },
+    {
+        "id": "emari_demercado",
+        "name": "Emari Demercado",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 82.5,
+        "avg": 4.9
+    },
+    {
+        "id": "emmett_johnson",
+        "name": "Emmett Johnson",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 34.5,
+        "avg": 2.0
+    },
+    {
+        "id": "brashard_smith",
+        "name": "Brashard Smith",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 32.5,
+        "avg": 1.9
+    },
+    {
+        "id": "rashee_rice",
+        "name": "Rashee Rice",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 273.3,
+        "avg": 16.1
+    },
+    {
+        "id": "xavier_worthy",
+        "name": "Xavier Worthy",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 167.3,
+        "avg": 9.8
+    },
+    {
+        "id": "tyquan_thornton",
+        "name": "Tyquan Thornton",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 92.6,
+        "avg": 5.4
+    },
+    {
+        "id": "cyrus_allen",
+        "name": "Cyrus Allen",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 43.7,
+        "avg": 2.6
+    },
+    {
+        "id": "jalen_royals",
+        "name": "Jalen Royals",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 18.3,
+        "avg": 1.1
+    },
+    {
+        "id": "nikko_remigio",
+        "name": "Nikko Remigio",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "travis_kelce",
+        "name": "Travis Kelce",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 181.8,
+        "avg": 10.7
+    },
+    {
+        "id": "noah_gray",
+        "name": "Noah Gray",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 50.8,
+        "avg": 3.0
+    },
+    {
+        "id": "jared_wiley",
+        "name": "Jared Wiley",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 26.5,
+        "avg": 1.6
+    },
+    {
+        "id": "harrison_butker",
+        "name": "Harrison Butker",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 131.8,
+        "avg": 7.8
+    },
+    {
+        "id": "kansas_city_chiefs",
+        "name": "Kansas City Chiefs",
+        "pos": "QB",
+        "team": "KC",
+        "bye": 8,
+        "fpts": 92.6,
+        "avg": 5.4
+    },
+    {
+        "id": "los_angeles_rams",
+        "name": "Los Angeles Rams",
+        "pos": "QB",
+        "team": "LA",
+        "bye": 8,
+        "fpts": 107.1,
+        "avg": 6.3
+    },
+    {
+        "id": "justin_herbert",
+        "name": "Justin Herbert",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 300.3,
+        "avg": 17.7
+    },
+    {
+        "id": "trey_lance",
+        "name": "Trey Lance",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 10.4,
+        "avg": 0.6
+    },
+    {
+        "id": "omarion_hampton",
+        "name": "Omarion Hampton",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 263.6,
+        "avg": 15.5
+    },
+    {
+        "id": "keaton_mitchell",
+        "name": "Keaton Mitchell",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 70.8,
+        "avg": 4.2
+    },
+    {
+        "id": "kimani_vidal",
+        "name": "Kimani Vidal",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 61.1,
+        "avg": 3.6
+    },
+    {
+        "id": "alec_ingold",
+        "name": "Alec Ingold",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 16.4,
+        "avg": 1.0
+    },
+    {
+        "id": "ladd_mcconkey",
+        "name": "Ladd McConkey",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 212.6,
+        "avg": 12.5
+    },
+    {
+        "id": "quentin_johnston",
+        "name": "Quentin Johnston",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 169.8,
+        "avg": 10.0
+    },
+    {
+        "id": "tre'_harris",
+        "name": "Tre' Harris",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 89.4,
+        "avg": 5.3
+    },
+    {
+        "id": "brenen_thompson",
+        "name": "Brenen Thompson",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 27.4,
+        "avg": 1.6
+    },
+    {
+        "id": "keandre_lambert-smith",
+        "name": "KeAndre Lambert-Smith",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 26.6,
+        "avg": 1.6
+    },
+    {
+        "id": "derius_davis",
+        "name": "Derius Davis",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 10.2,
+        "avg": 0.6
+    },
+    {
+        "id": "oronde_gadsden_ii",
+        "name": "Oronde Gadsden II",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 118.8,
+        "avg": 7.0
+    },
+    {
+        "id": "david_njoku",
+        "name": "David Njoku",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 90.5,
+        "avg": 5.3
+    },
+    {
+        "id": "charlie_kolar",
+        "name": "Charlie Kolar",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 55.4,
+        "avg": 3.3
+    },
+    {
+        "id": "cameron_dicker",
+        "name": "Cameron Dicker",
+        "pos": "QB",
+        "team": "LAC",
+        "bye": 8,
+        "fpts": 144.1,
+        "avg": 8.5
+    },
+    {
+        "id": "matthew_stafford",
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 294.0,
+        "avg": 17.3
+    },
+    {
+        "id": "ty_simpson",
+        "name": "Ty Simpson",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 23.4,
+        "avg": 1.4
+    },
+    {
+        "id": "stetson_bennett_iv",
+        "name": "Stetson Bennett IV",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "kyren_williams",
+        "name": "Kyren Williams",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 239.8,
+        "avg": 14.1
+    },
+    {
+        "id": "blake_corum",
+        "name": "Blake Corum",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 138.6,
+        "avg": 8.2
+    },
+    {
+        "id": "jarquez_hunter",
+        "name": "Jarquez Hunter",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 23.2,
+        "avg": 1.4
+    },
+    {
+        "id": "puka_nacua",
+        "name": "Puka Nacua",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 339.8,
+        "avg": 20.0
+    },
+    {
+        "id": "davante_adams",
+        "name": "Davante Adams",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 222.0,
+        "avg": 13.1
+    },
+    {
+        "id": "jordan_whittington",
+        "name": "Jordan Whittington",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 41.1,
+        "avg": 2.4
+    },
+    {
+        "id": "konata_mumpfield",
+        "name": "Konata Mumpfield",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 29.2,
+        "avg": 1.7
+    },
+    {
+        "id": "xavier_smith",
+        "name": "Xavier Smith",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 9.9,
+        "avg": 0.6
+    },
+    {
+        "id": "cj_daniels",
+        "name": "CJ Daniels",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 9.6,
+        "avg": 0.6
+    },
+    {
+        "id": "terrance_ferguson",
+        "name": "Terrance Ferguson",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 112.8,
+        "avg": 6.6
+    },
+    {
+        "id": "colby_parkinson",
+        "name": "Colby Parkinson",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 91.9,
+        "avg": 5.4
+    },
+    {
+        "id": "tyler_higbee",
+        "name": "Tyler Higbee",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 71.2,
+        "avg": 4.2
+    },
+    {
+        "id": "davis_allen",
+        "name": "Davis Allen",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 43.8,
+        "avg": 2.6
+    },
+    {
+        "id": "max_klare",
+        "name": "Max Klare",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 19.8,
+        "avg": 1.2
+    },
+    {
+        "id": "harrison_mevis",
+        "name": "Harrison Mevis",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 136.9,
+        "avg": 8.1
+    },
+    {
+        "id": "los_angeles_chargers",
+        "name": "Los Angeles Chargers",
+        "pos": "QB",
+        "team": "LAR",
+        "bye": 8,
+        "fpts": 107.7,
+        "avg": 6.3
+    },
+    {
+        "id": "fernando_mendoza",
+        "name": "Fernando Mendoza",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 192.7,
+        "avg": 11.3
+    },
+    {
+        "id": "kirk_cousins",
+        "name": "Kirk Cousins",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 47.2,
+        "avg": 2.8
+    },
+    {
+        "id": "aidan_o'connell",
+        "name": "Aidan O'Connell",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "ashton_jeanty",
+        "name": "Ashton Jeanty",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 276.8,
+        "avg": 16.3
+    },
+    {
+        "id": "mike_washington_jr",
+        "name": "Mike Washington Jr.",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 77.7,
+        "avg": 4.6
+    },
+    {
+        "id": "connor_heyward",
+        "name": "Connor Heyward",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 10.2,
+        "avg": 0.6
+    },
+    {
+        "id": "dylan_laube",
+        "name": "Dylan Laube",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "tre_tucker",
+        "name": "Tre Tucker",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 142.0,
+        "avg": 8.4
+    },
+    {
+        "id": "jalen_nailor",
+        "name": "Jalen Nailor",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 130.2,
+        "avg": 7.7
+    },
+    {
+        "id": "jack_bech",
+        "name": "Jack Bech",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 82.5,
+        "avg": 4.9
+    },
+    {
+        "id": "dont'e_thornton_jr",
+        "name": "Dont'e Thornton Jr.",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 32.2,
+        "avg": 1.9
+    },
+    {
+        "id": "malik_benson",
+        "name": "Malik Benson",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 15.7,
+        "avg": 0.9
+    },
+    {
+        "id": "dareke_young",
+        "name": "Dareke Young",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "brock_bowers",
+        "name": "Brock Bowers",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 243.7,
+        "avg": 14.3
+    },
+    {
+        "id": "michael_mayer",
+        "name": "Michael Mayer",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 90.1,
+        "avg": 5.3
+    },
+    {
+        "id": "connor_heyward",
+        "name": "Connor Heyward",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 36.3,
+        "avg": 2.1
+    },
+    {
+        "id": "zack_kuntz",
+        "name": "Zack Kuntz",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 23.7,
+        "avg": 1.4
+    },
+    {
+        "id": "ian_thomas",
+        "name": "Ian Thomas",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 8.2,
+        "avg": 0.5
+    },
+    {
+        "id": "matt_gay",
+        "name": "Matt Gay",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 108.1,
+        "avg": 6.4
+    },
+    {
+        "id": "las_vegas_raiders",
+        "name": "Las Vegas Raiders",
+        "pos": "QB",
+        "team": "LV",
+        "bye": 8,
+        "fpts": 90.0,
+        "avg": 5.3
+    },
+    {
+        "id": "malik_willis",
+        "name": "Malik Willis",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 269.6,
+        "avg": 15.9
+    },
+    {
+        "id": "quinn_ewers",
+        "name": "Quinn Ewers",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 11.5,
+        "avg": 0.7
+    },
+    {
+        "id": "de'von_achane",
+        "name": "De'Von Achane",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 292.0,
+        "avg": 17.2
+    },
+    {
+        "id": "jaylen_wright",
+        "name": "Jaylen Wright",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 50.5,
+        "avg": 3.0
+    },
+    {
+        "id": "ollie_gordon_ii",
+        "name": "Ollie Gordon II",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 34.6,
+        "avg": 2.0
+    },
+    {
+        "id": "donovan_edwards",
+        "name": "Donovan Edwards",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 22.9,
+        "avg": 1.3
+    },
+    {
+        "id": "carlos_washington_jr",
+        "name": "Carlos Washington Jr.",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 22.9,
+        "avg": 1.3
+    },
+    {
+        "id": "theo_wease_jr",
+        "name": "Theo Wease Jr.",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 145.3,
+        "avg": 8.5
+    },
+    {
+        "id": "malik_washington",
+        "name": "Malik Washington",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 107.0,
+        "avg": 6.3
+    },
+    {
+        "id": "jalen_tolbert",
+        "name": "Jalen Tolbert",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 89.5,
+        "avg": 5.3
+    },
+    {
+        "id": "chris_bell",
+        "name": "Chris Bell",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 88.4,
+        "avg": 5.2
+    },
+    {
+        "id": "caleb_douglas",
+        "name": "Caleb Douglas",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 87.8,
+        "avg": 5.2
+    },
+    {
+        "id": "tutu_atwell",
+        "name": "Tutu Atwell",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 53.4,
+        "avg": 3.1
+    },
+    {
+        "id": "kevin_coleman_jr",
+        "name": "Kevin Coleman Jr.",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 51.8,
+        "avg": 3.0
+    },
+    {
+        "id": "greg_dulcich",
+        "name": "Greg Dulcich",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 133.5,
+        "avg": 7.9
+    },
+    {
+        "id": "will_kacmarek",
+        "name": "Will Kacmarek",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 61.8,
+        "avg": 3.6
+    },
+    {
+        "id": "ben_sims",
+        "name": "Ben Sims",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 44.8,
+        "avg": 2.6
+    },
+    {
+        "id": "cole_turner",
+        "name": "Cole Turner",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 11.9,
+        "avg": 0.7
+    },
+    {
+        "id": "zane_gonzalez",
+        "name": "Zane Gonzalez",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 115.4,
+        "avg": 6.8
+    },
+    {
+        "id": "riley_patterson",
+        "name": "Riley Patterson",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 73.0,
+        "avg": 4.3
+    },
+    {
+        "id": "miami_dolphins",
+        "name": "Miami Dolphins",
+        "pos": "QB",
+        "team": "MIA",
+        "bye": 8,
+        "fpts": 90.7,
+        "avg": 5.3
+    },
+    {
+        "id": "kyler_murray",
+        "name": "Kyler Murray",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 280.3,
+        "avg": 16.5
+    },
+    {
+        "id": "jj_mccarthy",
+        "name": "J.J. McCarthy",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 22.5,
+        "avg": 1.3
+    },
+    {
+        "id": "aaron_jones_sr",
+        "name": "Aaron Jones Sr.",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 168.0,
+        "avg": 9.9
+    },
+    {
+        "id": "jordan_mason",
+        "name": "Jordan Mason",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 138.4,
+        "avg": 8.1
+    },
+    {
+        "id": "demond_claiborne",
+        "name": "Demond Claiborne",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 23.6,
+        "avg": 1.4
+    },
+    {
+        "id": "max_bredeson",
+        "name": "Max Bredeson",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 9.6,
+        "avg": 0.6
+    },
+    {
+        "id": "zavier_scott",
+        "name": "Zavier Scott",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "justin_jefferson",
+        "name": "Justin Jefferson",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 269.6,
+        "avg": 15.9
+    },
+    {
+        "id": "jordan_addison",
+        "name": "Jordan Addison",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 168.8,
+        "avg": 9.9
+    },
+    {
+        "id": "jauan_jennings",
+        "name": "Jauan Jennings",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 134.0,
+        "avg": 7.9
+    },
+    {
+        "id": "tai_felton",
+        "name": "Tai Felton",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 8.8,
+        "avg": 0.5
+    },
+    {
+        "id": "jeshaun_jones",
+        "name": "Jeshaun Jones",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "myles_price",
+        "name": "Myles Price",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "tj_hockenson",
+        "name": "T.J. Hockenson",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 140.6,
+        "avg": 8.3
+    },
+    {
+        "id": "josh_oliver",
+        "name": "Josh Oliver",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 52.1,
+        "avg": 3.1
+    },
+    {
+        "id": "will_reichard",
+        "name": "Will Reichard",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 129.7,
+        "avg": 7.6
+    },
+    {
+        "id": "minnesota_vikings",
+        "name": "Minnesota Vikings",
+        "pos": "QB",
+        "team": "MIN",
+        "bye": 8,
+        "fpts": 112.7,
+        "avg": 6.6
+    },
+    {
+        "id": "drake_maye",
+        "name": "Drake Maye",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 326.9,
+        "avg": 19.2
+    },
+    {
+        "id": "tommy_devito",
+        "name": "Tommy DeVito",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 10.6,
+        "avg": 0.6
+    },
+    {
+        "id": "behren_morton",
+        "name": "Behren Morton",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 9.8,
+        "avg": 0.6
+    },
+    {
+        "id": "treveyon_henderson",
+        "name": "TreVeyon Henderson",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 201.6,
+        "avg": 11.9
+    },
+    {
+        "id": "rhamondre_stevenson",
+        "name": "Rhamondre Stevenson",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 185.9,
+        "avg": 10.9
+    },
+    {
+        "id": "jam_miller",
+        "name": "Jam Miller",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 26.1,
+        "avg": 1.5
+    },
+    {
+        "id": "reggie_gilliam",
+        "name": "Reggie Gilliam",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 7.9,
+        "avg": 0.5
+    },
+    {
+        "id": "aj_brown",
+        "name": "A.J. Brown",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 257.4,
+        "avg": 15.1
+    },
+    {
+        "id": "romeo_doubs",
+        "name": "Romeo Doubs",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 160.9,
+        "avg": 9.5
+    },
+    {
+        "id": "kayshon_boutte",
+        "name": "Kayshon Boutte",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 105.5,
+        "avg": 6.2
+    },
+    {
+        "id": "demario_douglas",
+        "name": "DeMario Douglas",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 61.3,
+        "avg": 3.6
+    },
+    {
+        "id": "mack_hollins",
+        "name": "Mack Hollins",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 28.0,
+        "avg": 1.6
+    },
+    {
+        "id": "kyle_williams",
+        "name": "Kyle Williams",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 22.1,
+        "avg": 1.3
+    },
+    {
+        "id": "efton_chism_iii",
+        "name": "Efton Chism III",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "hunter_henry",
+        "name": "Hunter Henry",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 153.6,
+        "avg": 9.0
+    },
+    {
+        "id": "eli_raridon",
+        "name": "Eli Raridon",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 46.5,
+        "avg": 2.7
+    },
+    {
+        "id": "cj_dippre",
+        "name": "CJ Dippre",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 9.2,
+        "avg": 0.5
+    },
+    {
+        "id": "julian_hill",
+        "name": "Julian Hill",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "andy_borregales",
+        "name": "Andy Borregales",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 121.3,
+        "avg": 7.1
+    },
+    {
+        "id": "new_england_patriots",
+        "name": "New England Patriots",
+        "pos": "QB",
+        "team": "NE",
+        "bye": 8,
+        "fpts": 98.1,
+        "avg": 5.8
+    },
+    {
+        "id": "tyler_shough",
+        "name": "Tyler Shough",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 286.2,
+        "avg": 16.8
+    },
+    {
+        "id": "spencer_rattler",
+        "name": "Spencer Rattler",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 10.2,
+        "avg": 0.6
+    },
+    {
+        "id": "travis_etienne_jr",
+        "name": "Travis Etienne Jr.",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 231.9,
+        "avg": 13.6
+    },
+    {
+        "id": "alvin_kamara",
+        "name": "Alvin Kamara",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 131.4,
+        "avg": 7.7
+    },
+    {
+        "id": "ty_chandler",
+        "name": "Ty Chandler",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 37.5,
+        "avg": 2.2
+    },
+    {
+        "id": "devin_neal",
+        "name": "Devin Neal",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 19.2,
+        "avg": 1.1
+    },
+    {
+        "id": "kendre_miller",
+        "name": "Kendre Miller",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 7.2,
+        "avg": 0.4
+    },
+    {
+        "id": "chris_olave",
+        "name": "Chris Olave",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 257.3,
+        "avg": 15.1
+    },
+    {
+        "id": "jordyn_tyson",
+        "name": "Jordyn Tyson",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 172.5,
+        "avg": 10.1
+    },
+    {
+        "id": "bub_means",
+        "name": "Bub Means",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 106.2,
+        "avg": 6.2
+    },
+    {
+        "id": "devaughn_vele",
+        "name": "Devaughn Vele",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 94.2,
+        "avg": 5.5
+    },
+    {
+        "id": "bryce_lance",
+        "name": "Bryce Lance",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 42.1,
+        "avg": 2.5
+    },
+    {
+        "id": "barion_brown",
+        "name": "Barion Brown",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 8.4,
+        "avg": 0.5
+    },
+    {
+        "id": "mason_tipton",
+        "name": "Mason Tipton",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "juwan_johnson",
+        "name": "Juwan Johnson",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 154.0,
+        "avg": 9.1
+    },
+    {
+        "id": "noah_fant",
+        "name": "Noah Fant",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 65.7,
+        "avg": 3.9
+    },
+    {
+        "id": "oscar_delp",
+        "name": "Oscar Delp",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 8.9,
+        "avg": 0.5
+    },
+    {
+        "id": "charlie_smyth",
+        "name": "Charlie Smyth",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 122.9,
+        "avg": 7.2
+    },
+    {
+        "id": "tanner_brown",
+        "name": "Tanner Brown",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "new_orleans_saints",
+        "name": "New Orleans Saints",
+        "pos": "QB",
+        "team": "NO",
+        "bye": 8,
+        "fpts": 100.5,
+        "avg": 5.9
+    },
+    {
+        "id": "jaxson_dart",
+        "name": "Jaxson Dart",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 311.7,
+        "avg": 18.3
+    },
+    {
+        "id": "jameis_winston",
+        "name": "Jameis Winston",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 11.7,
+        "avg": 0.7
+    },
+    {
+        "id": "cam_skattebo",
+        "name": "Cam Skattebo",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 244.3,
+        "avg": 14.4
+    },
+    {
+        "id": "tyrone_tracy_jr",
+        "name": "Tyrone Tracy Jr.",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 119.6,
+        "avg": 7.0
+    },
+    {
+        "id": "devin_singletary",
+        "name": "Devin Singletary",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 19.8,
+        "avg": 1.2
+    },
+    {
+        "id": "patrick_ricard",
+        "name": "Patrick Ricard",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 7.4,
+        "avg": 0.4
+    },
+    {
+        "id": "malik_nabers",
+        "name": "Malik Nabers",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 231.3,
+        "avg": 13.6
+    },
+    {
+        "id": "darnell_mooney",
+        "name": "Darnell Mooney",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 105.4,
+        "avg": 6.2
+    },
+    {
+        "id": "darius_slayton",
+        "name": "Darius Slayton",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 100.7,
+        "avg": 5.9
+    },
+    {
+        "id": "calvin_austin_iii",
+        "name": "Calvin Austin III",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 60.1,
+        "avg": 3.5
+    },
+    {
+        "id": "odell_beckham_jr",
+        "name": "Odell Beckham Jr.",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 35.1,
+        "avg": 2.1
+    },
+    {
+        "id": "malachi_fields",
+        "name": "Malachi Fields",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 34.0,
+        "avg": 2.0
+    },
+    {
+        "id": "juju_smith-schuster",
+        "name": "JuJu Smith-Schuster",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 1.6,
+        "avg": 0.1
+    },
+    {
+        "id": "braxton_berrios",
+        "name": "Braxton Berrios",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "isaiah_likely",
+        "name": "Isaiah Likely",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 165.3,
+        "avg": 9.7
+    },
+    {
+        "id": "theo_johnson",
+        "name": "Theo Johnson",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 76.2,
+        "avg": 4.5
+    },
+    {
+        "id": "tanner_conner",
+        "name": "Tanner Conner",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 27.3,
+        "avg": 1.6
+    },
+    {
+        "id": "thomas_fidone_ii",
+        "name": "Thomas Fidone II",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 26.1,
+        "avg": 1.5
+    },
+    {
+        "id": "chris_manhertz",
+        "name": "Chris Manhertz",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 13.9,
+        "avg": 0.8
+    },
+    {
+        "id": "dominic_zvada",
+        "name": "Dominic Zvada",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 76.8,
+        "avg": 4.5
+    },
+    {
+        "id": "ben_sauls",
+        "name": "Ben Sauls",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 58.5,
+        "avg": 3.4
+    },
+    {
+        "id": "new_york_giants",
+        "name": "New York Giants",
+        "pos": "QB",
+        "team": "NYG",
+        "bye": 8,
+        "fpts": 91.9,
+        "avg": 5.4
+    },
+    {
+        "id": "geno_smith",
+        "name": "Geno Smith",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 234.5,
+        "avg": 13.8
+    },
+    {
+        "id": "cade_klubnik",
+        "name": "Cade Klubnik",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 9.4,
+        "avg": 0.6
+    },
+    {
+        "id": "brady_cook",
+        "name": "Brady Cook",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 5.0,
+        "avg": 0.3
+    },
+    {
+        "id": "breece_hall",
+        "name": "Breece Hall",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 253.5,
+        "avg": 14.9
+    },
+    {
+        "id": "braelon_allen",
+        "name": "Braelon Allen",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 86.0,
+        "avg": 5.1
+    },
+    {
+        "id": "isaiah_davis",
+        "name": "Isaiah Davis",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 43.3,
+        "avg": 2.5
+    },
+    {
+        "id": "andrew_beck",
+        "name": "Andrew Beck",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 14.8,
+        "avg": 0.9
+    },
+    {
+        "id": "kene_nwangwu",
+        "name": "Kene Nwangwu",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "garrett_wilson",
+        "name": "Garrett Wilson",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 242.1,
+        "avg": 14.2
+    },
+    {
+        "id": "adonai_mitchell",
+        "name": "Adonai Mitchell",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 124.5,
+        "avg": 7.3
+    },
+    {
+        "id": "omar_cooper_jr",
+        "name": "Omar Cooper Jr.",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 120.4,
+        "avg": 7.1
+    },
+    {
+        "id": "isaiah_williams",
+        "name": "Isaiah Williams",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 10.0,
+        "avg": 0.6
+    },
+    {
+        "id": "arian_smith",
+        "name": "Arian Smith",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 3.4,
+        "avg": 0.2
+    },
+    {
+        "id": "kenyon_sadiq",
+        "name": "Kenyon Sadiq",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 130.0,
+        "avg": 7.6
+    },
+    {
+        "id": "mason_taylor",
+        "name": "Mason Taylor",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 97.7,
+        "avg": 5.7
+    },
+    {
+        "id": "jeremy_ruckert",
+        "name": "Jeremy Ruckert",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 41.8,
+        "avg": 2.5
+    },
+    {
+        "id": "jelani_woods",
+        "name": "Jelani Woods",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "jason_sanders",
+        "name": "Jason Sanders",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 117.5,
+        "avg": 6.9
+    },
+    {
+        "id": "cade_york",
+        "name": "Cade York",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 36.0,
+        "avg": 2.1
+    },
+    {
+        "id": "new_york_jets",
+        "name": "New York Jets",
+        "pos": "QB",
+        "team": "NYJ",
+        "bye": 8,
+        "fpts": 86.0,
+        "avg": 5.1
+    },
+    {
+        "id": "jalen_hurts",
+        "name": "Jalen Hurts",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 320.6,
+        "avg": 18.9
+    },
+    {
+        "id": "tanner_mckee",
+        "name": "Tanner McKee",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 10.3,
+        "avg": 0.6
+    },
+    {
+        "id": "andy_dalton",
+        "name": "Andy Dalton",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 9.9,
+        "avg": 0.6
+    },
+    {
+        "id": "cole_payton",
+        "name": "Cole Payton",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 9.2,
+        "avg": 0.5
+    },
+    {
+        "id": "saquon_barkley",
+        "name": "Saquon Barkley",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 265.9,
+        "avg": 15.6
+    },
+    {
+        "id": "tank_bigsby",
+        "name": "Tank Bigsby",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 67.3,
+        "avg": 4.0
+    },
+    {
+        "id": "will_shipley",
+        "name": "Will Shipley",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 27.5,
+        "avg": 1.6
+    },
+    {
+        "id": "elijah_mitchell",
+        "name": "Elijah Mitchell",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 26.1,
+        "avg": 1.5
+    },
+    {
+        "id": "dameon_pierce",
+        "name": "Dameon Pierce",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 22.1,
+        "avg": 1.3
+    },
+    {
+        "id": "devonta_smith",
+        "name": "DeVonta Smith",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 236.7,
+        "avg": 13.9
+    },
+    {
+        "id": "makai_lemon",
+        "name": "Makai Lemon",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 162.4,
+        "avg": 9.6
+    },
+    {
+        "id": "hollywood_brown",
+        "name": "Hollywood Brown",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 89.6,
+        "avg": 5.3
+    },
+    {
+        "id": "dontayvion_wicks",
+        "name": "Dontayvion Wicks",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 65.5,
+        "avg": 3.9
+    },
+    {
+        "id": "darius_cooper",
+        "name": "Darius Cooper",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 8.5,
+        "avg": 0.5
+    },
+    {
+        "id": "britain_covey",
+        "name": "Britain Covey",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "dallas_goedert",
+        "name": "Dallas Goedert",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 179.3,
+        "avg": 10.5
+    },
+    {
+        "id": "eli_stowers",
+        "name": "Eli Stowers",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 53.9,
+        "avg": 3.2
+    },
+    {
+        "id": "grant_calcaterra",
+        "name": "Grant Calcaterra",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 28.5,
+        "avg": 1.7
+    },
+    {
+        "id": "johnny_mundt",
+        "name": "Johnny Mundt",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 8.2,
+        "avg": 0.5
+    },
+    {
+        "id": "jake_elliott",
+        "name": "Jake Elliott",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 119.8,
+        "avg": 7.0
+    },
+    {
+        "id": "philadelphia_eagles",
+        "name": "Philadelphia Eagles",
+        "pos": "QB",
+        "team": "PHI",
+        "bye": 8,
+        "fpts": 102.3,
+        "avg": 6.0
+    },
+    {
+        "id": "aaron_rodgers",
+        "name": "Aaron Rodgers",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 223.1,
+        "avg": 13.1
+    },
+    {
+        "id": "drew_allar",
+        "name": "Drew Allar",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 9.3,
+        "avg": 0.5
+    },
+    {
+        "id": "will_howard",
+        "name": "Will Howard",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 6.7,
+        "avg": 0.4
+    },
+    {
+        "id": "mason_rudolph",
+        "name": "Mason Rudolph",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 5.5,
+        "avg": 0.3
+    },
+    {
+        "id": "jaylen_warren",
+        "name": "Jaylen Warren",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 192.6,
+        "avg": 11.3
+    },
+    {
+        "id": "rico_dowdle",
+        "name": "Rico Dowdle",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 185.8,
+        "avg": 10.9
+    },
+    {
+        "id": "riley_nowakowski",
+        "name": "Riley Nowakowski",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 8.1,
+        "avg": 0.5
+    },
+    {
+        "id": "kaleb_johnson",
+        "name": "Kaleb Johnson",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 4.8,
+        "avg": 0.3
+    },
+    {
+        "id": "dk_metcalf",
+        "name": "DK Metcalf",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 194.8,
+        "avg": 11.5
+    },
+    {
+        "id": "michael_pittman_jr",
+        "name": "Michael Pittman Jr.",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 189.9,
+        "avg": 11.2
+    },
+    {
+        "id": "germie_bernard",
+        "name": "Germie Bernard",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 118.1,
+        "avg": 6.9
+    },
+    {
+        "id": "ben_skowronek",
+        "name": "Ben Skowronek",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 11.7,
+        "avg": 0.7
+    },
+    {
+        "id": "kaden_wetjen",
+        "name": "Kaden Wetjen",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 5.6,
+        "avg": 0.3
+    },
+    {
+        "id": "pat_freiermuth",
+        "name": "Pat Freiermuth",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 133.9,
+        "avg": 7.9
+    },
+    {
+        "id": "darnell_washington",
+        "name": "Darnell Washington",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 73.9,
+        "avg": 4.3
+    },
+    {
+        "id": "jaheim_bell",
+        "name": "Jaheim Bell",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 25.8,
+        "avg": 1.5
+    },
+    {
+        "id": "chris_boswell",
+        "name": "Chris Boswell",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 118.2,
+        "avg": 7.0
+    },
+    {
+        "id": "pittsburgh_steelers",
+        "name": "Pittsburgh Steelers",
+        "pos": "QB",
+        "team": "PIT",
+        "bye": 8,
+        "fpts": 112.8,
+        "avg": 6.6
+    },
+    {
+        "id": "sam_darnold",
+        "name": "Sam Darnold",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 266.5,
+        "avg": 15.7
+    },
+    {
+        "id": "drew_lock",
+        "name": "Drew Lock",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 10.0,
+        "avg": 0.6
+    },
+    {
+        "id": "jalen_milroe",
+        "name": "Jalen Milroe",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 9.0,
+        "avg": 0.5
+    },
+    {
+        "id": "jadarian_price",
+        "name": "Jadarian Price",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 187.5,
+        "avg": 11.0
+    },
+    {
+        "id": "zach_charbonnet",
+        "name": "Zach Charbonnet",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 123.0,
+        "avg": 7.2
+    },
+    {
+        "id": "emanuel_wilson",
+        "name": "Emanuel Wilson",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 51.2,
+        "avg": 3.0
+    },
+    {
+        "id": "george_holani",
+        "name": "George Holani",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 41.1,
+        "avg": 2.4
+    },
+    {
+        "id": "jaxon_smith-njigba",
+        "name": "Jaxon Smith-Njigba",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 324.1,
+        "avg": 19.1
+    },
+    {
+        "id": "rashid_shaheed",
+        "name": "Rashid Shaheed",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 156.7,
+        "avg": 9.2
+    },
+    {
+        "id": "cooper_kupp",
+        "name": "Cooper Kupp",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 125.1,
+        "avg": 7.4
+    },
+    {
+        "id": "tory_horton",
+        "name": "Tory Horton",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 94.4,
+        "avg": 5.6
+    },
+    {
+        "id": "aj_barner",
+        "name": "AJ Barner",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 124.3,
+        "avg": 7.3
+    },
+    {
+        "id": "elijah_arroyo",
+        "name": "Elijah Arroyo",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 58.4,
+        "avg": 3.4
+    },
+    {
+        "id": "nick_vannett",
+        "name": "Nick Vannett",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 31.5,
+        "avg": 1.9
+    },
+    {
+        "id": "eric_saubert",
+        "name": "Eric Saubert",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 8.6,
+        "avg": 0.5
+    },
+    {
+        "id": "jason_myers",
+        "name": "Jason Myers",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 150.4,
+        "avg": 8.8
+    },
+    {
+        "id": "seattle_seahawks",
+        "name": "Seattle Seahawks",
+        "pos": "QB",
+        "team": "SEA",
+        "bye": 8,
+        "fpts": 110.7,
+        "avg": 6.5
+    },
+    {
+        "id": "brock_purdy",
+        "name": "Brock Purdy",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 306.0,
+        "avg": 18.0
+    },
+    {
+        "id": "mac_jones",
+        "name": "Mac Jones",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 10.5,
+        "avg": 0.6
+    },
+    {
+        "id": "adrian_martinez",
+        "name": "Adrian Martinez",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 9.3,
+        "avg": 0.5
+    },
+    {
+        "id": "christian_mccaffrey",
+        "name": "Christian McCaffrey",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 327.8,
+        "avg": 19.3
+    },
+    {
+        "id": "jordan_james",
+        "name": "Jordan James",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 89.8,
+        "avg": 5.3
+    },
+    {
+        "id": "kaelon_black",
+        "name": "Kaelon Black",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 72.6,
+        "avg": 4.3
+    },
+    {
+        "id": "kyle_juszczyk",
+        "name": "Kyle Juszczyk",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 53.6,
+        "avg": 3.2
+    },
+    {
+        "id": "isaac_guerendo",
+        "name": "Isaac Guerendo",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 14.9,
+        "avg": 0.9
+    },
+    {
+        "id": "mike_evans",
+        "name": "Mike Evans",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 193.7,
+        "avg": 11.4
+    },
+    {
+        "id": "deebo_samuel_sr",
+        "name": "Deebo Samuel Sr.",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 159.6,
+        "avg": 9.4
+    },
+    {
+        "id": "de'zhaun_stribling",
+        "name": "De'Zhaun Stribling",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 107.8,
+        "avg": 6.3
+    },
+    {
+        "id": "christian_kirk",
+        "name": "Christian Kirk",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 73.7,
+        "avg": 4.3
+    },
+    {
+        "id": "demarcus_robinson",
+        "name": "Demarcus Robinson",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 46.7,
+        "avg": 2.7
+    },
+    {
+        "id": "jacob_cowing",
+        "name": "Jacob Cowing",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "george_kittle",
+        "name": "George Kittle",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 169.3,
+        "avg": 10.0
+    },
+    {
+        "id": "jake_tonges",
+        "name": "Jake Tonges",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 48.1,
+        "avg": 2.8
+    },
+    {
+        "id": "hayden_rucci",
+        "name": "Hayden Rucci",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 29.8,
+        "avg": 1.8
+    },
+    {
+        "id": "luke_farrell",
+        "name": "Luke Farrell",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 10.0,
+        "avg": 0.6
+    },
+    {
+        "id": "eddy_pineiro",
+        "name": "Eddy Pineiro",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 132.6,
+        "avg": 7.8
+    },
+    {
+        "id": "san_francisco_49ers",
+        "name": "San Francisco 49ers",
+        "pos": "QB",
+        "team": "SF",
+        "bye": 8,
+        "fpts": 88.0,
+        "avg": 5.2
+    },
+    {
+        "id": "baker_mayfield",
+        "name": "Baker Mayfield",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 282.2,
+        "avg": 16.6
+    },
+    {
+        "id": "jake_browning",
+        "name": "Jake Browning",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 11.3,
+        "avg": 0.7
+    },
+    {
+        "id": "bucky_irving",
+        "name": "Bucky Irving",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 223.9,
+        "avg": 13.2
+    },
+    {
+        "id": "kenny_gainwell",
+        "name": "Kenny Gainwell",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 168.3,
+        "avg": 9.9
+    },
+    {
+        "id": "sean_tucker",
+        "name": "Sean Tucker",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 32.2,
+        "avg": 1.9
+    },
+    {
+        "id": "josh_williams",
+        "name": "Josh Williams",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "emeka_egbuka",
+        "name": "Emeka Egbuka",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 227.9,
+        "avg": 13.4
+    },
+    {
+        "id": "chris_godwin_jr",
+        "name": "Chris Godwin Jr.",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 175.7,
+        "avg": 10.3
+    },
+    {
+        "id": "jalen_mcmillan",
+        "name": "Jalen McMillan",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 133.8,
+        "avg": 7.9
+    },
+    {
+        "id": "ted_hurst_iii",
+        "name": "Ted Hurst III",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 82.7,
+        "avg": 4.9
+    },
+    {
+        "id": "tez_johnson",
+        "name": "Tez Johnson",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 21.5,
+        "avg": 1.3
+    },
+    {
+        "id": "kameron_johnson",
+        "name": "Kameron Johnson",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 1.8,
+        "avg": 0.1
+    },
+    {
+        "id": "cade_otton",
+        "name": "Cade Otton",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 128.9,
+        "avg": 7.6
+    },
+    {
+        "id": "bauer_sharp",
+        "name": "Bauer Sharp",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 28.2,
+        "avg": 1.7
+    },
+    {
+        "id": "payne_durham",
+        "name": "Payne Durham",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 18.0,
+        "avg": 1.1
+    },
+    {
+        "id": "devin_culp",
+        "name": "Devin Culp",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 17.4,
+        "avg": 1.0
+    },
+    {
+        "id": "ko_kieft",
+        "name": "Ko Kieft",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 9.1,
+        "avg": 0.5
+    },
+    {
+        "id": "chase_mclaughlin",
+        "name": "Chase McLaughlin",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 132.9,
+        "avg": 7.8
+    },
+    {
+        "id": "tampa_bay_buccaneers",
+        "name": "Tampa Bay Buccaneers",
+        "pos": "QB",
+        "team": "TB",
+        "bye": 8,
+        "fpts": 97.2,
+        "avg": 5.7
+    },
+    {
+        "id": "cam_ward",
+        "name": "Cam Ward",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 232.2,
+        "avg": 13.7
+    },
+    {
+        "id": "will_levis",
+        "name": "Will Levis",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 11.4,
+        "avg": 0.7
+    },
+    {
+        "id": "mitchell_trubisky",
+        "name": "Mitchell Trubisky",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 9.0,
+        "avg": 0.5
+    },
+    {
+        "id": "tony_pollard",
+        "name": "Tony Pollard",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 191.1,
+        "avg": 11.2
+    },
+    {
+        "id": "tyjae_spears",
+        "name": "Tyjae Spears",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 136.4,
+        "avg": 8.0
+    },
+    {
+        "id": "nicholas_singleton",
+        "name": "Nicholas Singleton",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 19.7,
+        "avg": 1.2
+    },
+    {
+        "id": "wan'dale_robinson",
+        "name": "Wan'Dale Robinson",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 188.8,
+        "avg": 11.1
+    },
+    {
+        "id": "carnell_tate",
+        "name": "Carnell Tate",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 181.4,
+        "avg": 10.7
+    },
+    {
+        "id": "calvin_ridley",
+        "name": "Calvin Ridley",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 152.4,
+        "avg": 9.0
+    },
+    {
+        "id": "elic_ayomanor",
+        "name": "Elic Ayomanor",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 75.4,
+        "avg": 4.4
+    },
+    {
+        "id": "chimere_dike",
+        "name": "Chimere Dike",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 74.8,
+        "avg": 4.4
+    },
+    {
+        "id": "mason_kinsey",
+        "name": "Mason Kinsey",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 0.0,
+        "avg": 0.0
+    },
+    {
+        "id": "gunnar_helm",
+        "name": "Gunnar Helm",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 111.4,
+        "avg": 6.6
+    },
+    {
+        "id": "daniel_bellinger",
+        "name": "Daniel Bellinger",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 51.9,
+        "avg": 3.1
+    },
+    {
+        "id": "jaren_kanak",
+        "name": "Jaren Kanak",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 25.6,
+        "avg": 1.5
+    },
+    {
+        "id": "joey_slye",
+        "name": "Joey Slye",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 113.8,
+        "avg": 6.7
+    },
+    {
+        "id": "tennessee_titans",
+        "name": "Tennessee Titans",
+        "pos": "QB",
+        "team": "TEN",
+        "bye": 8,
+        "fpts": 95.4,
+        "avg": 5.6
+    },
+    {
+        "id": "jayden_daniels",
+        "name": "Jayden Daniels",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 324.5,
+        "avg": 19.1
+    },
+    {
+        "id": "marcus_mariota",
+        "name": "Marcus Mariota",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 18.1,
+        "avg": 1.1
+    },
+    {
+        "id": "rachaad_white",
+        "name": "Rachaad White",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 167.2,
+        "avg": 9.8
+    },
+    {
+        "id": "jacory_croskey-merritt",
+        "name": "Jacory Croskey-Merritt",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 143.6,
+        "avg": 8.4
+    },
+    {
+        "id": "jeremy_mcnichols",
+        "name": "Jeremy McNichols",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 27.2,
+        "avg": 1.6
+    },
+    {
+        "id": "kaytron_allen",
+        "name": "Kaytron Allen",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 21.5,
+        "avg": 1.3
+    },
+    {
+        "id": "jerome_ford",
+        "name": "Jerome Ford",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 19.1,
+        "avg": 1.1
+    },
+    {
+        "id": "terry_mclaurin",
+        "name": "Terry McLaurin",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 214.2,
+        "avg": 12.6
+    },
+    {
+        "id": "antonio_williams",
+        "name": "Antonio Williams",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 125.6,
+        "avg": 7.4
+    },
+    {
+        "id": "dyami_brown",
+        "name": "Dyami Brown",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 84.2,
+        "avg": 5.0
+    },
+    {
+        "id": "treylon_burks",
+        "name": "Treylon Burks",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 80.9,
+        "avg": 4.8
+    },
+    {
+        "id": "luke_mccaffrey",
+        "name": "Luke McCaffrey",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 65.0,
+        "avg": 3.8
+    },
+    {
+        "id": "jaylin_lane",
+        "name": "Jaylin Lane",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 60.7,
+        "avg": 3.6
+    },
+    {
+        "id": "chig_okonkwo",
+        "name": "Chig Okonkwo",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 126.5,
+        "avg": 7.4
+    },
+    {
+        "id": "john_bates",
+        "name": "John Bates",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 43.8,
+        "avg": 2.6
+    },
+    {
+        "id": "ben_sinnott",
+        "name": "Ben Sinnott",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 31.6,
+        "avg": 1.9
+    },
+    {
+        "id": "jake_moody",
+        "name": "Jake Moody",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 121.4,
+        "avg": 7.1
+    },
+    {
+        "id": "washington_commanders",
+        "name": "Washington Commanders",
+        "pos": "QB",
+        "team": "WAS",
+        "bye": 8,
+        "fpts": 94.3,
+        "avg": 5.5
+    }
+]
