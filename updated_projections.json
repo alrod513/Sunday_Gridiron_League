@@ -1,95 +1,5 @@
 [
     {
-        "id": "christian_mccaffrey",
-        "name": "Christian McCaffrey",
-        "pos": "RB",
-        "team": "SF",
-        "bye": 8,
-        "fpts": 332.8,
-        "avg": 20.8
-    },
-    {
-        "id": "breece_hall",
-        "name": "Breece Hall",
-        "pos": "RB",
-        "team": "NYJ",
-        "bye": 13,
-        "fpts": 280.0,
-        "avg": 17.5
-    },
-    {
-        "id": "bijan_robinson",
-        "name": "Bijan Robinson",
-        "pos": "RB",
-        "team": "ATL",
-        "bye": 11,
-        "fpts": 289.6,
-        "avg": 18.1
-    },
-    {
-        "id": "justin_jefferson",
-        "name": "Justin Jefferson",
-        "pos": "WR",
-        "team": "MIN",
-        "bye": 6,
-        "fpts": 302.4,
-        "avg": 18.9
-    },
-    {
-        "id": "ceedee_lamb",
-        "name": "CeeDee Lamb",
-        "pos": "WR",
-        "team": "DAL",
-        "bye": 14,
-        "fpts": 310.4,
-        "avg": 19.4
-    },
-    {
-        "id": "tyreek_hill",
-        "name": "Tyreek Hill",
-        "pos": "WR",
-        "team": "MIA",
-        "bye": 6,
-        "fpts": 305.6,
-        "avg": 19.1
-    },
-    {
-        "id": "travis_kelce",
-        "name": "Travis Kelce",
-        "pos": "TE",
-        "team": "KC",
-        "bye": 5,
-        "fpts": 227.2,
-        "avg": 14.2
-    },
-    {
-        "id": "sam_laporta",
-        "name": "Sam LaPorta",
-        "pos": "TE",
-        "team": "DET",
-        "bye": 6,
-        "fpts": 204.8,
-        "avg": 12.8
-    },
-    {
-        "id": "justin_tucker",
-        "name": "Justin Tucker",
-        "pos": "K",
-        "team": "BAL",
-        "bye": 13,
-        "fpts": 136.0,
-        "avg": 8.5
-    },
-    {
-        "id": "san_francisco_dst",
-        "name": "San Francisco DST",
-        "pos": "DST",
-        "team": "SF",
-        "bye": 8,
-        "fpts": 140.8,
-        "avg": 8.8
-    },
-    {
         "id": "jacoby_brissett",
         "name": "Jacoby Brissett",
         "pos": "QB",
@@ -119,7 +29,7 @@
     {
         "id": "jeremiyah_love",
         "name": "Jeremiyah Love",
-        "pos": "QB",
+        "pos": "RB",
         "team": "ARI",
         "bye": 8,
         "fpts": 255.7,
@@ -128,7 +38,7 @@
     {
         "id": "tyler_allgeier",
         "name": "Tyler Allgeier",
-        "pos": "QB",
+        "pos": "RB",
         "team": "ARI",
         "bye": 8,
         "fpts": 95.6,
@@ -137,7 +47,7 @@
     {
         "id": "james_conner",
         "name": "James Conner",
-        "pos": "QB",
+        "pos": "RB",
         "team": "ARI",
         "bye": 8,
         "fpts": 61.6,
@@ -146,7 +56,7 @@
     {
         "id": "bam_knight",
         "name": "Bam Knight",
-        "pos": "QB",
+        "pos": "RB",
         "team": "ARI",
         "bye": 8,
         "fpts": 0.0,
@@ -155,7 +65,7 @@
     {
         "id": "trey_benson",
         "name": "Trey Benson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "ARI",
         "bye": 8,
         "fpts": 0.0,
@@ -164,7 +74,7 @@
     {
         "id": "marvin_harrison_jr",
         "name": "Marvin Harrison Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ARI",
         "bye": 8,
         "fpts": 197.3,
@@ -173,7 +83,7 @@
     {
         "id": "michael_wilson",
         "name": "Michael Wilson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ARI",
         "bye": 8,
         "fpts": 176.6,
@@ -182,7 +92,7 @@
     {
         "id": "kendrick_bourne",
         "name": "Kendrick Bourne",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ARI",
         "bye": 8,
         "fpts": 50.3,
@@ -191,7 +101,7 @@
     {
         "id": "reggie_virgil",
         "name": "Reggie Virgil",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ARI",
         "bye": 8,
         "fpts": 8.1,
@@ -200,7 +110,7 @@
     {
         "id": "devin_duvernay",
         "name": "Devin Duvernay",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ARI",
         "bye": 8,
         "fpts": 0.0,
@@ -209,7 +119,7 @@
     {
         "id": "jalen_brooks",
         "name": "Jalen Brooks",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ARI",
         "bye": 8,
         "fpts": 0.0,
@@ -218,7 +128,7 @@
     {
         "id": "trey_mcbride",
         "name": "Trey McBride",
-        "pos": "QB",
+        "pos": "TE",
         "team": "ARI",
         "bye": 8,
         "fpts": 254.3,
@@ -227,7 +137,7 @@
     {
         "id": "elijah_higgins",
         "name": "Elijah Higgins",
-        "pos": "QB",
+        "pos": "TE",
         "team": "ARI",
         "bye": 8,
         "fpts": 45.5,
@@ -236,7 +146,7 @@
     {
         "id": "teagan_quitoriano",
         "name": "Teagan Quitoriano",
-        "pos": "QB",
+        "pos": "TE",
         "team": "ARI",
         "bye": 8,
         "fpts": 28.8,
@@ -245,7 +155,7 @@
     {
         "id": "tip_reiman",
         "name": "Tip Reiman",
-        "pos": "QB",
+        "pos": "TE",
         "team": "ARI",
         "bye": 8,
         "fpts": 17.7,
@@ -254,7 +164,7 @@
     {
         "id": "arizona_cardinals",
         "name": "Arizona Cardinals",
-        "pos": "QB",
+        "pos": "DST",
         "team": "ARI",
         "bye": 8,
         "fpts": 90.3,
@@ -263,7 +173,7 @@
     {
         "id": "chad_ryland",
         "name": "Chad Ryland",
-        "pos": "QB",
+        "pos": "K",
         "team": "ARI",
         "bye": 8,
         "fpts": 111.7,
@@ -290,7 +200,7 @@
     {
         "id": "bijan_robinson",
         "name": "Bijan Robinson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "ATL",
         "bye": 8,
         "fpts": 370.0,
@@ -299,7 +209,7 @@
     {
         "id": "brian_robinson_jr",
         "name": "Brian Robinson Jr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "ATL",
         "bye": 8,
         "fpts": 93.1,
@@ -308,7 +218,7 @@
     {
         "id": "drake_london",
         "name": "Drake London",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ATL",
         "bye": 8,
         "fpts": 289.2,
@@ -317,7 +227,7 @@
     {
         "id": "zachariah_branch",
         "name": "Zachariah Branch",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ATL",
         "bye": 8,
         "fpts": 98.6,
@@ -326,7 +236,7 @@
     {
         "id": "jahan_dotson",
         "name": "Jahan Dotson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ATL",
         "bye": 8,
         "fpts": 75.2,
@@ -335,7 +245,7 @@
     {
         "id": "olamide_zaccheaus",
         "name": "Olamide Zaccheaus",
-        "pos": "QB",
+        "pos": "WR",
         "team": "ATL",
         "bye": 8,
         "fpts": 69.5,
@@ -344,7 +254,7 @@
     {
         "id": "kyle_pitts_sr",
         "name": "Kyle Pitts Sr.",
-        "pos": "QB",
+        "pos": "TE",
         "team": "ATL",
         "bye": 8,
         "fpts": 195.7,
@@ -353,7 +263,7 @@
     {
         "id": "austin_hooper",
         "name": "Austin Hooper",
-        "pos": "QB",
+        "pos": "TE",
         "team": "ATL",
         "bye": 8,
         "fpts": 55.7,
@@ -362,7 +272,7 @@
     {
         "id": "charlie_woerner",
         "name": "Charlie Woerner",
-        "pos": "QB",
+        "pos": "TE",
         "team": "ATL",
         "bye": 8,
         "fpts": 30.7,
@@ -371,7 +281,7 @@
     {
         "id": "nick_folk",
         "name": "Nick Folk",
-        "pos": "QB",
+        "pos": "K",
         "team": "ATL",
         "bye": 8,
         "fpts": 128.6,
@@ -380,7 +290,7 @@
     {
         "id": "atlanta_falcons",
         "name": "Atlanta Falcons",
-        "pos": "QB",
+        "pos": "DST",
         "team": "ATL",
         "bye": 8,
         "fpts": 104.3,
@@ -407,7 +317,7 @@
     {
         "id": "derrick_henry",
         "name": "Derrick Henry",
-        "pos": "QB",
+        "pos": "RB",
         "team": "BAL",
         "bye": 8,
         "fpts": 273.1,
@@ -416,7 +326,7 @@
     {
         "id": "justice_hill",
         "name": "Justice Hill",
-        "pos": "QB",
+        "pos": "RB",
         "team": "BAL",
         "bye": 8,
         "fpts": 116.1,
@@ -425,7 +335,7 @@
     {
         "id": "adam_randall",
         "name": "Adam Randall",
-        "pos": "QB",
+        "pos": "RB",
         "team": "BAL",
         "bye": 8,
         "fpts": 66.0,
@@ -434,7 +344,7 @@
     {
         "id": "rasheen_ali",
         "name": "Rasheen Ali",
-        "pos": "QB",
+        "pos": "RB",
         "team": "BAL",
         "bye": 8,
         "fpts": 0.0,
@@ -443,7 +353,7 @@
     {
         "id": "zay_flowers",
         "name": "Zay Flowers",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BAL",
         "bye": 8,
         "fpts": 243.6,
@@ -452,7 +362,7 @@
     {
         "id": "rashod_bateman",
         "name": "Rashod Bateman",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BAL",
         "bye": 8,
         "fpts": 133.4,
@@ -461,7 +371,7 @@
     {
         "id": "ja'kobi_lane",
         "name": "Ja'Kobi Lane",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BAL",
         "bye": 8,
         "fpts": 96.5,
@@ -470,7 +380,7 @@
     {
         "id": "elijah_sarratt",
         "name": "Elijah Sarratt",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BAL",
         "bye": 8,
         "fpts": 59.2,
@@ -479,7 +389,7 @@
     {
         "id": "devontez_walker",
         "name": "Devontez Walker",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BAL",
         "bye": 8,
         "fpts": 35.1,
@@ -488,7 +398,7 @@
     {
         "id": "lajohntay_wester",
         "name": "LaJohntay Wester",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BAL",
         "bye": 8,
         "fpts": 0.0,
@@ -497,7 +407,7 @@
     {
         "id": "mark_andrews",
         "name": "Mark Andrews",
-        "pos": "QB",
+        "pos": "TE",
         "team": "BAL",
         "bye": 8,
         "fpts": 162.9,
@@ -506,7 +416,7 @@
     {
         "id": "durham_smythe",
         "name": "Durham Smythe",
-        "pos": "QB",
+        "pos": "TE",
         "team": "BAL",
         "bye": 8,
         "fpts": 23.6,
@@ -515,7 +425,7 @@
     {
         "id": "josh_cuevas",
         "name": "Josh Cuevas",
-        "pos": "QB",
+        "pos": "TE",
         "team": "BAL",
         "bye": 8,
         "fpts": 16.2,
@@ -524,7 +434,7 @@
     {
         "id": "tyler_loop",
         "name": "Tyler Loop",
-        "pos": "QB",
+        "pos": "K",
         "team": "BAL",
         "bye": 8,
         "fpts": 132.0,
@@ -533,7 +443,7 @@
     {
         "id": "baltimore_ravens",
         "name": "Baltimore Ravens",
-        "pos": "QB",
+        "pos": "DST",
         "team": "BAL",
         "bye": 8,
         "fpts": 101.9,
@@ -569,7 +479,7 @@
     {
         "id": "james_cook_iii",
         "name": "James Cook III",
-        "pos": "QB",
+        "pos": "RB",
         "team": "BUF",
         "bye": 8,
         "fpts": 270.2,
@@ -578,7 +488,7 @@
     {
         "id": "ty_johnson",
         "name": "Ty Johnson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "BUF",
         "bye": 8,
         "fpts": 96.3,
@@ -587,7 +497,7 @@
     {
         "id": "ray_davis",
         "name": "Ray Davis",
-        "pos": "QB",
+        "pos": "RB",
         "team": "BUF",
         "bye": 8,
         "fpts": 35.8,
@@ -596,7 +506,7 @@
     {
         "id": "frank_gore_jr",
         "name": "Frank Gore Jr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "BUF",
         "bye": 8,
         "fpts": 35.0,
@@ -605,7 +515,7 @@
     {
         "id": "dj_moore",
         "name": "DJ Moore",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BUF",
         "bye": 8,
         "fpts": 207.6,
@@ -614,7 +524,7 @@
     {
         "id": "khalil_shakir",
         "name": "Khalil Shakir",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BUF",
         "bye": 8,
         "fpts": 171.8,
@@ -623,7 +533,7 @@
     {
         "id": "joshua_palmer",
         "name": "Joshua Palmer",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BUF",
         "bye": 8,
         "fpts": 69.2,
@@ -632,7 +542,7 @@
     {
         "id": "keon_coleman",
         "name": "Keon Coleman",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BUF",
         "bye": 8,
         "fpts": 59.1,
@@ -641,7 +551,7 @@
     {
         "id": "skyler_bell",
         "name": "Skyler Bell",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BUF",
         "bye": 8,
         "fpts": 42.6,
@@ -650,7 +560,7 @@
     {
         "id": "tyrell_shavers",
         "name": "Tyrell Shavers",
-        "pos": "QB",
+        "pos": "WR",
         "team": "BUF",
         "bye": 8,
         "fpts": 11.0,
@@ -659,7 +569,7 @@
     {
         "id": "dalton_kincaid",
         "name": "Dalton Kincaid",
-        "pos": "QB",
+        "pos": "TE",
         "team": "BUF",
         "bye": 8,
         "fpts": 159.4,
@@ -668,7 +578,7 @@
     {
         "id": "dawson_knox",
         "name": "Dawson Knox",
-        "pos": "QB",
+        "pos": "TE",
         "team": "BUF",
         "bye": 8,
         "fpts": 78.9,
@@ -677,7 +587,7 @@
     {
         "id": "jackson_hawes",
         "name": "Jackson Hawes",
-        "pos": "QB",
+        "pos": "TE",
         "team": "BUF",
         "bye": 8,
         "fpts": 30.6,
@@ -686,7 +596,7 @@
     {
         "id": "tyler_bass",
         "name": "Tyler Bass",
-        "pos": "QB",
+        "pos": "K",
         "team": "BUF",
         "bye": 8,
         "fpts": 123.5,
@@ -695,7 +605,7 @@
     {
         "id": "buffalo_bills",
         "name": "Buffalo Bills",
-        "pos": "QB",
+        "pos": "DST",
         "team": "BUF",
         "bye": 8,
         "fpts": 107.6,
@@ -722,7 +632,7 @@
     {
         "id": "chuba_hubbard",
         "name": "Chuba Hubbard",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CAR",
         "bye": 8,
         "fpts": 186.4,
@@ -731,7 +641,7 @@
     {
         "id": "jonathon_brooks",
         "name": "Jonathon Brooks",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CAR",
         "bye": 8,
         "fpts": 144.6,
@@ -740,7 +650,7 @@
     {
         "id": "aj_dillon",
         "name": "AJ Dillon",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CAR",
         "bye": 8,
         "fpts": 94.5,
@@ -749,7 +659,7 @@
     {
         "id": "trevor_etienne",
         "name": "Trevor Etienne",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CAR",
         "bye": 8,
         "fpts": 14.9,
@@ -758,7 +668,7 @@
     {
         "id": "tetairoa_mcmillan",
         "name": "Tetairoa McMillan",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CAR",
         "bye": 8,
         "fpts": 227.7,
@@ -767,7 +677,7 @@
     {
         "id": "john_metchie_iii",
         "name": "John Metchie III",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CAR",
         "bye": 8,
         "fpts": 162.7,
@@ -776,7 +686,7 @@
     {
         "id": "jalen_coker",
         "name": "Jalen Coker",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CAR",
         "bye": 8,
         "fpts": 153.3,
@@ -785,7 +695,7 @@
     {
         "id": "xavier_legette",
         "name": "Xavier Legette",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CAR",
         "bye": 8,
         "fpts": 111.6,
@@ -794,7 +704,7 @@
     {
         "id": "jimmy_horn_jr",
         "name": "Jimmy Horn Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CAR",
         "bye": 8,
         "fpts": 21.4,
@@ -803,7 +713,7 @@
     {
         "id": "brycen_tremayne",
         "name": "Brycen Tremayne",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CAR",
         "bye": 8,
         "fpts": 7.9,
@@ -812,7 +722,7 @@
     {
         "id": "david_moore",
         "name": "David Moore",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CAR",
         "bye": 8,
         "fpts": 0.0,
@@ -821,7 +731,7 @@
     {
         "id": "ja'tavion_sanders",
         "name": "Ja'Tavion Sanders",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CAR",
         "bye": 8,
         "fpts": 67.7,
@@ -830,7 +740,7 @@
     {
         "id": "tommy_tremble",
         "name": "Tommy Tremble",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CAR",
         "bye": 8,
         "fpts": 63.6,
@@ -839,7 +749,7 @@
     {
         "id": "mitchell_evans",
         "name": "Mitchell Evans",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CAR",
         "bye": 8,
         "fpts": 37.6,
@@ -848,7 +758,7 @@
     {
         "id": "ryan_fitzgerald",
         "name": "Ryan Fitzgerald",
-        "pos": "QB",
+        "pos": "K",
         "team": "CAR",
         "bye": 8,
         "fpts": 107.0,
@@ -857,7 +767,7 @@
     {
         "id": "carolina_panthers",
         "name": "Carolina Panthers",
-        "pos": "QB",
+        "pos": "DST",
         "team": "CAR",
         "bye": 8,
         "fpts": 86.3,
@@ -884,7 +794,7 @@
     {
         "id": "d'andre_swift",
         "name": "D'Andre Swift",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CHI",
         "bye": 8,
         "fpts": 222.7,
@@ -893,7 +803,7 @@
     {
         "id": "kyle_monangai",
         "name": "Kyle Monangai",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CHI",
         "bye": 8,
         "fpts": 155.9,
@@ -902,7 +812,7 @@
     {
         "id": "roschon_johnson",
         "name": "Roschon Johnson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CHI",
         "bye": 8,
         "fpts": 34.2,
@@ -911,7 +821,7 @@
     {
         "id": "salvon_ahmed",
         "name": "Salvon Ahmed",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CHI",
         "bye": 8,
         "fpts": 23.4,
@@ -920,7 +830,7 @@
     {
         "id": "rome_odunze",
         "name": "Rome Odunze",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CHI",
         "bye": 8,
         "fpts": 209.9,
@@ -929,7 +839,7 @@
     {
         "id": "luther_burden_iii",
         "name": "Luther Burden III",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CHI",
         "bye": 8,
         "fpts": 208.1,
@@ -938,7 +848,7 @@
     {
         "id": "jahdae_walker",
         "name": "Jahdae Walker",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CHI",
         "bye": 8,
         "fpts": 56.0,
@@ -947,7 +857,7 @@
     {
         "id": "kalif_raymond",
         "name": "Kalif Raymond",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CHI",
         "bye": 8,
         "fpts": 46.5,
@@ -956,7 +866,7 @@
     {
         "id": "zavion_thomas",
         "name": "Zavion Thomas",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CHI",
         "bye": 8,
         "fpts": 34.9,
@@ -965,7 +875,7 @@
     {
         "id": "colston_loveland",
         "name": "Colston Loveland",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CHI",
         "bye": 8,
         "fpts": 209.3,
@@ -974,7 +884,7 @@
     {
         "id": "cole_kmet",
         "name": "Cole Kmet",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CHI",
         "bye": 8,
         "fpts": 66.3,
@@ -983,7 +893,7 @@
     {
         "id": "sam_roush",
         "name": "Sam Roush",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CHI",
         "bye": 8,
         "fpts": 17.7,
@@ -992,7 +902,7 @@
     {
         "id": "cairo_santos",
         "name": "Cairo Santos",
-        "pos": "QB",
+        "pos": "K",
         "team": "CHI",
         "bye": 8,
         "fpts": 132.9,
@@ -1001,7 +911,7 @@
     {
         "id": "chicago_bears",
         "name": "Chicago Bears",
-        "pos": "QB",
+        "pos": "DST",
         "team": "CHI",
         "bye": 8,
         "fpts": 102.4,
@@ -1037,7 +947,7 @@
     {
         "id": "chase_brown",
         "name": "Chase Brown",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CIN",
         "bye": 8,
         "fpts": 277.7,
@@ -1046,7 +956,7 @@
     {
         "id": "samaje_perine",
         "name": "Samaje Perine",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CIN",
         "bye": 8,
         "fpts": 96.2,
@@ -1055,7 +965,7 @@
     {
         "id": "tahj_brooks",
         "name": "Tahj Brooks",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CIN",
         "bye": 8,
         "fpts": 18.3,
@@ -1064,7 +974,7 @@
     {
         "id": "ja'marr_chase",
         "name": "Ja'Marr Chase",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CIN",
         "bye": 8,
         "fpts": 335.6,
@@ -1073,7 +983,7 @@
     {
         "id": "tee_higgins",
         "name": "Tee Higgins",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CIN",
         "bye": 8,
         "fpts": 221.4,
@@ -1082,7 +992,7 @@
     {
         "id": "andrei_iosivas",
         "name": "Andrei Iosivas",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CIN",
         "bye": 8,
         "fpts": 89.0,
@@ -1091,7 +1001,7 @@
     {
         "id": "mitch_tinsley",
         "name": "Mitch Tinsley",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CIN",
         "bye": 8,
         "fpts": 19.5,
@@ -1100,7 +1010,7 @@
     {
         "id": "colbie_young",
         "name": "Colbie Young",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CIN",
         "bye": 8,
         "fpts": 9.7,
@@ -1109,7 +1019,7 @@
     {
         "id": "charlie_jones",
         "name": "Charlie Jones",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CIN",
         "bye": 8,
         "fpts": 0.0,
@@ -1118,7 +1028,7 @@
     {
         "id": "ke'shawn_williams",
         "name": "Ke'Shawn Williams",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CIN",
         "bye": 8,
         "fpts": 0.0,
@@ -1127,7 +1037,7 @@
     {
         "id": "mike_gesicki",
         "name": "Mike Gesicki",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CIN",
         "bye": 8,
         "fpts": 113.1,
@@ -1136,7 +1046,7 @@
     {
         "id": "erick_all_jr",
         "name": "Erick All Jr.",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CIN",
         "bye": 8,
         "fpts": 58.5,
@@ -1145,7 +1055,7 @@
     {
         "id": "drew_sample",
         "name": "Drew Sample",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CIN",
         "bye": 8,
         "fpts": 33.8,
@@ -1154,7 +1064,7 @@
     {
         "id": "jack_endries",
         "name": "Jack Endries",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CIN",
         "bye": 8,
         "fpts": 31.3,
@@ -1163,7 +1073,7 @@
     {
         "id": "tanner_hudson",
         "name": "Tanner Hudson",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CIN",
         "bye": 8,
         "fpts": 29.2,
@@ -1172,7 +1082,7 @@
     {
         "id": "cam_grandy",
         "name": "Cam Grandy",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CIN",
         "bye": 8,
         "fpts": 29.0,
@@ -1181,7 +1091,7 @@
     {
         "id": "evan_mcpherson",
         "name": "Evan McPherson",
-        "pos": "QB",
+        "pos": "K",
         "team": "CIN",
         "bye": 8,
         "fpts": 128.7,
@@ -1190,7 +1100,7 @@
     {
         "id": "cincinnati_bengals",
         "name": "Cincinnati Bengals",
-        "pos": "QB",
+        "pos": "DST",
         "team": "CIN",
         "bye": 8,
         "fpts": 99.5,
@@ -1217,7 +1127,7 @@
     {
         "id": "quinshon_judkins",
         "name": "Quinshon Judkins",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CLE",
         "bye": 8,
         "fpts": 213.7,
@@ -1226,7 +1136,7 @@
     {
         "id": "dylan_sampson",
         "name": "Dylan Sampson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CLE",
         "bye": 8,
         "fpts": 107.8,
@@ -1235,7 +1145,7 @@
     {
         "id": "michael_burton",
         "name": "Michael Burton",
-        "pos": "QB",
+        "pos": "RB",
         "team": "CLE",
         "bye": 8,
         "fpts": 16.5,
@@ -1244,7 +1154,7 @@
     {
         "id": "kc_concepcion",
         "name": "KC Concepcion",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CLE",
         "bye": 8,
         "fpts": 145.3,
@@ -1253,7 +1163,7 @@
     {
         "id": "jerry_jeudy",
         "name": "Jerry Jeudy",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CLE",
         "bye": 8,
         "fpts": 144.5,
@@ -1262,7 +1172,7 @@
     {
         "id": "denzel_boston",
         "name": "Denzel Boston",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CLE",
         "bye": 8,
         "fpts": 126.2,
@@ -1271,7 +1181,7 @@
     {
         "id": "cedric_tillman",
         "name": "Cedric Tillman",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CLE",
         "bye": 8,
         "fpts": 54.5,
@@ -1280,7 +1190,7 @@
     {
         "id": "isaiah_bond",
         "name": "Isaiah Bond",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CLE",
         "bye": 8,
         "fpts": 30.4,
@@ -1289,7 +1199,7 @@
     {
         "id": "malachi_corley",
         "name": "Malachi Corley",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CLE",
         "bye": 8,
         "fpts": 9.1,
@@ -1298,7 +1208,7 @@
     {
         "id": "gage_larvadain",
         "name": "Gage Larvadain",
-        "pos": "QB",
+        "pos": "WR",
         "team": "CLE",
         "bye": 8,
         "fpts": 0.0,
@@ -1307,7 +1217,7 @@
     {
         "id": "harold_fannin_jr",
         "name": "Harold Fannin Jr.",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CLE",
         "bye": 8,
         "fpts": 190.5,
@@ -1316,7 +1226,7 @@
     {
         "id": "joe_royer",
         "name": "Joe Royer",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CLE",
         "bye": 8,
         "fpts": 20.8,
@@ -1325,7 +1235,7 @@
     {
         "id": "jack_stoll",
         "name": "Jack Stoll",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CLE",
         "bye": 8,
         "fpts": 7.5,
@@ -1334,7 +1244,7 @@
     {
         "id": "blake_whiteheart",
         "name": "Blake Whiteheart",
-        "pos": "QB",
+        "pos": "TE",
         "team": "CLE",
         "bye": 8,
         "fpts": 0.0,
@@ -1343,7 +1253,7 @@
     {
         "id": "andre_szmyt",
         "name": "Andre Szmyt",
-        "pos": "QB",
+        "pos": "K",
         "team": "CLE",
         "bye": 8,
         "fpts": 102.0,
@@ -1352,7 +1262,7 @@
     {
         "id": "cleveland_browns",
         "name": "Cleveland Browns",
-        "pos": "QB",
+        "pos": "DST",
         "team": "CLE",
         "bye": 8,
         "fpts": 101.1,
@@ -1388,7 +1298,7 @@
     {
         "id": "javonte_williams",
         "name": "Javonte Williams",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DAL",
         "bye": 8,
         "fpts": 234.0,
@@ -1397,7 +1307,7 @@
     {
         "id": "malik_davis",
         "name": "Malik Davis",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DAL",
         "bye": 8,
         "fpts": 65.7,
@@ -1406,7 +1316,7 @@
     {
         "id": "jaydon_blue",
         "name": "Jaydon Blue",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DAL",
         "bye": 8,
         "fpts": 46.5,
@@ -1415,7 +1325,7 @@
     {
         "id": "phil_mafah",
         "name": "Phil Mafah",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DAL",
         "bye": 8,
         "fpts": 27.6,
@@ -1424,7 +1334,7 @@
     {
         "id": "hunter_luepke",
         "name": "Hunter Luepke",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DAL",
         "bye": 8,
         "fpts": 25.0,
@@ -1433,7 +1343,7 @@
     {
         "id": "israel_abanikanda",
         "name": "Israel Abanikanda",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DAL",
         "bye": 8,
         "fpts": 23.1,
@@ -1442,7 +1352,7 @@
     {
         "id": "ceedee_lamb",
         "name": "CeeDee Lamb",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DAL",
         "bye": 8,
         "fpts": 273.3,
@@ -1451,7 +1361,7 @@
     {
         "id": "george_pickens",
         "name": "George Pickens",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DAL",
         "bye": 8,
         "fpts": 252.3,
@@ -1460,7 +1370,7 @@
     {
         "id": "ryan_flournoy",
         "name": "Ryan Flournoy",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DAL",
         "bye": 8,
         "fpts": 89.4,
@@ -1469,7 +1379,7 @@
     {
         "id": "kavontae_turpin",
         "name": "KaVontae Turpin",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DAL",
         "bye": 8,
         "fpts": 63.6,
@@ -1478,7 +1388,7 @@
     {
         "id": "jonathan_mingo",
         "name": "Jonathan Mingo",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DAL",
         "bye": 8,
         "fpts": 8.4,
@@ -1487,7 +1397,7 @@
     {
         "id": "jake_ferguson",
         "name": "Jake Ferguson",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DAL",
         "bye": 8,
         "fpts": 167.6,
@@ -1496,7 +1406,7 @@
     {
         "id": "luke_schoonmaker",
         "name": "Luke Schoonmaker",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DAL",
         "bye": 8,
         "fpts": 31.0,
@@ -1505,7 +1415,7 @@
     {
         "id": "brevyn_spann-ford",
         "name": "Brevyn Spann-Ford",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DAL",
         "bye": 8,
         "fpts": 9.5,
@@ -1514,7 +1424,7 @@
     {
         "id": "brandon_aubrey",
         "name": "Brandon Aubrey",
-        "pos": "QB",
+        "pos": "K",
         "team": "DAL",
         "bye": 8,
         "fpts": 153.0,
@@ -1523,7 +1433,7 @@
     {
         "id": "dallas_cowboys",
         "name": "Dallas Cowboys",
-        "pos": "QB",
+        "pos": "DST",
         "team": "DAL",
         "bye": 8,
         "fpts": 90.6,
@@ -1550,7 +1460,7 @@
     {
         "id": "rj_harvey",
         "name": "RJ Harvey",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DEN",
         "bye": 8,
         "fpts": 177.9,
@@ -1559,7 +1469,7 @@
     {
         "id": "jk_dobbins",
         "name": "J.K. Dobbins",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DEN",
         "bye": 8,
         "fpts": 170.6,
@@ -1568,7 +1478,7 @@
     {
         "id": "jonah_coleman",
         "name": "Jonah Coleman",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DEN",
         "bye": 8,
         "fpts": 32.7,
@@ -1577,7 +1487,7 @@
     {
         "id": "tyler_badie",
         "name": "Tyler Badie",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DEN",
         "bye": 8,
         "fpts": 19.1,
@@ -1586,7 +1496,7 @@
     {
         "id": "adam_prentice",
         "name": "Adam Prentice",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DEN",
         "bye": 8,
         "fpts": 10.5,
@@ -1595,7 +1505,7 @@
     {
         "id": "jaylen_waddle",
         "name": "Jaylen Waddle",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DEN",
         "bye": 8,
         "fpts": 209.7,
@@ -1604,7 +1514,7 @@
     {
         "id": "courtland_sutton",
         "name": "Courtland Sutton",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DEN",
         "bye": 8,
         "fpts": 204.4,
@@ -1613,7 +1523,7 @@
     {
         "id": "troy_franklin",
         "name": "Troy Franklin",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DEN",
         "bye": 8,
         "fpts": 96.6,
@@ -1622,7 +1532,7 @@
     {
         "id": "pat_bryant",
         "name": "Pat Bryant",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DEN",
         "bye": 8,
         "fpts": 72.5,
@@ -1631,7 +1541,7 @@
     {
         "id": "marvin_mims_jr",
         "name": "Marvin Mims Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DEN",
         "bye": 8,
         "fpts": 66.7,
@@ -1640,7 +1550,7 @@
     {
         "id": "michael_bandy",
         "name": "Michael Bandy",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DEN",
         "bye": 8,
         "fpts": 0.0,
@@ -1649,7 +1559,7 @@
     {
         "id": "evan_engram",
         "name": "Evan Engram",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DEN",
         "bye": 8,
         "fpts": 116.7,
@@ -1658,7 +1568,7 @@
     {
         "id": "adam_trautman",
         "name": "Adam Trautman",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DEN",
         "bye": 8,
         "fpts": 47.6,
@@ -1667,7 +1577,7 @@
     {
         "id": "nate_adkins",
         "name": "Nate Adkins",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DEN",
         "bye": 8,
         "fpts": 31.7,
@@ -1676,7 +1586,7 @@
     {
         "id": "lucas_krull",
         "name": "Lucas Krull",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DEN",
         "bye": 8,
         "fpts": 13.5,
@@ -1685,7 +1595,7 @@
     {
         "id": "justin_joly",
         "name": "Justin Joly",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DEN",
         "bye": 8,
         "fpts": 9.5,
@@ -1694,7 +1604,7 @@
     {
         "id": "wil_lutz",
         "name": "Wil Lutz",
-        "pos": "QB",
+        "pos": "K",
         "team": "DEN",
         "bye": 8,
         "fpts": 128.4,
@@ -1703,7 +1613,7 @@
     {
         "id": "denver_broncos",
         "name": "Denver Broncos",
-        "pos": "QB",
+        "pos": "DST",
         "team": "DEN",
         "bye": 8,
         "fpts": 118.2,
@@ -1730,7 +1640,7 @@
     {
         "id": "jahmyr_gibbs",
         "name": "Jahmyr Gibbs",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DET",
         "bye": 8,
         "fpts": 372.6,
@@ -1739,7 +1649,7 @@
     {
         "id": "isiah_pacheco",
         "name": "Isiah Pacheco",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DET",
         "bye": 8,
         "fpts": 115.9,
@@ -1748,7 +1658,7 @@
     {
         "id": "jacob_saylors",
         "name": "Jacob Saylors",
-        "pos": "QB",
+        "pos": "RB",
         "team": "DET",
         "bye": 8,
         "fpts": 0.0,
@@ -1757,7 +1667,7 @@
     {
         "id": "amon-ra_st_brown",
         "name": "Amon-Ra St. Brown",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DET",
         "bye": 8,
         "fpts": 319.5,
@@ -1766,7 +1676,7 @@
     {
         "id": "jameson_williams",
         "name": "Jameson Williams",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DET",
         "bye": 8,
         "fpts": 217.3,
@@ -1775,7 +1685,7 @@
     {
         "id": "isaac_teslaa",
         "name": "Isaac TeSlaa",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DET",
         "bye": 8,
         "fpts": 85.0,
@@ -1784,7 +1694,7 @@
     {
         "id": "greg_dortch",
         "name": "Greg Dortch",
-        "pos": "QB",
+        "pos": "WR",
         "team": "DET",
         "bye": 8,
         "fpts": 14.1,
@@ -1793,7 +1703,7 @@
     {
         "id": "sam_laporta",
         "name": "Sam LaPorta",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DET",
         "bye": 8,
         "fpts": 183.1,
@@ -1802,7 +1712,7 @@
     {
         "id": "brock_wright",
         "name": "Brock Wright",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DET",
         "bye": 8,
         "fpts": 50.7,
@@ -1811,7 +1721,7 @@
     {
         "id": "tyler_conklin",
         "name": "Tyler Conklin",
-        "pos": "QB",
+        "pos": "TE",
         "team": "DET",
         "bye": 8,
         "fpts": 8.9,
@@ -1820,7 +1730,7 @@
     {
         "id": "jake_bates",
         "name": "Jake Bates",
-        "pos": "QB",
+        "pos": "K",
         "team": "DET",
         "bye": 8,
         "fpts": 135.9,
@@ -1829,7 +1739,7 @@
     {
         "id": "detroit_lions",
         "name": "Detroit Lions",
-        "pos": "QB",
+        "pos": "DST",
         "team": "DET",
         "bye": 8,
         "fpts": 107.3,
@@ -1856,7 +1766,7 @@
     {
         "id": "josh_jacobs",
         "name": "Josh Jacobs",
-        "pos": "QB",
+        "pos": "RB",
         "team": "GB",
         "bye": 8,
         "fpts": 256.9,
@@ -1865,7 +1775,7 @@
     {
         "id": "chris_brooks",
         "name": "Chris Brooks",
-        "pos": "QB",
+        "pos": "RB",
         "team": "GB",
         "bye": 8,
         "fpts": 66.9,
@@ -1874,7 +1784,7 @@
     {
         "id": "marshawn_lloyd",
         "name": "MarShawn Lloyd",
-        "pos": "QB",
+        "pos": "RB",
         "team": "GB",
         "bye": 8,
         "fpts": 43.2,
@@ -1883,7 +1793,7 @@
     {
         "id": "christian_watson",
         "name": "Christian Watson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "GB",
         "bye": 8,
         "fpts": 190.8,
@@ -1892,7 +1802,7 @@
     {
         "id": "jayden_reed",
         "name": "Jayden Reed",
-        "pos": "QB",
+        "pos": "WR",
         "team": "GB",
         "bye": 8,
         "fpts": 176.0,
@@ -1901,7 +1811,7 @@
     {
         "id": "matthew_golden",
         "name": "Matthew Golden",
-        "pos": "QB",
+        "pos": "WR",
         "team": "GB",
         "bye": 8,
         "fpts": 155.8,
@@ -1910,7 +1820,7 @@
     {
         "id": "savion_williams",
         "name": "Savion Williams",
-        "pos": "QB",
+        "pos": "WR",
         "team": "GB",
         "bye": 8,
         "fpts": 69.0,
@@ -1919,7 +1829,7 @@
     {
         "id": "bo_melton",
         "name": "Bo Melton",
-        "pos": "QB",
+        "pos": "WR",
         "team": "GB",
         "bye": 8,
         "fpts": 11.5,
@@ -1928,7 +1838,7 @@
     {
         "id": "skyy_moore",
         "name": "Skyy Moore",
-        "pos": "QB",
+        "pos": "WR",
         "team": "GB",
         "bye": 8,
         "fpts": 0.0,
@@ -1937,7 +1847,7 @@
     {
         "id": "tucker_kraft",
         "name": "Tucker Kraft",
-        "pos": "QB",
+        "pos": "TE",
         "team": "GB",
         "bye": 8,
         "fpts": 174.9,
@@ -1946,7 +1856,7 @@
     {
         "id": "luke_musgrave",
         "name": "Luke Musgrave",
-        "pos": "QB",
+        "pos": "TE",
         "team": "GB",
         "bye": 8,
         "fpts": 49.9,
@@ -1955,7 +1865,7 @@
     {
         "id": "josh_whyle",
         "name": "Josh Whyle",
-        "pos": "QB",
+        "pos": "TE",
         "team": "GB",
         "bye": 8,
         "fpts": 23.6,
@@ -1964,7 +1874,7 @@
     {
         "id": "trey_smack",
         "name": "Trey Smack",
-        "pos": "QB",
+        "pos": "K",
         "team": "GB",
         "bye": 8,
         "fpts": 125.4,
@@ -1973,7 +1883,7 @@
     {
         "id": "green_bay_packers",
         "name": "Green Bay Packers",
-        "pos": "QB",
+        "pos": "DST",
         "team": "GB",
         "bye": 8,
         "fpts": 95.3,
@@ -2000,7 +1910,7 @@
     {
         "id": "david_montgomery",
         "name": "David Montgomery",
-        "pos": "QB",
+        "pos": "RB",
         "team": "HOU",
         "bye": 8,
         "fpts": 191.9,
@@ -2009,7 +1919,7 @@
     {
         "id": "woody_marks",
         "name": "Woody Marks",
-        "pos": "QB",
+        "pos": "RB",
         "team": "HOU",
         "bye": 8,
         "fpts": 124.3,
@@ -2018,7 +1928,7 @@
     {
         "id": "jawhar_jordan",
         "name": "Jawhar Jordan",
-        "pos": "QB",
+        "pos": "RB",
         "team": "HOU",
         "bye": 8,
         "fpts": 50.3,
@@ -2027,7 +1937,7 @@
     {
         "id": "british_brooks",
         "name": "British Brooks",
-        "pos": "QB",
+        "pos": "RB",
         "team": "HOU",
         "bye": 8,
         "fpts": 2.4,
@@ -2036,7 +1946,7 @@
     {
         "id": "nico_collins",
         "name": "Nico Collins",
-        "pos": "QB",
+        "pos": "WR",
         "team": "HOU",
         "bye": 8,
         "fpts": 248.5,
@@ -2045,7 +1955,7 @@
     {
         "id": "tank_dell",
         "name": "Tank Dell",
-        "pos": "QB",
+        "pos": "WR",
         "team": "HOU",
         "bye": 8,
         "fpts": 141.4,
@@ -2054,7 +1964,7 @@
     {
         "id": "jayden_higgins",
         "name": "Jayden Higgins",
-        "pos": "QB",
+        "pos": "WR",
         "team": "HOU",
         "bye": 8,
         "fpts": 137.9,
@@ -2063,7 +1973,7 @@
     {
         "id": "jaylin_noel",
         "name": "Jaylin Noel",
-        "pos": "QB",
+        "pos": "WR",
         "team": "HOU",
         "bye": 8,
         "fpts": 74.2,
@@ -2072,7 +1982,7 @@
     {
         "id": "xavier_hutchinson",
         "name": "Xavier Hutchinson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "HOU",
         "bye": 8,
         "fpts": 64.1,
@@ -2081,7 +1991,7 @@
     {
         "id": "justin_watson",
         "name": "Justin Watson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "HOU",
         "bye": 8,
         "fpts": 8.5,
@@ -2090,7 +2000,7 @@
     {
         "id": "dalton_schultz",
         "name": "Dalton Schultz",
-        "pos": "QB",
+        "pos": "TE",
         "team": "HOU",
         "bye": 8,
         "fpts": 148.6,
@@ -2099,7 +2009,7 @@
     {
         "id": "marlin_klein",
         "name": "Marlin Klein",
-        "pos": "QB",
+        "pos": "TE",
         "team": "HOU",
         "bye": 8,
         "fpts": 44.5,
@@ -2108,7 +2018,7 @@
     {
         "id": "cade_stover",
         "name": "Cade Stover",
-        "pos": "QB",
+        "pos": "TE",
         "team": "HOU",
         "bye": 8,
         "fpts": 33.1,
@@ -2117,7 +2027,7 @@
     {
         "id": "foster_moreau",
         "name": "Foster Moreau",
-        "pos": "QB",
+        "pos": "TE",
         "team": "HOU",
         "bye": 8,
         "fpts": 27.6,
@@ -2126,7 +2036,7 @@
     {
         "id": "ka'imi_fairbairn",
         "name": "Ka'imi Fairbairn",
-        "pos": "QB",
+        "pos": "K",
         "team": "HOU",
         "bye": 8,
         "fpts": 144.5,
@@ -2135,7 +2045,7 @@
     {
         "id": "houston_texans",
         "name": "Houston Texans",
-        "pos": "QB",
+        "pos": "DST",
         "team": "HOU",
         "bye": 8,
         "fpts": 120.5,
@@ -2171,7 +2081,7 @@
     {
         "id": "jonathan_taylor",
         "name": "Jonathan Taylor",
-        "pos": "QB",
+        "pos": "RB",
         "team": "IND",
         "bye": 8,
         "fpts": 312.5,
@@ -2180,7 +2090,7 @@
     {
         "id": "dj_giddens",
         "name": "DJ Giddens",
-        "pos": "QB",
+        "pos": "RB",
         "team": "IND",
         "bye": 8,
         "fpts": 35.9,
@@ -2189,7 +2099,7 @@
     {
         "id": "seth_mcgowan",
         "name": "Seth McGowan",
-        "pos": "QB",
+        "pos": "RB",
         "team": "IND",
         "bye": 8,
         "fpts": 23.2,
@@ -2198,7 +2108,7 @@
     {
         "id": "alec_pierce",
         "name": "Alec Pierce",
-        "pos": "QB",
+        "pos": "WR",
         "team": "IND",
         "bye": 8,
         "fpts": 207.4,
@@ -2207,7 +2117,7 @@
     {
         "id": "josh_downs",
         "name": "Josh Downs",
-        "pos": "QB",
+        "pos": "WR",
         "team": "IND",
         "bye": 8,
         "fpts": 174.3,
@@ -2216,7 +2126,7 @@
     {
         "id": "ashton_dulin",
         "name": "Ashton Dulin",
-        "pos": "QB",
+        "pos": "WR",
         "team": "IND",
         "bye": 8,
         "fpts": 78.5,
@@ -2225,7 +2135,7 @@
     {
         "id": "nick_westbrook-ikhine",
         "name": "Nick Westbrook-Ikhine",
-        "pos": "QB",
+        "pos": "WR",
         "team": "IND",
         "bye": 8,
         "fpts": 60.1,
@@ -2234,7 +2144,7 @@
     {
         "id": "anthony_gould",
         "name": "Anthony Gould",
-        "pos": "QB",
+        "pos": "WR",
         "team": "IND",
         "bye": 8,
         "fpts": 16.2,
@@ -2243,7 +2153,7 @@
     {
         "id": "laquon_treadwell",
         "name": "Laquon Treadwell",
-        "pos": "QB",
+        "pos": "WR",
         "team": "IND",
         "bye": 8,
         "fpts": 8.3,
@@ -2252,7 +2162,7 @@
     {
         "id": "tyler_warren",
         "name": "Tyler Warren",
-        "pos": "QB",
+        "pos": "TE",
         "team": "IND",
         "bye": 8,
         "fpts": 201.8,
@@ -2261,7 +2171,7 @@
     {
         "id": "will_mallory",
         "name": "Will Mallory",
-        "pos": "QB",
+        "pos": "TE",
         "team": "IND",
         "bye": 8,
         "fpts": 29.5,
@@ -2270,7 +2180,7 @@
     {
         "id": "mo_alie-cox",
         "name": "Mo Alie-Cox",
-        "pos": "QB",
+        "pos": "TE",
         "team": "IND",
         "bye": 8,
         "fpts": 27.1,
@@ -2279,7 +2189,7 @@
     {
         "id": "drew_ogletree",
         "name": "Drew Ogletree",
-        "pos": "QB",
+        "pos": "TE",
         "team": "IND",
         "bye": 8,
         "fpts": 8.7,
@@ -2288,7 +2198,7 @@
     {
         "id": "spencer_shrader",
         "name": "Spencer Shrader",
-        "pos": "QB",
+        "pos": "K",
         "team": "IND",
         "bye": 8,
         "fpts": 76.5,
@@ -2297,7 +2207,7 @@
     {
         "id": "blake_grupe",
         "name": "Blake Grupe",
-        "pos": "QB",
+        "pos": "K",
         "team": "IND",
         "bye": 8,
         "fpts": 73.9,
@@ -2306,7 +2216,7 @@
     {
         "id": "indianapolis_colts",
         "name": "Indianapolis Colts",
-        "pos": "QB",
+        "pos": "DST",
         "team": "IND",
         "bye": 8,
         "fpts": 94.3,
@@ -2333,7 +2243,7 @@
     {
         "id": "bhayshul_tuten",
         "name": "Bhayshul Tuten",
-        "pos": "QB",
+        "pos": "RB",
         "team": "JAX",
         "bye": 8,
         "fpts": 208.5,
@@ -2342,7 +2252,7 @@
     {
         "id": "chris_rodriguez_jr",
         "name": "Chris Rodriguez Jr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "JAX",
         "bye": 8,
         "fpts": 94.8,
@@ -2351,7 +2261,7 @@
     {
         "id": "lequint_allen_jr",
         "name": "LeQuint Allen Jr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "JAX",
         "bye": 8,
         "fpts": 45.8,
@@ -2360,7 +2270,7 @@
     {
         "id": "deejay_dallas",
         "name": "DeeJay Dallas",
-        "pos": "QB",
+        "pos": "RB",
         "team": "JAX",
         "bye": 8,
         "fpts": 0.0,
@@ -2369,7 +2279,7 @@
     {
         "id": "jakobi_meyers",
         "name": "Jakobi Meyers",
-        "pos": "QB",
+        "pos": "WR",
         "team": "JAX",
         "bye": 8,
         "fpts": 185.7,
@@ -2378,7 +2288,7 @@
     {
         "id": "parker_washington",
         "name": "Parker Washington",
-        "pos": "QB",
+        "pos": "WR",
         "team": "JAX",
         "bye": 8,
         "fpts": 178.7,
@@ -2387,7 +2297,7 @@
     {
         "id": "brian_thomas_jr",
         "name": "Brian Thomas Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "JAX",
         "bye": 8,
         "fpts": 175.4,
@@ -2396,7 +2306,7 @@
     {
         "id": "travis_hunter",
         "name": "Travis Hunter",
-        "pos": "QB",
+        "pos": "WR",
         "team": "JAX",
         "bye": 8,
         "fpts": 111.7,
@@ -2405,7 +2315,7 @@
     {
         "id": "josh_cameron",
         "name": "Josh Cameron",
-        "pos": "QB",
+        "pos": "WR",
         "team": "JAX",
         "bye": 8,
         "fpts": 0.0,
@@ -2414,7 +2324,7 @@
     {
         "id": "brenton_strange",
         "name": "Brenton Strange",
-        "pos": "QB",
+        "pos": "TE",
         "team": "JAX",
         "bye": 8,
         "fpts": 151.4,
@@ -2423,7 +2333,7 @@
     {
         "id": "nate_boerkircher",
         "name": "Nate Boerkircher",
-        "pos": "QB",
+        "pos": "TE",
         "team": "JAX",
         "bye": 8,
         "fpts": 37.1,
@@ -2432,7 +2342,7 @@
     {
         "id": "hunter_long",
         "name": "Hunter Long",
-        "pos": "QB",
+        "pos": "TE",
         "team": "JAX",
         "bye": 8,
         "fpts": 15.5,
@@ -2441,7 +2351,7 @@
     {
         "id": "tanner_koziol",
         "name": "Tanner Koziol",
-        "pos": "QB",
+        "pos": "TE",
         "team": "JAX",
         "bye": 8,
         "fpts": 9.2,
@@ -2450,7 +2360,7 @@
     {
         "id": "quintin_morris",
         "name": "Quintin Morris",
-        "pos": "QB",
+        "pos": "TE",
         "team": "JAX",
         "bye": 8,
         "fpts": 0.0,
@@ -2459,7 +2369,7 @@
     {
         "id": "cam_little",
         "name": "Cam Little",
-        "pos": "QB",
+        "pos": "K",
         "team": "JAX",
         "bye": 8,
         "fpts": 129.9,
@@ -2468,7 +2378,7 @@
     {
         "id": "jacksonville_jaguars",
         "name": "Jacksonville Jaguars",
-        "pos": "QB",
+        "pos": "DST",
         "team": "JAX",
         "bye": 8,
         "fpts": 99.0,
@@ -2513,7 +2423,7 @@
     {
         "id": "kenneth_walker_iii",
         "name": "Kenneth Walker III",
-        "pos": "QB",
+        "pos": "RB",
         "team": "KC",
         "bye": 8,
         "fpts": 251.2,
@@ -2522,7 +2432,7 @@
     {
         "id": "emari_demercado",
         "name": "Emari Demercado",
-        "pos": "QB",
+        "pos": "RB",
         "team": "KC",
         "bye": 8,
         "fpts": 82.5,
@@ -2531,7 +2441,7 @@
     {
         "id": "emmett_johnson",
         "name": "Emmett Johnson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "KC",
         "bye": 8,
         "fpts": 34.5,
@@ -2540,7 +2450,7 @@
     {
         "id": "brashard_smith",
         "name": "Brashard Smith",
-        "pos": "QB",
+        "pos": "RB",
         "team": "KC",
         "bye": 8,
         "fpts": 32.5,
@@ -2549,7 +2459,7 @@
     {
         "id": "rashee_rice",
         "name": "Rashee Rice",
-        "pos": "QB",
+        "pos": "WR",
         "team": "KC",
         "bye": 8,
         "fpts": 273.3,
@@ -2558,7 +2468,7 @@
     {
         "id": "xavier_worthy",
         "name": "Xavier Worthy",
-        "pos": "QB",
+        "pos": "WR",
         "team": "KC",
         "bye": 8,
         "fpts": 167.3,
@@ -2567,7 +2477,7 @@
     {
         "id": "tyquan_thornton",
         "name": "Tyquan Thornton",
-        "pos": "QB",
+        "pos": "WR",
         "team": "KC",
         "bye": 8,
         "fpts": 92.6,
@@ -2576,7 +2486,7 @@
     {
         "id": "cyrus_allen",
         "name": "Cyrus Allen",
-        "pos": "QB",
+        "pos": "WR",
         "team": "KC",
         "bye": 8,
         "fpts": 43.7,
@@ -2585,7 +2495,7 @@
     {
         "id": "jalen_royals",
         "name": "Jalen Royals",
-        "pos": "QB",
+        "pos": "WR",
         "team": "KC",
         "bye": 8,
         "fpts": 18.3,
@@ -2594,7 +2504,7 @@
     {
         "id": "nikko_remigio",
         "name": "Nikko Remigio",
-        "pos": "QB",
+        "pos": "WR",
         "team": "KC",
         "bye": 8,
         "fpts": 0.0,
@@ -2603,7 +2513,7 @@
     {
         "id": "travis_kelce",
         "name": "Travis Kelce",
-        "pos": "QB",
+        "pos": "TE",
         "team": "KC",
         "bye": 8,
         "fpts": 181.8,
@@ -2612,7 +2522,7 @@
     {
         "id": "noah_gray",
         "name": "Noah Gray",
-        "pos": "QB",
+        "pos": "TE",
         "team": "KC",
         "bye": 8,
         "fpts": 50.8,
@@ -2621,7 +2531,7 @@
     {
         "id": "jared_wiley",
         "name": "Jared Wiley",
-        "pos": "QB",
+        "pos": "TE",
         "team": "KC",
         "bye": 8,
         "fpts": 26.5,
@@ -2630,7 +2540,7 @@
     {
         "id": "harrison_butker",
         "name": "Harrison Butker",
-        "pos": "QB",
+        "pos": "K",
         "team": "KC",
         "bye": 8,
         "fpts": 131.8,
@@ -2639,7 +2549,7 @@
     {
         "id": "kansas_city_chiefs",
         "name": "Kansas City Chiefs",
-        "pos": "QB",
+        "pos": "DST",
         "team": "KC",
         "bye": 8,
         "fpts": 92.6,
@@ -2648,7 +2558,7 @@
     {
         "id": "los_angeles_rams",
         "name": "Los Angeles Rams",
-        "pos": "QB",
+        "pos": "DST",
         "team": "LA",
         "bye": 8,
         "fpts": 107.1,
@@ -2675,7 +2585,7 @@
     {
         "id": "omarion_hampton",
         "name": "Omarion Hampton",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LAC",
         "bye": 8,
         "fpts": 263.6,
@@ -2684,7 +2594,7 @@
     {
         "id": "keaton_mitchell",
         "name": "Keaton Mitchell",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LAC",
         "bye": 8,
         "fpts": 70.8,
@@ -2693,7 +2603,7 @@
     {
         "id": "kimani_vidal",
         "name": "Kimani Vidal",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LAC",
         "bye": 8,
         "fpts": 61.1,
@@ -2702,7 +2612,7 @@
     {
         "id": "alec_ingold",
         "name": "Alec Ingold",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LAC",
         "bye": 8,
         "fpts": 16.4,
@@ -2711,7 +2621,7 @@
     {
         "id": "ladd_mcconkey",
         "name": "Ladd McConkey",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAC",
         "bye": 8,
         "fpts": 212.6,
@@ -2720,7 +2630,7 @@
     {
         "id": "quentin_johnston",
         "name": "Quentin Johnston",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAC",
         "bye": 8,
         "fpts": 169.8,
@@ -2729,7 +2639,7 @@
     {
         "id": "tre'_harris",
         "name": "Tre' Harris",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAC",
         "bye": 8,
         "fpts": 89.4,
@@ -2738,7 +2648,7 @@
     {
         "id": "brenen_thompson",
         "name": "Brenen Thompson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAC",
         "bye": 8,
         "fpts": 27.4,
@@ -2747,7 +2657,7 @@
     {
         "id": "keandre_lambert-smith",
         "name": "KeAndre Lambert-Smith",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAC",
         "bye": 8,
         "fpts": 26.6,
@@ -2756,7 +2666,7 @@
     {
         "id": "derius_davis",
         "name": "Derius Davis",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAC",
         "bye": 8,
         "fpts": 10.2,
@@ -2765,7 +2675,7 @@
     {
         "id": "oronde_gadsden_ii",
         "name": "Oronde Gadsden II",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LAC",
         "bye": 8,
         "fpts": 118.8,
@@ -2774,7 +2684,7 @@
     {
         "id": "david_njoku",
         "name": "David Njoku",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LAC",
         "bye": 8,
         "fpts": 90.5,
@@ -2783,7 +2693,7 @@
     {
         "id": "charlie_kolar",
         "name": "Charlie Kolar",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LAC",
         "bye": 8,
         "fpts": 55.4,
@@ -2792,7 +2702,7 @@
     {
         "id": "cameron_dicker",
         "name": "Cameron Dicker",
-        "pos": "QB",
+        "pos": "K",
         "team": "LAC",
         "bye": 8,
         "fpts": 144.1,
@@ -2828,7 +2738,7 @@
     {
         "id": "kyren_williams",
         "name": "Kyren Williams",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LAR",
         "bye": 8,
         "fpts": 239.8,
@@ -2837,7 +2747,7 @@
     {
         "id": "blake_corum",
         "name": "Blake Corum",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LAR",
         "bye": 8,
         "fpts": 138.6,
@@ -2846,7 +2756,7 @@
     {
         "id": "jarquez_hunter",
         "name": "Jarquez Hunter",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LAR",
         "bye": 8,
         "fpts": 23.2,
@@ -2855,7 +2765,7 @@
     {
         "id": "puka_nacua",
         "name": "Puka Nacua",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAR",
         "bye": 8,
         "fpts": 339.8,
@@ -2864,7 +2774,7 @@
     {
         "id": "davante_adams",
         "name": "Davante Adams",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAR",
         "bye": 8,
         "fpts": 222.0,
@@ -2873,7 +2783,7 @@
     {
         "id": "jordan_whittington",
         "name": "Jordan Whittington",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAR",
         "bye": 8,
         "fpts": 41.1,
@@ -2882,7 +2792,7 @@
     {
         "id": "konata_mumpfield",
         "name": "Konata Mumpfield",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAR",
         "bye": 8,
         "fpts": 29.2,
@@ -2891,7 +2801,7 @@
     {
         "id": "xavier_smith",
         "name": "Xavier Smith",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAR",
         "bye": 8,
         "fpts": 9.9,
@@ -2900,7 +2810,7 @@
     {
         "id": "cj_daniels",
         "name": "CJ Daniels",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LAR",
         "bye": 8,
         "fpts": 9.6,
@@ -2909,7 +2819,7 @@
     {
         "id": "terrance_ferguson",
         "name": "Terrance Ferguson",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LAR",
         "bye": 8,
         "fpts": 112.8,
@@ -2918,7 +2828,7 @@
     {
         "id": "colby_parkinson",
         "name": "Colby Parkinson",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LAR",
         "bye": 8,
         "fpts": 91.9,
@@ -2927,7 +2837,7 @@
     {
         "id": "tyler_higbee",
         "name": "Tyler Higbee",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LAR",
         "bye": 8,
         "fpts": 71.2,
@@ -2936,7 +2846,7 @@
     {
         "id": "davis_allen",
         "name": "Davis Allen",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LAR",
         "bye": 8,
         "fpts": 43.8,
@@ -2945,7 +2855,7 @@
     {
         "id": "max_klare",
         "name": "Max Klare",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LAR",
         "bye": 8,
         "fpts": 19.8,
@@ -2954,7 +2864,7 @@
     {
         "id": "harrison_mevis",
         "name": "Harrison Mevis",
-        "pos": "QB",
+        "pos": "K",
         "team": "LAR",
         "bye": 8,
         "fpts": 136.9,
@@ -2963,7 +2873,7 @@
     {
         "id": "los_angeles_chargers",
         "name": "Los Angeles Chargers",
-        "pos": "QB",
+        "pos": "DST",
         "team": "LAR",
         "bye": 8,
         "fpts": 107.7,
@@ -2999,7 +2909,7 @@
     {
         "id": "ashton_jeanty",
         "name": "Ashton Jeanty",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LV",
         "bye": 8,
         "fpts": 276.8,
@@ -3008,7 +2918,7 @@
     {
         "id": "mike_washington_jr",
         "name": "Mike Washington Jr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LV",
         "bye": 8,
         "fpts": 77.7,
@@ -3017,7 +2927,7 @@
     {
         "id": "connor_heyward",
         "name": "Connor Heyward",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LV",
         "bye": 8,
         "fpts": 10.2,
@@ -3026,7 +2936,7 @@
     {
         "id": "dylan_laube",
         "name": "Dylan Laube",
-        "pos": "QB",
+        "pos": "RB",
         "team": "LV",
         "bye": 8,
         "fpts": 0.0,
@@ -3035,7 +2945,7 @@
     {
         "id": "tre_tucker",
         "name": "Tre Tucker",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LV",
         "bye": 8,
         "fpts": 142.0,
@@ -3044,7 +2954,7 @@
     {
         "id": "jalen_nailor",
         "name": "Jalen Nailor",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LV",
         "bye": 8,
         "fpts": 130.2,
@@ -3053,7 +2963,7 @@
     {
         "id": "jack_bech",
         "name": "Jack Bech",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LV",
         "bye": 8,
         "fpts": 82.5,
@@ -3062,7 +2972,7 @@
     {
         "id": "dont'e_thornton_jr",
         "name": "Dont'e Thornton Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LV",
         "bye": 8,
         "fpts": 32.2,
@@ -3071,7 +2981,7 @@
     {
         "id": "malik_benson",
         "name": "Malik Benson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LV",
         "bye": 8,
         "fpts": 15.7,
@@ -3080,7 +2990,7 @@
     {
         "id": "dareke_young",
         "name": "Dareke Young",
-        "pos": "QB",
+        "pos": "WR",
         "team": "LV",
         "bye": 8,
         "fpts": 0.0,
@@ -3089,7 +2999,7 @@
     {
         "id": "brock_bowers",
         "name": "Brock Bowers",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LV",
         "bye": 8,
         "fpts": 243.7,
@@ -3098,7 +3008,7 @@
     {
         "id": "michael_mayer",
         "name": "Michael Mayer",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LV",
         "bye": 8,
         "fpts": 90.1,
@@ -3107,7 +3017,7 @@
     {
         "id": "connor_heyward",
         "name": "Connor Heyward",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LV",
         "bye": 8,
         "fpts": 36.3,
@@ -3116,7 +3026,7 @@
     {
         "id": "zack_kuntz",
         "name": "Zack Kuntz",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LV",
         "bye": 8,
         "fpts": 23.7,
@@ -3125,7 +3035,7 @@
     {
         "id": "ian_thomas",
         "name": "Ian Thomas",
-        "pos": "QB",
+        "pos": "TE",
         "team": "LV",
         "bye": 8,
         "fpts": 8.2,
@@ -3134,7 +3044,7 @@
     {
         "id": "matt_gay",
         "name": "Matt Gay",
-        "pos": "QB",
+        "pos": "K",
         "team": "LV",
         "bye": 8,
         "fpts": 108.1,
@@ -3143,7 +3053,7 @@
     {
         "id": "las_vegas_raiders",
         "name": "Las Vegas Raiders",
-        "pos": "QB",
+        "pos": "DST",
         "team": "LV",
         "bye": 8,
         "fpts": 90.0,
@@ -3170,7 +3080,7 @@
     {
         "id": "de'von_achane",
         "name": "De'Von Achane",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIA",
         "bye": 8,
         "fpts": 292.0,
@@ -3179,7 +3089,7 @@
     {
         "id": "jaylen_wright",
         "name": "Jaylen Wright",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIA",
         "bye": 8,
         "fpts": 50.5,
@@ -3188,7 +3098,7 @@
     {
         "id": "ollie_gordon_ii",
         "name": "Ollie Gordon II",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIA",
         "bye": 8,
         "fpts": 34.6,
@@ -3197,7 +3107,7 @@
     {
         "id": "donovan_edwards",
         "name": "Donovan Edwards",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIA",
         "bye": 8,
         "fpts": 22.9,
@@ -3206,7 +3116,7 @@
     {
         "id": "carlos_washington_jr",
         "name": "Carlos Washington Jr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIA",
         "bye": 8,
         "fpts": 22.9,
@@ -3215,7 +3125,7 @@
     {
         "id": "theo_wease_jr",
         "name": "Theo Wease Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIA",
         "bye": 8,
         "fpts": 145.3,
@@ -3224,7 +3134,7 @@
     {
         "id": "malik_washington",
         "name": "Malik Washington",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIA",
         "bye": 8,
         "fpts": 107.0,
@@ -3233,7 +3143,7 @@
     {
         "id": "jalen_tolbert",
         "name": "Jalen Tolbert",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIA",
         "bye": 8,
         "fpts": 89.5,
@@ -3242,7 +3152,7 @@
     {
         "id": "chris_bell",
         "name": "Chris Bell",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIA",
         "bye": 8,
         "fpts": 88.4,
@@ -3251,7 +3161,7 @@
     {
         "id": "caleb_douglas",
         "name": "Caleb Douglas",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIA",
         "bye": 8,
         "fpts": 87.8,
@@ -3260,7 +3170,7 @@
     {
         "id": "tutu_atwell",
         "name": "Tutu Atwell",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIA",
         "bye": 8,
         "fpts": 53.4,
@@ -3269,7 +3179,7 @@
     {
         "id": "kevin_coleman_jr",
         "name": "Kevin Coleman Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIA",
         "bye": 8,
         "fpts": 51.8,
@@ -3278,7 +3188,7 @@
     {
         "id": "greg_dulcich",
         "name": "Greg Dulcich",
-        "pos": "QB",
+        "pos": "TE",
         "team": "MIA",
         "bye": 8,
         "fpts": 133.5,
@@ -3287,7 +3197,7 @@
     {
         "id": "will_kacmarek",
         "name": "Will Kacmarek",
-        "pos": "QB",
+        "pos": "TE",
         "team": "MIA",
         "bye": 8,
         "fpts": 61.8,
@@ -3296,7 +3206,7 @@
     {
         "id": "ben_sims",
         "name": "Ben Sims",
-        "pos": "QB",
+        "pos": "TE",
         "team": "MIA",
         "bye": 8,
         "fpts": 44.8,
@@ -3305,7 +3215,7 @@
     {
         "id": "cole_turner",
         "name": "Cole Turner",
-        "pos": "QB",
+        "pos": "TE",
         "team": "MIA",
         "bye": 8,
         "fpts": 11.9,
@@ -3314,7 +3224,7 @@
     {
         "id": "zane_gonzalez",
         "name": "Zane Gonzalez",
-        "pos": "QB",
+        "pos": "K",
         "team": "MIA",
         "bye": 8,
         "fpts": 115.4,
@@ -3323,7 +3233,7 @@
     {
         "id": "riley_patterson",
         "name": "Riley Patterson",
-        "pos": "QB",
+        "pos": "K",
         "team": "MIA",
         "bye": 8,
         "fpts": 73.0,
@@ -3332,7 +3242,7 @@
     {
         "id": "miami_dolphins",
         "name": "Miami Dolphins",
-        "pos": "QB",
+        "pos": "DST",
         "team": "MIA",
         "bye": 8,
         "fpts": 90.7,
@@ -3359,7 +3269,7 @@
     {
         "id": "aaron_jones_sr",
         "name": "Aaron Jones Sr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIN",
         "bye": 8,
         "fpts": 168.0,
@@ -3368,7 +3278,7 @@
     {
         "id": "jordan_mason",
         "name": "Jordan Mason",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIN",
         "bye": 8,
         "fpts": 138.4,
@@ -3377,7 +3287,7 @@
     {
         "id": "demond_claiborne",
         "name": "Demond Claiborne",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIN",
         "bye": 8,
         "fpts": 23.6,
@@ -3386,7 +3296,7 @@
     {
         "id": "max_bredeson",
         "name": "Max Bredeson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIN",
         "bye": 8,
         "fpts": 9.6,
@@ -3395,7 +3305,7 @@
     {
         "id": "zavier_scott",
         "name": "Zavier Scott",
-        "pos": "QB",
+        "pos": "RB",
         "team": "MIN",
         "bye": 8,
         "fpts": 0.0,
@@ -3404,7 +3314,7 @@
     {
         "id": "justin_jefferson",
         "name": "Justin Jefferson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIN",
         "bye": 8,
         "fpts": 269.6,
@@ -3413,7 +3323,7 @@
     {
         "id": "jordan_addison",
         "name": "Jordan Addison",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIN",
         "bye": 8,
         "fpts": 168.8,
@@ -3422,7 +3332,7 @@
     {
         "id": "jauan_jennings",
         "name": "Jauan Jennings",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIN",
         "bye": 8,
         "fpts": 134.0,
@@ -3431,7 +3341,7 @@
     {
         "id": "tai_felton",
         "name": "Tai Felton",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIN",
         "bye": 8,
         "fpts": 8.8,
@@ -3440,7 +3350,7 @@
     {
         "id": "jeshaun_jones",
         "name": "Jeshaun Jones",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIN",
         "bye": 8,
         "fpts": 0.0,
@@ -3449,7 +3359,7 @@
     {
         "id": "myles_price",
         "name": "Myles Price",
-        "pos": "QB",
+        "pos": "WR",
         "team": "MIN",
         "bye": 8,
         "fpts": 0.0,
@@ -3458,7 +3368,7 @@
     {
         "id": "tj_hockenson",
         "name": "T.J. Hockenson",
-        "pos": "QB",
+        "pos": "TE",
         "team": "MIN",
         "bye": 8,
         "fpts": 140.6,
@@ -3467,7 +3377,7 @@
     {
         "id": "josh_oliver",
         "name": "Josh Oliver",
-        "pos": "QB",
+        "pos": "TE",
         "team": "MIN",
         "bye": 8,
         "fpts": 52.1,
@@ -3476,7 +3386,7 @@
     {
         "id": "will_reichard",
         "name": "Will Reichard",
-        "pos": "QB",
+        "pos": "K",
         "team": "MIN",
         "bye": 8,
         "fpts": 129.7,
@@ -3485,7 +3395,7 @@
     {
         "id": "minnesota_vikings",
         "name": "Minnesota Vikings",
-        "pos": "QB",
+        "pos": "DST",
         "team": "MIN",
         "bye": 8,
         "fpts": 112.7,
@@ -3521,7 +3431,7 @@
     {
         "id": "treveyon_henderson",
         "name": "TreVeyon Henderson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NE",
         "bye": 8,
         "fpts": 201.6,
@@ -3530,7 +3440,7 @@
     {
         "id": "rhamondre_stevenson",
         "name": "Rhamondre Stevenson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NE",
         "bye": 8,
         "fpts": 185.9,
@@ -3539,7 +3449,7 @@
     {
         "id": "jam_miller",
         "name": "Jam Miller",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NE",
         "bye": 8,
         "fpts": 26.1,
@@ -3548,7 +3458,7 @@
     {
         "id": "reggie_gilliam",
         "name": "Reggie Gilliam",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NE",
         "bye": 8,
         "fpts": 7.9,
@@ -3557,7 +3467,7 @@
     {
         "id": "aj_brown",
         "name": "A.J. Brown",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NE",
         "bye": 8,
         "fpts": 257.4,
@@ -3566,7 +3476,7 @@
     {
         "id": "romeo_doubs",
         "name": "Romeo Doubs",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NE",
         "bye": 8,
         "fpts": 160.9,
@@ -3575,7 +3485,7 @@
     {
         "id": "kayshon_boutte",
         "name": "Kayshon Boutte",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NE",
         "bye": 8,
         "fpts": 105.5,
@@ -3584,7 +3494,7 @@
     {
         "id": "demario_douglas",
         "name": "DeMario Douglas",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NE",
         "bye": 8,
         "fpts": 61.3,
@@ -3593,7 +3503,7 @@
     {
         "id": "mack_hollins",
         "name": "Mack Hollins",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NE",
         "bye": 8,
         "fpts": 28.0,
@@ -3602,7 +3512,7 @@
     {
         "id": "kyle_williams",
         "name": "Kyle Williams",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NE",
         "bye": 8,
         "fpts": 22.1,
@@ -3611,7 +3521,7 @@
     {
         "id": "efton_chism_iii",
         "name": "Efton Chism III",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NE",
         "bye": 8,
         "fpts": 0.0,
@@ -3620,7 +3530,7 @@
     {
         "id": "hunter_henry",
         "name": "Hunter Henry",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NE",
         "bye": 8,
         "fpts": 153.6,
@@ -3629,7 +3539,7 @@
     {
         "id": "eli_raridon",
         "name": "Eli Raridon",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NE",
         "bye": 8,
         "fpts": 46.5,
@@ -3638,7 +3548,7 @@
     {
         "id": "cj_dippre",
         "name": "CJ Dippre",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NE",
         "bye": 8,
         "fpts": 9.2,
@@ -3647,7 +3557,7 @@
     {
         "id": "julian_hill",
         "name": "Julian Hill",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NE",
         "bye": 8,
         "fpts": 0.0,
@@ -3656,7 +3566,7 @@
     {
         "id": "andy_borregales",
         "name": "Andy Borregales",
-        "pos": "QB",
+        "pos": "K",
         "team": "NE",
         "bye": 8,
         "fpts": 121.3,
@@ -3665,7 +3575,7 @@
     {
         "id": "new_england_patriots",
         "name": "New England Patriots",
-        "pos": "QB",
+        "pos": "DST",
         "team": "NE",
         "bye": 8,
         "fpts": 98.1,
@@ -3692,7 +3602,7 @@
     {
         "id": "travis_etienne_jr",
         "name": "Travis Etienne Jr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NO",
         "bye": 8,
         "fpts": 231.9,
@@ -3701,7 +3611,7 @@
     {
         "id": "alvin_kamara",
         "name": "Alvin Kamara",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NO",
         "bye": 8,
         "fpts": 131.4,
@@ -3710,7 +3620,7 @@
     {
         "id": "ty_chandler",
         "name": "Ty Chandler",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NO",
         "bye": 8,
         "fpts": 37.5,
@@ -3719,7 +3629,7 @@
     {
         "id": "devin_neal",
         "name": "Devin Neal",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NO",
         "bye": 8,
         "fpts": 19.2,
@@ -3728,7 +3638,7 @@
     {
         "id": "kendre_miller",
         "name": "Kendre Miller",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NO",
         "bye": 8,
         "fpts": 7.2,
@@ -3737,7 +3647,7 @@
     {
         "id": "chris_olave",
         "name": "Chris Olave",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NO",
         "bye": 8,
         "fpts": 257.3,
@@ -3746,7 +3656,7 @@
     {
         "id": "jordyn_tyson",
         "name": "Jordyn Tyson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NO",
         "bye": 8,
         "fpts": 172.5,
@@ -3755,7 +3665,7 @@
     {
         "id": "bub_means",
         "name": "Bub Means",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NO",
         "bye": 8,
         "fpts": 106.2,
@@ -3764,7 +3674,7 @@
     {
         "id": "devaughn_vele",
         "name": "Devaughn Vele",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NO",
         "bye": 8,
         "fpts": 94.2,
@@ -3773,7 +3683,7 @@
     {
         "id": "bryce_lance",
         "name": "Bryce Lance",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NO",
         "bye": 8,
         "fpts": 42.1,
@@ -3782,7 +3692,7 @@
     {
         "id": "barion_brown",
         "name": "Barion Brown",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NO",
         "bye": 8,
         "fpts": 8.4,
@@ -3791,7 +3701,7 @@
     {
         "id": "mason_tipton",
         "name": "Mason Tipton",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NO",
         "bye": 8,
         "fpts": 0.0,
@@ -3800,7 +3710,7 @@
     {
         "id": "juwan_johnson",
         "name": "Juwan Johnson",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NO",
         "bye": 8,
         "fpts": 154.0,
@@ -3809,7 +3719,7 @@
     {
         "id": "noah_fant",
         "name": "Noah Fant",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NO",
         "bye": 8,
         "fpts": 65.7,
@@ -3818,7 +3728,7 @@
     {
         "id": "oscar_delp",
         "name": "Oscar Delp",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NO",
         "bye": 8,
         "fpts": 8.9,
@@ -3827,7 +3737,7 @@
     {
         "id": "charlie_smyth",
         "name": "Charlie Smyth",
-        "pos": "QB",
+        "pos": "K",
         "team": "NO",
         "bye": 8,
         "fpts": 122.9,
@@ -3836,7 +3746,7 @@
     {
         "id": "tanner_brown",
         "name": "Tanner Brown",
-        "pos": "QB",
+        "pos": "K",
         "team": "NO",
         "bye": 8,
         "fpts": 0.0,
@@ -3845,7 +3755,7 @@
     {
         "id": "new_orleans_saints",
         "name": "New Orleans Saints",
-        "pos": "QB",
+        "pos": "DST",
         "team": "NO",
         "bye": 8,
         "fpts": 100.5,
@@ -3872,7 +3782,7 @@
     {
         "id": "cam_skattebo",
         "name": "Cam Skattebo",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYG",
         "bye": 8,
         "fpts": 244.3,
@@ -3881,7 +3791,7 @@
     {
         "id": "tyrone_tracy_jr",
         "name": "Tyrone Tracy Jr.",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYG",
         "bye": 8,
         "fpts": 119.6,
@@ -3890,7 +3800,7 @@
     {
         "id": "devin_singletary",
         "name": "Devin Singletary",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYG",
         "bye": 8,
         "fpts": 19.8,
@@ -3899,7 +3809,7 @@
     {
         "id": "patrick_ricard",
         "name": "Patrick Ricard",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYG",
         "bye": 8,
         "fpts": 7.4,
@@ -3908,7 +3818,7 @@
     {
         "id": "malik_nabers",
         "name": "Malik Nabers",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYG",
         "bye": 8,
         "fpts": 231.3,
@@ -3917,7 +3827,7 @@
     {
         "id": "darnell_mooney",
         "name": "Darnell Mooney",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYG",
         "bye": 8,
         "fpts": 105.4,
@@ -3926,7 +3836,7 @@
     {
         "id": "darius_slayton",
         "name": "Darius Slayton",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYG",
         "bye": 8,
         "fpts": 100.7,
@@ -3935,7 +3845,7 @@
     {
         "id": "calvin_austin_iii",
         "name": "Calvin Austin III",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYG",
         "bye": 8,
         "fpts": 60.1,
@@ -3944,7 +3854,7 @@
     {
         "id": "odell_beckham_jr",
         "name": "Odell Beckham Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYG",
         "bye": 8,
         "fpts": 35.1,
@@ -3953,7 +3863,7 @@
     {
         "id": "malachi_fields",
         "name": "Malachi Fields",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYG",
         "bye": 8,
         "fpts": 34.0,
@@ -3962,7 +3872,7 @@
     {
         "id": "juju_smith-schuster",
         "name": "JuJu Smith-Schuster",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYG",
         "bye": 8,
         "fpts": 1.6,
@@ -3971,7 +3881,7 @@
     {
         "id": "braxton_berrios",
         "name": "Braxton Berrios",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYG",
         "bye": 8,
         "fpts": 0.0,
@@ -3980,7 +3890,7 @@
     {
         "id": "isaiah_likely",
         "name": "Isaiah Likely",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYG",
         "bye": 8,
         "fpts": 165.3,
@@ -3989,7 +3899,7 @@
     {
         "id": "theo_johnson",
         "name": "Theo Johnson",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYG",
         "bye": 8,
         "fpts": 76.2,
@@ -3998,7 +3908,7 @@
     {
         "id": "tanner_conner",
         "name": "Tanner Conner",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYG",
         "bye": 8,
         "fpts": 27.3,
@@ -4007,7 +3917,7 @@
     {
         "id": "thomas_fidone_ii",
         "name": "Thomas Fidone II",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYG",
         "bye": 8,
         "fpts": 26.1,
@@ -4016,7 +3926,7 @@
     {
         "id": "chris_manhertz",
         "name": "Chris Manhertz",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYG",
         "bye": 8,
         "fpts": 13.9,
@@ -4025,7 +3935,7 @@
     {
         "id": "dominic_zvada",
         "name": "Dominic Zvada",
-        "pos": "QB",
+        "pos": "K",
         "team": "NYG",
         "bye": 8,
         "fpts": 76.8,
@@ -4034,7 +3944,7 @@
     {
         "id": "ben_sauls",
         "name": "Ben Sauls",
-        "pos": "QB",
+        "pos": "K",
         "team": "NYG",
         "bye": 8,
         "fpts": 58.5,
@@ -4043,7 +3953,7 @@
     {
         "id": "new_york_giants",
         "name": "New York Giants",
-        "pos": "QB",
+        "pos": "DST",
         "team": "NYG",
         "bye": 8,
         "fpts": 91.9,
@@ -4079,7 +3989,7 @@
     {
         "id": "breece_hall",
         "name": "Breece Hall",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYJ",
         "bye": 8,
         "fpts": 253.5,
@@ -4088,7 +3998,7 @@
     {
         "id": "braelon_allen",
         "name": "Braelon Allen",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYJ",
         "bye": 8,
         "fpts": 86.0,
@@ -4097,7 +4007,7 @@
     {
         "id": "isaiah_davis",
         "name": "Isaiah Davis",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYJ",
         "bye": 8,
         "fpts": 43.3,
@@ -4106,7 +4016,7 @@
     {
         "id": "andrew_beck",
         "name": "Andrew Beck",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYJ",
         "bye": 8,
         "fpts": 14.8,
@@ -4115,7 +4025,7 @@
     {
         "id": "kene_nwangwu",
         "name": "Kene Nwangwu",
-        "pos": "QB",
+        "pos": "RB",
         "team": "NYJ",
         "bye": 8,
         "fpts": 0.0,
@@ -4124,7 +4034,7 @@
     {
         "id": "garrett_wilson",
         "name": "Garrett Wilson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYJ",
         "bye": 8,
         "fpts": 242.1,
@@ -4133,7 +4043,7 @@
     {
         "id": "adonai_mitchell",
         "name": "Adonai Mitchell",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYJ",
         "bye": 8,
         "fpts": 124.5,
@@ -4142,7 +4052,7 @@
     {
         "id": "omar_cooper_jr",
         "name": "Omar Cooper Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYJ",
         "bye": 8,
         "fpts": 120.4,
@@ -4151,7 +4061,7 @@
     {
         "id": "isaiah_williams",
         "name": "Isaiah Williams",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYJ",
         "bye": 8,
         "fpts": 10.0,
@@ -4160,7 +4070,7 @@
     {
         "id": "arian_smith",
         "name": "Arian Smith",
-        "pos": "QB",
+        "pos": "WR",
         "team": "NYJ",
         "bye": 8,
         "fpts": 3.4,
@@ -4169,7 +4079,7 @@
     {
         "id": "kenyon_sadiq",
         "name": "Kenyon Sadiq",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYJ",
         "bye": 8,
         "fpts": 130.0,
@@ -4178,7 +4088,7 @@
     {
         "id": "mason_taylor",
         "name": "Mason Taylor",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYJ",
         "bye": 8,
         "fpts": 97.7,
@@ -4187,7 +4097,7 @@
     {
         "id": "jeremy_ruckert",
         "name": "Jeremy Ruckert",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYJ",
         "bye": 8,
         "fpts": 41.8,
@@ -4196,7 +4106,7 @@
     {
         "id": "jelani_woods",
         "name": "Jelani Woods",
-        "pos": "QB",
+        "pos": "TE",
         "team": "NYJ",
         "bye": 8,
         "fpts": 0.0,
@@ -4205,7 +4115,7 @@
     {
         "id": "jason_sanders",
         "name": "Jason Sanders",
-        "pos": "QB",
+        "pos": "K",
         "team": "NYJ",
         "bye": 8,
         "fpts": 117.5,
@@ -4214,7 +4124,7 @@
     {
         "id": "cade_york",
         "name": "Cade York",
-        "pos": "QB",
+        "pos": "K",
         "team": "NYJ",
         "bye": 8,
         "fpts": 36.0,
@@ -4223,7 +4133,7 @@
     {
         "id": "new_york_jets",
         "name": "New York Jets",
-        "pos": "QB",
+        "pos": "DST",
         "team": "NYJ",
         "bye": 8,
         "fpts": 86.0,
@@ -4268,7 +4178,7 @@
     {
         "id": "saquon_barkley",
         "name": "Saquon Barkley",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PHI",
         "bye": 8,
         "fpts": 265.9,
@@ -4277,7 +4187,7 @@
     {
         "id": "tank_bigsby",
         "name": "Tank Bigsby",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PHI",
         "bye": 8,
         "fpts": 67.3,
@@ -4286,7 +4196,7 @@
     {
         "id": "will_shipley",
         "name": "Will Shipley",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PHI",
         "bye": 8,
         "fpts": 27.5,
@@ -4295,7 +4205,7 @@
     {
         "id": "elijah_mitchell",
         "name": "Elijah Mitchell",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PHI",
         "bye": 8,
         "fpts": 26.1,
@@ -4304,7 +4214,7 @@
     {
         "id": "dameon_pierce",
         "name": "Dameon Pierce",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PHI",
         "bye": 8,
         "fpts": 22.1,
@@ -4313,7 +4223,7 @@
     {
         "id": "devonta_smith",
         "name": "DeVonta Smith",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PHI",
         "bye": 8,
         "fpts": 236.7,
@@ -4322,7 +4232,7 @@
     {
         "id": "makai_lemon",
         "name": "Makai Lemon",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PHI",
         "bye": 8,
         "fpts": 162.4,
@@ -4331,7 +4241,7 @@
     {
         "id": "hollywood_brown",
         "name": "Hollywood Brown",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PHI",
         "bye": 8,
         "fpts": 89.6,
@@ -4340,7 +4250,7 @@
     {
         "id": "dontayvion_wicks",
         "name": "Dontayvion Wicks",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PHI",
         "bye": 8,
         "fpts": 65.5,
@@ -4349,7 +4259,7 @@
     {
         "id": "darius_cooper",
         "name": "Darius Cooper",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PHI",
         "bye": 8,
         "fpts": 8.5,
@@ -4358,7 +4268,7 @@
     {
         "id": "britain_covey",
         "name": "Britain Covey",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PHI",
         "bye": 8,
         "fpts": 0.0,
@@ -4367,7 +4277,7 @@
     {
         "id": "dallas_goedert",
         "name": "Dallas Goedert",
-        "pos": "QB",
+        "pos": "TE",
         "team": "PHI",
         "bye": 8,
         "fpts": 179.3,
@@ -4376,7 +4286,7 @@
     {
         "id": "eli_stowers",
         "name": "Eli Stowers",
-        "pos": "QB",
+        "pos": "TE",
         "team": "PHI",
         "bye": 8,
         "fpts": 53.9,
@@ -4385,7 +4295,7 @@
     {
         "id": "grant_calcaterra",
         "name": "Grant Calcaterra",
-        "pos": "QB",
+        "pos": "TE",
         "team": "PHI",
         "bye": 8,
         "fpts": 28.5,
@@ -4394,7 +4304,7 @@
     {
         "id": "johnny_mundt",
         "name": "Johnny Mundt",
-        "pos": "QB",
+        "pos": "TE",
         "team": "PHI",
         "bye": 8,
         "fpts": 8.2,
@@ -4403,7 +4313,7 @@
     {
         "id": "jake_elliott",
         "name": "Jake Elliott",
-        "pos": "QB",
+        "pos": "K",
         "team": "PHI",
         "bye": 8,
         "fpts": 119.8,
@@ -4412,7 +4322,7 @@
     {
         "id": "philadelphia_eagles",
         "name": "Philadelphia Eagles",
-        "pos": "QB",
+        "pos": "DST",
         "team": "PHI",
         "bye": 8,
         "fpts": 102.3,
@@ -4457,7 +4367,7 @@
     {
         "id": "jaylen_warren",
         "name": "Jaylen Warren",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PIT",
         "bye": 8,
         "fpts": 192.6,
@@ -4466,7 +4376,7 @@
     {
         "id": "rico_dowdle",
         "name": "Rico Dowdle",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PIT",
         "bye": 8,
         "fpts": 185.8,
@@ -4475,7 +4385,7 @@
     {
         "id": "riley_nowakowski",
         "name": "Riley Nowakowski",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PIT",
         "bye": 8,
         "fpts": 8.1,
@@ -4484,7 +4394,7 @@
     {
         "id": "kaleb_johnson",
         "name": "Kaleb Johnson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "PIT",
         "bye": 8,
         "fpts": 4.8,
@@ -4493,7 +4403,7 @@
     {
         "id": "dk_metcalf",
         "name": "DK Metcalf",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PIT",
         "bye": 8,
         "fpts": 194.8,
@@ -4502,7 +4412,7 @@
     {
         "id": "michael_pittman_jr",
         "name": "Michael Pittman Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PIT",
         "bye": 8,
         "fpts": 189.9,
@@ -4511,7 +4421,7 @@
     {
         "id": "germie_bernard",
         "name": "Germie Bernard",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PIT",
         "bye": 8,
         "fpts": 118.1,
@@ -4520,7 +4430,7 @@
     {
         "id": "ben_skowronek",
         "name": "Ben Skowronek",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PIT",
         "bye": 8,
         "fpts": 11.7,
@@ -4529,7 +4439,7 @@
     {
         "id": "kaden_wetjen",
         "name": "Kaden Wetjen",
-        "pos": "QB",
+        "pos": "WR",
         "team": "PIT",
         "bye": 8,
         "fpts": 5.6,
@@ -4538,7 +4448,7 @@
     {
         "id": "pat_freiermuth",
         "name": "Pat Freiermuth",
-        "pos": "QB",
+        "pos": "TE",
         "team": "PIT",
         "bye": 8,
         "fpts": 133.9,
@@ -4547,7 +4457,7 @@
     {
         "id": "darnell_washington",
         "name": "Darnell Washington",
-        "pos": "QB",
+        "pos": "TE",
         "team": "PIT",
         "bye": 8,
         "fpts": 73.9,
@@ -4556,7 +4466,7 @@
     {
         "id": "jaheim_bell",
         "name": "Jaheim Bell",
-        "pos": "QB",
+        "pos": "TE",
         "team": "PIT",
         "bye": 8,
         "fpts": 25.8,
@@ -4565,7 +4475,7 @@
     {
         "id": "chris_boswell",
         "name": "Chris Boswell",
-        "pos": "QB",
+        "pos": "K",
         "team": "PIT",
         "bye": 8,
         "fpts": 118.2,
@@ -4574,7 +4484,7 @@
     {
         "id": "pittsburgh_steelers",
         "name": "Pittsburgh Steelers",
-        "pos": "QB",
+        "pos": "DST",
         "team": "PIT",
         "bye": 8,
         "fpts": 112.8,
@@ -4610,7 +4520,7 @@
     {
         "id": "jadarian_price",
         "name": "Jadarian Price",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SEA",
         "bye": 8,
         "fpts": 187.5,
@@ -4619,7 +4529,7 @@
     {
         "id": "zach_charbonnet",
         "name": "Zach Charbonnet",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SEA",
         "bye": 8,
         "fpts": 123.0,
@@ -4628,7 +4538,7 @@
     {
         "id": "emanuel_wilson",
         "name": "Emanuel Wilson",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SEA",
         "bye": 8,
         "fpts": 51.2,
@@ -4637,7 +4547,7 @@
     {
         "id": "george_holani",
         "name": "George Holani",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SEA",
         "bye": 8,
         "fpts": 41.1,
@@ -4646,7 +4556,7 @@
     {
         "id": "jaxon_smith-njigba",
         "name": "Jaxon Smith-Njigba",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SEA",
         "bye": 8,
         "fpts": 324.1,
@@ -4655,7 +4565,7 @@
     {
         "id": "rashid_shaheed",
         "name": "Rashid Shaheed",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SEA",
         "bye": 8,
         "fpts": 156.7,
@@ -4664,7 +4574,7 @@
     {
         "id": "cooper_kupp",
         "name": "Cooper Kupp",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SEA",
         "bye": 8,
         "fpts": 125.1,
@@ -4673,7 +4583,7 @@
     {
         "id": "tory_horton",
         "name": "Tory Horton",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SEA",
         "bye": 8,
         "fpts": 94.4,
@@ -4682,7 +4592,7 @@
     {
         "id": "aj_barner",
         "name": "AJ Barner",
-        "pos": "QB",
+        "pos": "TE",
         "team": "SEA",
         "bye": 8,
         "fpts": 124.3,
@@ -4691,7 +4601,7 @@
     {
         "id": "elijah_arroyo",
         "name": "Elijah Arroyo",
-        "pos": "QB",
+        "pos": "TE",
         "team": "SEA",
         "bye": 8,
         "fpts": 58.4,
@@ -4700,7 +4610,7 @@
     {
         "id": "nick_vannett",
         "name": "Nick Vannett",
-        "pos": "QB",
+        "pos": "TE",
         "team": "SEA",
         "bye": 8,
         "fpts": 31.5,
@@ -4709,7 +4619,7 @@
     {
         "id": "eric_saubert",
         "name": "Eric Saubert",
-        "pos": "QB",
+        "pos": "TE",
         "team": "SEA",
         "bye": 8,
         "fpts": 8.6,
@@ -4718,7 +4628,7 @@
     {
         "id": "jason_myers",
         "name": "Jason Myers",
-        "pos": "QB",
+        "pos": "K",
         "team": "SEA",
         "bye": 8,
         "fpts": 150.4,
@@ -4727,7 +4637,7 @@
     {
         "id": "seattle_seahawks",
         "name": "Seattle Seahawks",
-        "pos": "QB",
+        "pos": "DST",
         "team": "SEA",
         "bye": 8,
         "fpts": 110.7,
@@ -4763,7 +4673,7 @@
     {
         "id": "christian_mccaffrey",
         "name": "Christian McCaffrey",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SF",
         "bye": 8,
         "fpts": 327.8,
@@ -4772,7 +4682,7 @@
     {
         "id": "jordan_james",
         "name": "Jordan James",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SF",
         "bye": 8,
         "fpts": 89.8,
@@ -4781,7 +4691,7 @@
     {
         "id": "kaelon_black",
         "name": "Kaelon Black",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SF",
         "bye": 8,
         "fpts": 72.6,
@@ -4790,7 +4700,7 @@
     {
         "id": "kyle_juszczyk",
         "name": "Kyle Juszczyk",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SF",
         "bye": 8,
         "fpts": 53.6,
@@ -4799,7 +4709,7 @@
     {
         "id": "isaac_guerendo",
         "name": "Isaac Guerendo",
-        "pos": "QB",
+        "pos": "RB",
         "team": "SF",
         "bye": 8,
         "fpts": 14.9,
@@ -4808,7 +4718,7 @@
     {
         "id": "mike_evans",
         "name": "Mike Evans",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SF",
         "bye": 8,
         "fpts": 193.7,
@@ -4817,7 +4727,7 @@
     {
         "id": "deebo_samuel_sr",
         "name": "Deebo Samuel Sr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SF",
         "bye": 8,
         "fpts": 159.6,
@@ -4826,7 +4736,7 @@
     {
         "id": "de'zhaun_stribling",
         "name": "De'Zhaun Stribling",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SF",
         "bye": 8,
         "fpts": 107.8,
@@ -4835,7 +4745,7 @@
     {
         "id": "christian_kirk",
         "name": "Christian Kirk",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SF",
         "bye": 8,
         "fpts": 73.7,
@@ -4844,7 +4754,7 @@
     {
         "id": "demarcus_robinson",
         "name": "Demarcus Robinson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SF",
         "bye": 8,
         "fpts": 46.7,
@@ -4853,7 +4763,7 @@
     {
         "id": "jacob_cowing",
         "name": "Jacob Cowing",
-        "pos": "QB",
+        "pos": "WR",
         "team": "SF",
         "bye": 8,
         "fpts": 0.0,
@@ -4862,7 +4772,7 @@
     {
         "id": "george_kittle",
         "name": "George Kittle",
-        "pos": "QB",
+        "pos": "TE",
         "team": "SF",
         "bye": 8,
         "fpts": 169.3,
@@ -4871,7 +4781,7 @@
     {
         "id": "jake_tonges",
         "name": "Jake Tonges",
-        "pos": "QB",
+        "pos": "TE",
         "team": "SF",
         "bye": 8,
         "fpts": 48.1,
@@ -4880,7 +4790,7 @@
     {
         "id": "hayden_rucci",
         "name": "Hayden Rucci",
-        "pos": "QB",
+        "pos": "TE",
         "team": "SF",
         "bye": 8,
         "fpts": 29.8,
@@ -4889,7 +4799,7 @@
     {
         "id": "luke_farrell",
         "name": "Luke Farrell",
-        "pos": "QB",
+        "pos": "TE",
         "team": "SF",
         "bye": 8,
         "fpts": 10.0,
@@ -4898,7 +4808,7 @@
     {
         "id": "eddy_pineiro",
         "name": "Eddy Pineiro",
-        "pos": "QB",
+        "pos": "K",
         "team": "SF",
         "bye": 8,
         "fpts": 132.6,
@@ -4907,7 +4817,7 @@
     {
         "id": "san_francisco_49ers",
         "name": "San Francisco 49ers",
-        "pos": "QB",
+        "pos": "DST",
         "team": "SF",
         "bye": 8,
         "fpts": 88.0,
@@ -4934,7 +4844,7 @@
     {
         "id": "bucky_irving",
         "name": "Bucky Irving",
-        "pos": "QB",
+        "pos": "RB",
         "team": "TB",
         "bye": 8,
         "fpts": 223.9,
@@ -4943,7 +4853,7 @@
     {
         "id": "kenny_gainwell",
         "name": "Kenny Gainwell",
-        "pos": "QB",
+        "pos": "RB",
         "team": "TB",
         "bye": 8,
         "fpts": 168.3,
@@ -4952,7 +4862,7 @@
     {
         "id": "sean_tucker",
         "name": "Sean Tucker",
-        "pos": "QB",
+        "pos": "RB",
         "team": "TB",
         "bye": 8,
         "fpts": 32.2,
@@ -4961,7 +4871,7 @@
     {
         "id": "josh_williams",
         "name": "Josh Williams",
-        "pos": "QB",
+        "pos": "RB",
         "team": "TB",
         "bye": 8,
         "fpts": 0.0,
@@ -4970,7 +4880,7 @@
     {
         "id": "emeka_egbuka",
         "name": "Emeka Egbuka",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TB",
         "bye": 8,
         "fpts": 227.9,
@@ -4979,7 +4889,7 @@
     {
         "id": "chris_godwin_jr",
         "name": "Chris Godwin Jr.",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TB",
         "bye": 8,
         "fpts": 175.7,
@@ -4988,7 +4898,7 @@
     {
         "id": "jalen_mcmillan",
         "name": "Jalen McMillan",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TB",
         "bye": 8,
         "fpts": 133.8,
@@ -4997,7 +4907,7 @@
     {
         "id": "ted_hurst_iii",
         "name": "Ted Hurst III",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TB",
         "bye": 8,
         "fpts": 82.7,
@@ -5006,7 +4916,7 @@
     {
         "id": "tez_johnson",
         "name": "Tez Johnson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TB",
         "bye": 8,
         "fpts": 21.5,
@@ -5015,7 +4925,7 @@
     {
         "id": "kameron_johnson",
         "name": "Kameron Johnson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TB",
         "bye": 8,
         "fpts": 1.8,
@@ -5024,7 +4934,7 @@
     {
         "id": "cade_otton",
         "name": "Cade Otton",
-        "pos": "QB",
+        "pos": "TE",
         "team": "TB",
         "bye": 8,
         "fpts": 128.9,
@@ -5033,7 +4943,7 @@
     {
         "id": "bauer_sharp",
         "name": "Bauer Sharp",
-        "pos": "QB",
+        "pos": "TE",
         "team": "TB",
         "bye": 8,
         "fpts": 28.2,
@@ -5042,7 +4952,7 @@
     {
         "id": "payne_durham",
         "name": "Payne Durham",
-        "pos": "QB",
+        "pos": "TE",
         "team": "TB",
         "bye": 8,
         "fpts": 18.0,
@@ -5051,7 +4961,7 @@
     {
         "id": "devin_culp",
         "name": "Devin Culp",
-        "pos": "QB",
+        "pos": "TE",
         "team": "TB",
         "bye": 8,
         "fpts": 17.4,
@@ -5060,7 +4970,7 @@
     {
         "id": "ko_kieft",
         "name": "Ko Kieft",
-        "pos": "QB",
+        "pos": "TE",
         "team": "TB",
         "bye": 8,
         "fpts": 9.1,
@@ -5069,7 +4979,7 @@
     {
         "id": "chase_mclaughlin",
         "name": "Chase McLaughlin",
-        "pos": "QB",
+        "pos": "K",
         "team": "TB",
         "bye": 8,
         "fpts": 132.9,
@@ -5078,7 +4988,7 @@
     {
         "id": "tampa_bay_buccaneers",
         "name": "Tampa Bay Buccaneers",
-        "pos": "QB",
+        "pos": "DST",
         "team": "TB",
         "bye": 8,
         "fpts": 97.2,
@@ -5114,7 +5024,7 @@
     {
         "id": "tony_pollard",
         "name": "Tony Pollard",
-        "pos": "QB",
+        "pos": "RB",
         "team": "TEN",
         "bye": 8,
         "fpts": 191.1,
@@ -5123,7 +5033,7 @@
     {
         "id": "tyjae_spears",
         "name": "Tyjae Spears",
-        "pos": "QB",
+        "pos": "RB",
         "team": "TEN",
         "bye": 8,
         "fpts": 136.4,
@@ -5132,7 +5042,7 @@
     {
         "id": "nicholas_singleton",
         "name": "Nicholas Singleton",
-        "pos": "QB",
+        "pos": "RB",
         "team": "TEN",
         "bye": 8,
         "fpts": 19.7,
@@ -5141,7 +5051,7 @@
     {
         "id": "wan'dale_robinson",
         "name": "Wan'Dale Robinson",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TEN",
         "bye": 8,
         "fpts": 188.8,
@@ -5150,7 +5060,7 @@
     {
         "id": "carnell_tate",
         "name": "Carnell Tate",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TEN",
         "bye": 8,
         "fpts": 181.4,
@@ -5159,7 +5069,7 @@
     {
         "id": "calvin_ridley",
         "name": "Calvin Ridley",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TEN",
         "bye": 8,
         "fpts": 152.4,
@@ -5168,7 +5078,7 @@
     {
         "id": "elic_ayomanor",
         "name": "Elic Ayomanor",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TEN",
         "bye": 8,
         "fpts": 75.4,
@@ -5177,7 +5087,7 @@
     {
         "id": "chimere_dike",
         "name": "Chimere Dike",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TEN",
         "bye": 8,
         "fpts": 74.8,
@@ -5186,7 +5096,7 @@
     {
         "id": "mason_kinsey",
         "name": "Mason Kinsey",
-        "pos": "QB",
+        "pos": "WR",
         "team": "TEN",
         "bye": 8,
         "fpts": 0.0,
@@ -5195,7 +5105,7 @@
     {
         "id": "gunnar_helm",
         "name": "Gunnar Helm",
-        "pos": "QB",
+        "pos": "TE",
         "team": "TEN",
         "bye": 8,
         "fpts": 111.4,
@@ -5204,7 +5114,7 @@
     {
         "id": "daniel_bellinger",
         "name": "Daniel Bellinger",
-        "pos": "QB",
+        "pos": "TE",
         "team": "TEN",
         "bye": 8,
         "fpts": 51.9,
@@ -5213,7 +5123,7 @@
     {
         "id": "jaren_kanak",
         "name": "Jaren Kanak",
-        "pos": "QB",
+        "pos": "TE",
         "team": "TEN",
         "bye": 8,
         "fpts": 25.6,
@@ -5222,7 +5132,7 @@
     {
         "id": "joey_slye",
         "name": "Joey Slye",
-        "pos": "QB",
+        "pos": "K",
         "team": "TEN",
         "bye": 8,
         "fpts": 113.8,
@@ -5231,7 +5141,7 @@
     {
         "id": "tennessee_titans",
         "name": "Tennessee Titans",
-        "pos": "QB",
+        "pos": "DST",
         "team": "TEN",
         "bye": 8,
         "fpts": 95.4,
@@ -5258,7 +5168,7 @@
     {
         "id": "rachaad_white",
         "name": "Rachaad White",
-        "pos": "QB",
+        "pos": "RB",
         "team": "WAS",
         "bye": 8,
         "fpts": 167.2,
@@ -5267,7 +5177,7 @@
     {
         "id": "jacory_croskey-merritt",
         "name": "Jacory Croskey-Merritt",
-        "pos": "QB",
+        "pos": "RB",
         "team": "WAS",
         "bye": 8,
         "fpts": 143.6,
@@ -5276,7 +5186,7 @@
     {
         "id": "jeremy_mcnichols",
         "name": "Jeremy McNichols",
-        "pos": "QB",
+        "pos": "RB",
         "team": "WAS",
         "bye": 8,
         "fpts": 27.2,
@@ -5285,7 +5195,7 @@
     {
         "id": "kaytron_allen",
         "name": "Kaytron Allen",
-        "pos": "QB",
+        "pos": "RB",
         "team": "WAS",
         "bye": 8,
         "fpts": 21.5,
@@ -5294,7 +5204,7 @@
     {
         "id": "jerome_ford",
         "name": "Jerome Ford",
-        "pos": "QB",
+        "pos": "RB",
         "team": "WAS",
         "bye": 8,
         "fpts": 19.1,
@@ -5303,7 +5213,7 @@
     {
         "id": "terry_mclaurin",
         "name": "Terry McLaurin",
-        "pos": "QB",
+        "pos": "WR",
         "team": "WAS",
         "bye": 8,
         "fpts": 214.2,
@@ -5312,7 +5222,7 @@
     {
         "id": "antonio_williams",
         "name": "Antonio Williams",
-        "pos": "QB",
+        "pos": "WR",
         "team": "WAS",
         "bye": 8,
         "fpts": 125.6,
@@ -5321,7 +5231,7 @@
     {
         "id": "dyami_brown",
         "name": "Dyami Brown",
-        "pos": "QB",
+        "pos": "WR",
         "team": "WAS",
         "bye": 8,
         "fpts": 84.2,
@@ -5330,7 +5240,7 @@
     {
         "id": "treylon_burks",
         "name": "Treylon Burks",
-        "pos": "QB",
+        "pos": "WR",
         "team": "WAS",
         "bye": 8,
         "fpts": 80.9,
@@ -5339,7 +5249,7 @@
     {
         "id": "luke_mccaffrey",
         "name": "Luke McCaffrey",
-        "pos": "QB",
+        "pos": "WR",
         "team": "WAS",
         "bye": 8,
         "fpts": 65.0,
@@ -5348,7 +5258,7 @@
     {
         "id": "jaylin_lane",
         "name": "Jaylin Lane",
-        "pos": "QB",
+        "pos": "WR",
         "team": "WAS",
         "bye": 8,
         "fpts": 60.7,
@@ -5357,7 +5267,7 @@
     {
         "id": "chig_okonkwo",
         "name": "Chig Okonkwo",
-        "pos": "QB",
+        "pos": "TE",
         "team": "WAS",
         "bye": 8,
         "fpts": 126.5,
@@ -5366,7 +5276,7 @@
     {
         "id": "john_bates",
         "name": "John Bates",
-        "pos": "QB",
+        "pos": "TE",
         "team": "WAS",
         "bye": 8,
         "fpts": 43.8,
@@ -5375,7 +5285,7 @@
     {
         "id": "ben_sinnott",
         "name": "Ben Sinnott",
-        "pos": "QB",
+        "pos": "TE",
         "team": "WAS",
         "bye": 8,
         "fpts": 31.6,
@@ -5384,7 +5294,7 @@
     {
         "id": "jake_moody",
         "name": "Jake Moody",
-        "pos": "QB",
+        "pos": "K",
         "team": "WAS",
         "bye": 8,
         "fpts": 121.4,
@@ -5393,7 +5303,7 @@
     {
         "id": "washington_commanders",
         "name": "Washington Commanders",
-        "pos": "QB",
+        "pos": "DST",
         "team": "WAS",
         "bye": 8,
         "fpts": 94.3,
