@@ -3,7 +3,7 @@ import json
 import os
 
 def main():
-    filename = "FantasyPros_Fantasy_Football_Projections_QB.csv"
+    filename = "FantasyPros_Fantasy_Football_Projections.csv"
     
     # Base pool keeping RBs, WRs, TEs, Ks, and DSTs intact
     full_pool = [
