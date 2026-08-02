@@ -1,0 +1,46 @@
+name: Automated Weekly Stats Check
+
+# Define when the action should run
+on:
+  # Allows you to click a "Run workflow" button manually in GitHub
+  workflow_dispatch:
+  
+  # Optional: Run automatically on a schedule (e.g., every Tuesday at 3:00 AM UTC)
+  schedule:
+    - cron: '0 3 * * 2'
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Check out your repository code so the action can access it
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. Set up your environment (e.g., Python if your script is written in Python)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. Install any required dependencies (like requests for API calls)
+      - name: Install Dependencies
+        run: |
+          pip install requests
+
+      # 4. Run your custom script to fetch and update stats
+      - name: Run Stats Update Script
+        run: |
+          python update_stats.py
+
+      # 5. Automatically commit and push the updated data back to your repo
+      - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Auto-update weekly player stats [skip ci]" || echo "No changes to commit"
+          git push
