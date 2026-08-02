@@ -231,22 +231,21 @@
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900/80 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl backdrop-blur">
                 <div>
                     <h2 class="text-xl sm:text-2xl font-black tracking-wide text-emerald-400 flex items-center gap-2">
-                        <span>📋</span> NFL Player Pool & Draft Board
+                        NFL Player Pool & Draft Board
                     </h2>
-                    <p class="text-xs text-slate-400 mt-1">Randomize draft order, run snake draft, and inspect picks.</p>
-                </div>
+                    </div>
                 <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                     <button onclick="randomizeDraftOrder()" class="flex-1 sm:flex-none bg-amber-600 hover:bg-amber-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
-                        🔀 Randomize Order
+                        Randomize Order
                     </button>
                     <button onclick="runSnakeDraft()" class="flex-1 sm:flex-none bg-purple-600 hover:bg-purple-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
-                        🔄 Run Draft
+                        Run Draft
                     </button>
                     <button onclick="resetApp()" class="bg-red-600 hover:bg-red-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
-                        ⚠️ Reset
+                        Reset
                     </button>
                     <label class="flex-1 sm:flex-none bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs font-bold cursor-pointer transition shadow text-center">
-                        📤 CSV
+                        CSV
                         <input type="file" accept=".csv" class="hidden" onchange="handleProjectionUpload(event)">
                     </label>
 
@@ -262,7 +261,7 @@
             <!-- Draft Order Preview Bar -->
             <div class="bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl space-y-3">
                 <h3 class="font-bold text-slate-200 text-xs uppercase tracking-wider flex items-center gap-2">
-                    <span>🎯</span> Round 1 Draft Order Sequence
+                    Round 1 Draft Order Sequence
                 </h3>
                 <div id="draft-order-preview" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
                     <!-- Populated dynamically -->
@@ -274,10 +273,9 @@
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                     <div>
                         <h3 class="font-black text-white text-sm sm:text-base flex items-center gap-2">
-                            <span>📊</span> 12-Round Snake Draft Board Grid
+                            12-Round Snake Draft Board Grid
                         </h3>
-                        <p class="text-xs text-slate-400">Scroll horizontally on mobile to view all picks.</p>
-                    </div>
+                        </div>
                 </div>
                 <div class="overflow-x-auto bg-slate-950 rounded-xl border border-slate-800 p-2">
                     <table class="w-full text-left border-collapse text-xs min-w-[700px]">
