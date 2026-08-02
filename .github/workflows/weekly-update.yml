@@ -1,20 +1,17 @@
-name: Automated Weekly Stats Check
+name: Update Projections
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 3 * * 2'
-
-# Add this permissions block right here:
-permissions:
-  contents: write
+  push:
+    branches: [ main ]
 
 jobs:
-  update-stats:
+  build:
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write # Allows the workflow to write files back to your repo
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -22,20 +19,12 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Dependencies
-        run: |
-          pip install requests
+      - name: Run stats script
+        run: python update_stats.py
 
-      - name: Run Stats Update Script
+      - name: Commit and push updated projections
         run: |
-          python update_stats.py
-
-      - name: Commit and Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name "GitHub Action Bot"
-          git config --global user.email "action@github.com"
-          git add .
-          git commit -m "Auto-update weekly player stats [skip ci]" || echo "No changes to commit"
-          git push
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add updated_projections.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update projections JSON" && git push)
