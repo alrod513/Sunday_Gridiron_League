@@ -464,7 +464,7 @@
             "antonio brown", "eli manning", "philip rivers", "aaron kampman"
         ];
 
-        let nflPlayerPool = [
+       let nflPlayerPool = [
             { id: "1", name: "Patrick Mahomes", pos: "QB", team: "KC", bye: 5, fpts: 344.0, avg: 21.5 },
             { id: "2", name: "Josh Allen", pos: "QB", team: "BUF", bye: 7, fpts: 339.2, avg: 21.2 },
             { id: "3", name: "Lamar Jackson", pos: "QB", team: "BAL", bye: 13, fpts: 326.4, avg: 20.4 },
@@ -477,9 +477,17 @@
             { id: "10", name: "Travis Kelce", pos: "TE", team: "KC", bye: 5, fpts: 227.2, avg: 14.2 },
             { id: "11", name: "Sam LaPorta", pos: "TE", team: "DET", bye: 6, fpts: 204.8, avg: 12.8 },
             { id: "12", name: "Justin Tucker", pos: "K", team: "BAL", bye: 13, fpts: 136.0, avg: 8.5 },
-            { id: "13", name: "San Francisco DST", pos: "DST", team: "SF", bye: 8, fpts: 140.8, avg: 8.8 }
+            { id: "13", name: "San Francisco DST", pos: "DST", team: "SF", bye: 8, fpts: 140.8, avg: 8.8 },
+            // FantasyPros Quarterback Projections
+            { id: "fp_1", name: "Josh Allen", pos: "QB", team: "BUF", bye: 7, fpts: 350.0, avg: 20.6 },
+            { id: "fp_2", name: "Jalen Hurts", pos: "QB", team: "PHI", bye: 10, fpts: 340.0, avg: 20.0 },
+            { id: "fp_3", name: "Patrick Mahomes", pos: "QB", team: "KC", bye: 5, fpts: 335.0, avg: 19.7 },
+            { id: "fp_4", name: "Lamar Jackson", pos: "QB", team: "BAL", bye: 13, fpts: 330.0, avg: 19.4 },
+            { id: "fp_5", name: "C.J. Stroud", pos: "QB", team: "HOU", bye: 14, fpts: 310.0, avg: 18.2 },
+            { id: "fp_6", name: "Anthony Richardson", pos: "QB", team: "IND", bye: 14, fpts: 305.0, avg: 17.9 },
+            { id: "fp_7", name: "Joe Burrow", pos: "QB", team: "CIN", bye: 12, fpts: 300.0, avg: 17.6 },
+            { id: "fp_8", name: "Dak Prescott", pos: "QB", team: "DAL", bye: 7, fpts: 295.0, avg: 17.3 }
         ];
-
         let draftGridData = Array(12).fill(null).map(() => ({}));
         let currentPosFilter = 'ALL';
         let draggedIndex = null;
