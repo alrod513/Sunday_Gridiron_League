@@ -1268,7 +1268,7 @@
         window.onload = async () => {
             loadState();
             try {
-                let res = await fetch('updated_projections.json');
+                let res = await fetch('updated_projections.json?v=' + new Date().getTime());
                 if (res.ok) {
                     let livePool = await res.json();
                     if (livePool && livePool.length > 0) nflPlayerPool = livePool;
