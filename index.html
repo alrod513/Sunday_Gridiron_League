@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday Gridiron League (SGL)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .drag-item {
+            cursor: grab;
+            user-select: none;
+            touch-action: none;
+        }
+        .drag-item:active {
+            cursor: grabbing;
+        }
+        .drag-over {
+            background-color: rgba(16, 185, 129, 0.25) !important;
+            border: 2px dashed #10b981 !important;
+        }
+        /* Custom scrollbar for mobile horizontal scrolling */
+        ::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(51, 65, 85, 0.8);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(16, 185, 129, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen">
+
+    <!-- Header with SGL Main Logo -->
+    <header class="bg-slate-900 border-b border-slate-800 p-3 sm:p-4 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-start">
+                <div class="flex items-center space-x-3">
+                    <img src="logo_sgl_main.png" alt="SGL Logo" class="h-9 sm:h-10 w-auto object-contain">
+                    <div>
+                        <h1 class="text-base sm:text-lg font-bold tracking-wider text-emerald-400">SUNDAY GRIDIRON LEAGUE</h1>
+                        <p class="text-[10px] sm:text-xs text-slate-400">Official Home of SGL • 8-Team 1.0 PPR</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex flex-wrap gap-1 sm:gap-2 justify-center text-xs sm:text-sm font-medium">
+                <button onclick="switchTab('standings')" id="nav-standings" class="px-2.5 py-1.5 rounded-lg transition text-emerald-400 font-bold bg-slate-800 border border-slate-700">Standings</button>
+                <button onclick="switchTab('manager')" id="nav-manager" class="px-2.5 py-1.5 rounded-lg transition text-slate-300 hover:text-white hover:bg-slate-800">🤖 Manager</button>
+                <button onclick="switchTab('draft')" id="nav-draft" class="px-2.5 py-1.5 rounded-lg transition text-slate-300 hover:text-white hover:bg-slate-800">📋 Draft</button>
+                <button onclick="switchTab('rosters')" id="nav-rosters" class="px-2.5 py-1.5 rounded-lg transition text-slate-300 hover:text-white hover:bg-slate-800">👥 Rosters</button>
+                <button onclick="switchTab('schedule')" id="nav-schedule" class="px-2.5 py-1.5 rounded-lg transition text-slate-300 hover:text-white hover:bg-slate-800">🏈 Schedule</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto p-3 sm:p-6 space-y-6">
+        
+        <!-- Standings & Playoff Bracket View -->
+        <section id="standings-view" class="space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-slate-900/80 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-white flex items-center gap-2">
+                        <span>🏆</span> League Standings & Postseason Race
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">Standings update dynamically from simulated games. Top 4 seeds advance to playoffs.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                    <button onclick="simulateWeek15()" class="flex-1 sm:flex-none bg-purple-600 hover:bg-purple-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow flex items-center justify-center gap-1.5">
+                        <span>⚡</span> Sim Week 15 (SF)
+                    </button>
+                    <button onclick="simulateWeek16()" class="flex-1 sm:flex-none bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow flex items-center justify-center gap-1.5">
+                        <span>🏆</span> Sim Championship
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <!-- Compact Standings Table with Horizontal Scroll on Mobile -->
+                <div class="lg:col-span-7 bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl p-3 sm:p-4">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse min-w-[420px]">
+                            <thead>
+                                <tr class="bg-slate-800/80 text-slate-400 text-xs uppercase tracking-wider border-b border-slate-700/50 font-mono">
+                                    <th class="py-2 px-3 text-left">Franchise</th>
+                                    <th class="py-2 px-2 text-center w-12">W</th>
+                                    <th class="py-2 px-2 text-center w-12">L</th>
+                                    <th class="py-2 px-2 text-center w-12">T</th>
+                                    <th class="py-2 px-2 text-center w-14">GB</th>
+                                    <th class="py-2 px-3 text-center w-24">PF</th>
+                                </tr>
+                            </thead>
+                            <tbody id="standings-table" class="divide-y divide-slate-800/60 text-sm">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Postseason Bracket Next to Standings with Clear Winner Highlighting -->
+                <div class="lg:col-span-5 bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-800 shadow-xl space-y-4">
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                        <h3 class="font-black text-white text-sm sm:text-base flex items-center gap-2">
+                            <span>🏅</span> Semifinals Bracket (Week 15)
+                        </h3>
+                        <span class="text-xs font-mono text-emerald-400 bg-slate-950 px-2.5 py-1 rounded-full border border-slate-800">Semifinals</span>
+                    </div>
+
+                    <div class="space-y-3 text-xs">
+                        <!-- Semifinal 1 -->
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-2 shadow-inner">
+                            <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider flex justify-between">
+                                <span>Semifinal 1 (#1 vs #4)</span>
+                                <span id="sf1-winner-badge" class="text-emerald-400 font-bold"></span>
+                            </div>
+                            <div id="sf1-row-home" class="flex justify-between items-center bg-slate-900 p-2 rounded-lg transition">
+                                <span id="bracket-seed-1" class="font-bold text-white truncate max-w-[180px]">1. (TBD)</span>
+                                <span id="sf1-score" class="font-mono font-bold">-</span>
+                            </div>
+                            <div id="sf1-row-away" class="flex justify-between items-center bg-slate-900 p-2 rounded-lg transition">
+                                <span id="bracket-seed-4" class="font-bold text-white truncate max-w-[180px]">4. (TBD)</span>
+                                <span id="sf4-score" class="font-mono font-bold">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Semifinal 2 -->
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-2 shadow-inner">
+                            <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider flex justify-between">
+                                <span>Semifinal 2 (#2 vs #3)</span>
+                                <span id="sf2-winner-badge" class="text-emerald-400 font-bold"></span>
+                            </div>
+                            <div id="sf2-row-home" class="flex justify-between items-center bg-slate-900 p-2 rounded-lg transition">
+                                <span id="bracket-seed-2" class="font-bold text-white truncate max-w-[180px]">2. (TBD)</span>
+                                <span id="sf2-score" class="font-mono font-bold">-</span>
+                            </div>
+                            <div id="sf2-row-away" class="flex justify-between items-center bg-slate-900 p-2 rounded-lg transition">
+                                <span id="bracket-seed-3" class="font-bold text-white truncate max-w-[180px]">3. (TBD)</span>
+                                <span id="sf3-score" class="font-mono font-bold">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standalone Larger Championship Showcase -->
+            <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/40 p-4 sm:p-6 rounded-3xl border border-emerald-500/30 shadow-2xl space-y-4">
+                <div class="flex flex-col sm:flex-row justify-between items-center border-b border-slate-800 pb-4 gap-2 text-center sm:text-left">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">🏆</span>
+                        <div>
+                            <h3 class="font-black text-white text-base sm:text-lg tracking-wider uppercase text-emerald-400">SGL Championship Game (Week 16)</h3>
+                            <p class="text-xs text-slate-400">The ultimate showdown for the league title</p>
+                        </div>
+                    </div>
+                    <button onclick="simulateWeek16()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow flex items-center gap-2">
+                        <span>⚡</span> Simulate Championship
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-around py-6 bg-slate-950/70 rounded-2xl border border-slate-800/80 shadow-inner px-2 sm:px-4">
+                    <!-- Finalist 1 Logo -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <div id="champ-logo-1" class="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-slate-900 rounded-full border-2 border-emerald-500/50 p-2 shadow-lg">
+                            <span class="text-2xl sm:text-3xl text-slate-500">?</span>
+                        </div>
+                        <span id="champ-score-1" class="font-mono text-xl sm:text-2xl font-black text-emerald-400">-</span>
+                    </div>
+
+                    <!-- VS / Trophy -->
+                    <div class="flex flex-col items-center space-y-1">
+                        <span class="text-2xl sm:text-3xl font-black text-amber-400">VS</span>
+                        <span class="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-slate-400">Week 16</span>
+                    </div>
+
+                    <!-- Finalist 2 Logo -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <div id="champ-logo-2" class="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-slate-900 rounded-full border-2 border-emerald-500/50 p-2 shadow-lg">
+                            <span class="text-2xl sm:text-3xl text-slate-500">?</span>
+                        </div>
+                        <span id="champ-score-2" class="font-mono text-xl sm:text-2xl font-black text-emerald-400">-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Bot Manager View -->
+        <section id="manager-view" class="space-y-6 hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900/80 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-emerald-400 flex items-center gap-2">
+                        <span>⚙️</span> League Manager & Customizer
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">Edit franchise names, image paths, or upload custom PNGs.</p>
+                </div>
+                <button onclick="runAllAIBots()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold shadow-lg transition flex items-center gap-2 w-full sm:w-auto justify-center">
+                    <span>⚡</span> Optimize All Lineups
+                </button>
+            </div>
+
+            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-2xl space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-800 pb-4 gap-3">
+                    <div>
+                        <h3 class="font-bold text-slate-100 text-sm sm:text-base">Active League Rosters (8 Franchises)</h3>
+                        <p class="text-xs text-slate-400">Type names/links or upload PNG badges.</p>
+                    </div>
+                    <button onclick="saveAllFranchises()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shadow transition w-full sm:w-auto">
+                        Save Changes
+                    </button>
+                </div>
+                
+                <div id="manager-sortable-list" class="space-y-3">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <button onclick="saveAllFranchises()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3 rounded-xl text-sm font-bold shadow-lg transition w-full">
+                    Save All Franchise Changes
+                </button>
+            </div>
+
+            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+                <h3 class="font-bold text-slate-200 text-xs sm:text-sm tracking-wider uppercase">AI Automated Operations Log</h3>
+                <div id="ai-status-box" class="bg-slate-950 p-4 rounded-xl border border-slate-800/80 text-xs font-mono text-slate-300 space-y-1 overflow-x-auto">
+                    > Status: League manager initialized. All 7 AI bot systems online.
+                </div>
+            </div>
+        </section>
+
+        <!-- Player Pool & Draft Board View -->
+        <section id="draft-view" class="space-y-6 hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900/80 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-emerald-400 flex items-center gap-2">
+                        <span>📋</span> NFL Player Pool & Draft Board
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">Randomize draft order, run snake draft, and inspect picks.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                    <button onclick="randomizeDraftOrder()" class="flex-1 sm:flex-none bg-amber-600 hover:bg-amber-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
+                        🔀 Randomize Order
+                    </button>
+                    <button onclick="runSnakeDraft()" class="flex-1 sm:flex-none bg-purple-600 hover:bg-purple-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
+                        🔄 Run Draft
+                    </button>
+                    <button onclick="resetApp()" class="bg-red-600 hover:bg-red-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
+                        ⚠️ Reset
+                    </button>
+                    <label class="flex-1 sm:flex-none bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs font-bold cursor-pointer transition shadow text-center">
+                        📤 CSV
+                        <input type="file" accept=".csv" class="hidden" onchange="handleProjectionUpload(event)">
+                    </label>
+
+                    <div class="w-full flex items-center justify-between bg-slate-950 px-3 py-2 rounded-xl border border-slate-800 mt-1 sm:mt-0">
+                        <span class="text-xs font-mono text-slate-400 uppercase">Drafting For:</span>
+                        <select id="drafting-team-select" class="bg-slate-900 text-emerald-400 font-bold text-xs sm:text-sm focus:outline-none cursor-pointer p-1 rounded">
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Draft Order Preview Bar -->
+            <div class="bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl space-y-3">
+                <h3 class="font-bold text-slate-200 text-xs uppercase tracking-wider flex items-center gap-2">
+                    <span>🎯</span> Round 1 Draft Order Sequence
+                </h3>
+                <div id="draft-order-preview" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Draft Board Matrix Section -->
+            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                    <div>
+                        <h3 class="font-black text-white text-sm sm:text-base flex items-center gap-2">
+                            <span>📊</span> 12-Round Snake Draft Board Grid
+                        </h3>
+                        <p class="text-xs text-slate-400">Scroll horizontally on mobile to view all picks.</p>
+                    </div>
+                </div>
+                <div class="overflow-x-auto bg-slate-950 rounded-xl border border-slate-800 p-2">
+                    <table class="w-full text-left border-collapse text-xs min-w-[700px]">
+                        <thead id="draft-board-thead">
+                            <!-- Populated dynamically -->
+                        </thead>
+                        <tbody id="draft-board-tbody" class="divide-y divide-slate-900">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Player Pool Table Section -->
+            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+                <div class="flex flex-col gap-3 justify-between">
+                    <div class="flex flex-col sm:flex-row gap-2 w-full">
+                        <input type="text" id="player-search-input" oninput="filterPlayerPool()" placeholder="Search player..." class="bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs sm:text-sm text-slate-100 focus:outline-none focus:border-emerald-500 shadow-inner w-full">
+                        
+                        <select id="player-sort-select" onchange="filterPlayerPool()" class="bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs sm:text-sm text-emerald-400 font-bold focus:outline-none cursor-pointer">
+                            <option value="value">Sort: AVG (High)</option>
+                            <option value="name">Sort: Name (A-Z)</option>
+                            <option value="team">Sort: Team (A-Z)</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-wrap gap-1.5 justify-center sm:justify-start" id="pos-filter-buttons">
+                        <button onclick="setPosFilter('ALL')" class="pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white transition shadow">ALL</button>
+                        <button onclick="setPosFilter('QB')" class="pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">QB</button>
+                        <button onclick="setPosFilter('RB')" class="pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">RB</button>
+                        <button onclick="setPosFilter('WR')" class="pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">WR</button>
+                        <button onclick="setPosFilter('TE')" class="pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">TE</button>
+                        <button onclick="setPosFilter('K')" class="pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">K</button>
+                        <button onclick="setPosFilter('DST')" class="pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">DST</button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl max-h-[450px] overflow-y-auto">
+                    <table class="w-full text-left border-collapse min-w-[500px]">
+                        <thead>
+                            <tr class="bg-slate-900/90 text-slate-300 text-xs uppercase tracking-wider border-b border-slate-800 sticky top-0 z-10">
+                                <th class="p-3">Player</th>
+                                <th class="p-3 text-center">Pos</th>
+                                <th class="p-3 text-center">Team</th>
+                                <th class="p-3 text-center">Bye</th>
+                                <th class="p-3 text-center">FPTS</th>
+                                <th class="p-3 text-center">AVG</th>
+                                <th class="p-3 text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="player-pool-tbody" class="divide-y divide-slate-900 text-xs sm:text-sm">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Rosters & Starters/Bench Side-by-Side View -->
+        <section id="rosters-view" class="space-y-6 hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 bg-slate-900/80 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-white flex items-center gap-2">
+                        <span>👥</span> Starters (6) & Bench Management
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">Requires 1 QB, 1 RB, 1 WR, 1 TE, 1 K, 1 DST.</p>
+                </div>
+                <button onclick="optimizeAllTeamsLineups()" class="bg-purple-600 hover:bg-purple-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow w-full sm:w-auto">
+                    <span>⚡</span> Optimize All Lineups
+                </button>
+            </div>
+
+            <div id="all-team-rosters-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <!-- Populated dynamically -->
+            </div>
+        </section>
+
+        <!-- Schedule & Box Scores View -->
+        <section id="schedule-view" class="space-y-6 hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-900/80 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-emerald-400 flex items-center gap-2">
+                        <span>🏈</span> Schedule & Postseason
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">Simulate regular season (Weeks 1-14), Semifinals (15), and Championship (16).</p>
+                </div>
+                <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                    <button onclick="simulateCurrentWeek()" class="flex-1 sm:flex-none bg-purple-600 hover:bg-purple-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
+                        ⚡ Sim Active Week
+                    </button>
+                    <button onclick="simulateFullSeason()" class="flex-1 sm:flex-none bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
+                        🚀 Sim Full Season
+                    </button>
+                </div>
+            </div>
+
+            <!-- Week Navigator Tabs -->
+            <div class="bg-slate-900 p-3 sm:p-4 rounded-2xl border border-slate-800 shadow-xl overflow-x-auto">
+                <div class="flex gap-2 min-w-max" id="week-nav-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Matchups Grid for Selected Week -->
+            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                    <h3 id="schedule-header-title" class="font-black text-white text-base sm:text-lg">Week 1 Matchups</h3>
+                    <span class="text-[10px] sm:text-xs font-mono text-slate-400">Click any card for box score</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="week-matchups-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Box Score Modal -->
+    <div id="boxscore-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 hidden">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-4xl w-full p-4 sm:p-6 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                <div>
+                    <h3 id="modal-matchup-title" class="text-lg sm:text-xl font-black text-white">Box Score</h3>
+                    <p id="modal-matchup-subtitle" class="text-xs text-slate-400 font-mono">Head-to-Head Detailed Performance</p>
+                </div>
+                <button onclick="closeBoxScoreModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-xl text-xs font-bold transition">✕ Close</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6" id="modal-boxscore-content">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        let sglTeams = [
+            { id: 0, rank: 1, name: "Gridiron Kings", logo: "logo_gridiron_kings.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: false, starters: [], bench: [] },
+            { id: 1, rank: 2, name: "MCFC", logo: "logo_mcfc.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 2, rank: 3, name: "Bay City Bombers", logo: "logo_bay_city_bombers.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 3, rank: 4, name: "Third & Long", logo: "logo_third_and_long.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 4, rank: 5, name: "Red Zone Dynamos", logo: "logo_red_zone_dynamos.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 5, rank: 6, name: "Metro Blitz", logo: "logo_metro_blitz.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 6, rank: 7, name: "Sunday Gunners", logo: "logo_sunday_gunners.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 7, rank: 8, name: "Steel Curtain", logo: "logo_steel_curtain.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] }
+        ];
+
+        let draftOrderIndices = [0, 1, 2, 3, 4, 5, 6, 7];
+        let schedule = []; 
+        let activeWeekIndex = 0; 
+        const MAX_STARTERS = 6;
+
+        const nflByeWeeks = {
+            "ARI": 14, "ATL": 11, "BAL": 13, "BUF": 7, "CAR": 5, "CHI": 10,
+            "CIN": 6, "CLE": 11, "DAL": 14, "DEN": 10, "DET": 6, "GB": 11,
+            "HOU": 8, "IND": 13, "JAX": 7, "KC": 5, "LAC": 7, "LAR": 11,
+            "LV": 13, "MIA": 6, "MIN": 6, "NE": 11, "NO": 8, "NYG": 8,
+            "NYJ": 13, "PHI": 10, "PIT": 9, "SEA": 11, "SF": 8, "TB": 10,
+            "TEN": 9, "WAS": 7
+        };
+
+        const teamAliases = {
+            "WSH": "WAS", "ARZ": "ARI", "JAC": "JAX", "LA": "LAR",
+            "KANSAS CITY": "KC", "CAROLINA": "CAR", "CINCINNATI": "CIN", "DETROIT": "DET",
+            "MIAMI": "MIA", "MINNESOTA": "MIN", "BUFFALO": "BUF", "JACKSONVILLE": "JAX",
+            "WASHINGTON": "WAS", "HOUSTON": "HOU", "NEW ORLEANS": "NO", "GIANTS": "NYG",
+            "NEW YORK GIANTS": "NYG", "SAN FRANCISCO": "SF", "49ERS": "SF", "PITTSBURGH": "PIT",
+            "TENNESSEE": "TEN", "CHICAGO": "CHI", "DENVER": "DEN", "PHILADELPHIA": "PHI",
+            "TAMPA BAY": "TB", "BUCCANEERS": "TB", "ATLANTA": "ATL", "CLEVELAND": "CLE",
+            "GREEN BAY": "GB", "SEATTLE": "SEA", "NEW ENGLAND": "NE", "PATRIOTS": "NE",
+            "BALTIMORE": "BAL", "INDIANAPOLIS": "IND", "LAS VEGAS": "LV", "RAIDERS": "LV",
+            "JETS": "NYJ", "NEW YORK JETS": "NYJ", "ARIZONA": "ARI", "DALLAS": "DAL", "COWBOYS": "DAL",
+            "CHARGERS": "LAC", "LOS ANGELES CHARGERS": "LAC"
+        };
+
+        const retiredBlacklist = [
+            "frank gore", "tom brady", "drew brees", "ben roethlisberger", 
+            "adrian peterson", "larry fitzgerald", "julio jones", "rob gronkowski",
+            "antonio brown", "eli manning", "philip rivers", "aaron kampman"
+        ];
+
+        let nflPlayerPool = [
+            { id: "1", name: "Patrick Mahomes", pos: "QB", team: "KC", bye: 5, fpts: 344.0, avg: 21.5 },
+            { id: "2", name: "Josh Allen", pos: "QB", team: "BUF", bye: 7, fpts: 339.2, avg: 21.2 },
+            { id: "3", name: "Lamar Jackson", pos: "QB", team: "BAL", bye: 13, fpts: 326.4, avg: 20.4 },
+            { id: "4", name: "Christian McCaffrey", pos: "RB", team: "SF", bye: 8, fpts: 332.8, avg: 20.8 },
+            { id: "5", name: "Breece Hall", pos: "RB", team: "NYJ", bye: 13, fpts: 280.0, avg: 17.5 },
+            { id: "6", name: "Bijan Robinson", pos: "RB", team: "ATL", bye: 11, fpts: 289.6, avg: 18.1 },
+            { id: "7", name: "Justin Jefferson", pos: "WR", team: "MIN", bye: 6, fpts: 302.4, avg: 18.9 },
+            { id: "8", name: "CeeDee Lamb", pos: "WR", team: "DAL", bye: 14, fpts: 310.4, avg: 19.4 },
+            { id: "9", name: "Tyreek Hill", pos: "WR", team: "MIA", bye: 6, fpts: 305.6, avg: 19.1 },
+            { id: "10", name: "Travis Kelce", pos: "TE", team: "KC", bye: 5, fpts: 227.2, avg: 14.2 },
+            { id: "11", name: "Sam LaPorta", pos: "TE", team: "DET", bye: 6, fpts: 204.8, avg: 12.8 },
+            { id: "12", name: "Justin Tucker", pos: "K", team: "BAL", bye: 13, fpts: 136.0, avg: 8.5 },
+            { id: "13", name: "San Francisco DST", pos: "DST", team: "SF", bye: 8, fpts: 140.8, avg: 8.8 }
+        ];
+
+        let draftGridData = Array(12).fill(null).map(() => ({}));
+        let currentPosFilter = 'ALL';
+        let draggedIndex = null;
+
+        function getTeamById(id) {
+            return sglTeams.find(t => t.id === id) || sglTeams[0];
+        }
+
+        function saveState() {
+            const data = { sglTeams, nflPlayerPool, draftGridData, draftOrderIndices, schedule, activeWeekIndex };
+            localStorage.setItem('sgl_app_state', JSON.stringify(data));
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem('sgl_app_state');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    if (data.sglTeams) {
+                        sglTeams = data.sglTeams;
+                        sglTeams.forEach((t, idx) => {
+                            if (t.id === undefined) t.id = idx;
+                            if (!t.starters) t.starters = [];
+                            if (!t.bench) t.bench = [];
+                        });
+                    }
+                    if (data.nflPlayerPool) nflPlayerPool = data.nflPlayerPool;
+                    if (data.draftGridData) draftGridData = data.draftGridData;
+                    if (data.draftOrderIndices) draftOrderIndices = data.draftOrderIndices;
+                    if (data.schedule) schedule = data.schedule;
+                    if (data.activeWeekIndex !== undefined) activeWeekIndex = data.activeWeekIndex;
+                    return true;
+                } catch(e) {
+                    console.error("Failed to load saved state", e);
+                }
+            }
+            return false;
+        }
+
+        function renderAll() {
+            if (schedule.length < 16) generateSchedule();
+            updatePlayoffsAndStandings();
+            renderStandings();
+            renderManagerList();
+            renderDraftTeamSelector();
+            renderTeamRosters();
+            renderDraftOrderPreview();
+            renderDraftBoard();
+            renderScheduleTab();
+            saveState();
+        }
+
+        function generateSchedule() {
+            schedule = [];
+            let tIds = sglTeams.map(t => t.id);
+            let rounds = 7;
+            for (let w = 0; w < rounds; w++) {
+                let weekMatchups = [];
+                for (let i = 0; i < 4; i++) {
+                    weekMatchups.push({ home: tIds[i], away: tIds[7 - i], homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] });
+                }
+                schedule.push(weekMatchups);
+                let temp = tIds.pop();
+                tIds.splice(1, 0, temp);
+            }
+            for (let w = 0; w < rounds; w++) {
+                let firstHalf = schedule[w];
+                let secondHalf = firstHalf.map(m => ({ home: m.away, away: m.home, homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] }));
+                schedule.push(secondHalf);
+            }
+            schedule.push([
+                { home: sglTeams[0].id, away: sglTeams[3].id, homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] },
+                { home: sglTeams[1].id, away: sglTeams[2].id, homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] }
+            ]);
+            schedule.push([
+                { home: sglTeams[0].id, away: sglTeams[1].id, homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] }
+            ]);
+        }
+
+        function updatePlayoffsAndStandings() {
+            sglTeams.forEach(t => { t.w = 0; t.l = 0; t.t = 0; t.pf = 0.0; });
+            for (let w = 0; w < 14 && w < schedule.length; w++) {
+                schedule[w].forEach(m => {
+                    if (!m.played) return;
+                    let home = getTeamById(m.home);
+                    let away = getTeamById(m.away);
+                    home.pf += m.homeScore;
+                    away.pf += m.awayScore;
+                    if (m.homeScore > m.awayScore) { home.w++; away.l++; }
+                    else if (m.homeScore < m.awayScore) { away.w++; home.l++; }
+                    else { home.t++; away.t++; }
+                });
+            }
+
+            let sorted = [...sglTeams].sort((a, b) => {
+                if (b.w !== a.w) return b.w - a.w;
+                if (b.t !== a.t) return b.t - a.t;
+                return b.pf - a.pf;
+            });
+
+            if (schedule.length >= 15) {
+                let sfWeek = schedule[14];
+                if (sfWeek && sfWeek.length >= 2) {
+                    sfWeek[0].home = sorted[0]?.id || sglTeams[0].id;
+                    sfWeek[0].away = sorted[3]?.id || sglTeams[3].id;
+                    sfWeek[1].home = sorted[1]?.id || sglTeams[1].id;
+                    sfWeek[1].away = sorted[2]?.id || sglTeams[2].id;
+                }
+            }
+
+            if (schedule.length >= 16) {
+                let champWeek = schedule[15];
+                let sfWeek = schedule[14];
+                if (champWeek && champWeek.length > 0 && sfWeek && sfWeek.length >= 2) {
+                    let sf1Winner = sfWeek[0].played ? (sfWeek[0].homeScore >= sfWeek[0].awayScore ? sfWeek[0].home : sfWeek[0].away) : sorted[0]?.id || sglTeams[0].id;
+                    let sf2Winner = sfWeek[1].played ? (sfWeek[1].homeScore >= sfWeek[1].awayScore ? sfWeek[1].home : sfWeek[1].away) : sorted[1]?.id || sglTeams[1].id;
+                    champWeek[0].home = sf1Winner;
+                    champWeek[0].away = sf2Winner;
+                }
+            }
+        }
+
+        function optimizeTeamLineupForWeek(team, weekNum) {
+            let allPlayers = [...team.starters, ...team.bench];
+            if (allPlayers.length === 0) return;
+            let requiredPositions = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
+            let newStarters = [];
+            let remaining = [...allPlayers];
+
+            function getPlayerScore(p) {
+                if (p.bye === weekNum) return -999;
+                return p.avg;
+            }
+
+            requiredPositions.forEach(pos => {
+                let pool = remaining.filter(p => p.pos === pos);
+                if (pool.length > 0) {
+                    pool.sort((a, b) => getPlayerScore(b) - getPlayerScore(a));
+                    let best = pool[0];
+                    newStarters.push(best);
+                    let idx = remaining.indexOf(best);
+                    if (idx !== -1) remaining.splice(idx, 1);
+                }
+            });
+
+            while (newStarters.length < MAX_STARTERS && remaining.length > 0) {
+                remaining.sort((a, b) => getPlayerScore(b) - getPlayerScore(a));
+                newStarters.push(remaining.shift());
+            }
+
+            team.starters = newStarters;
+            team.bench = remaining;
+            saveState();
+        }
+
+        function optimizeAllTeamsLineups() {
+            sglTeams.forEach(team => optimizeTeamLineupForWeek(team, activeWeekIndex + 1));
+            renderTeamRosters();
+            alert("All team starting lineups optimized successfully!");
+        }
+
+        function simulateMatchup(matchup, weekNum) {
+            let homeTeam = getTeamById(matchup.home);
+            let awayTeam = getTeamById(matchup.away);
+            if (homeTeam.isAI) optimizeTeamLineupForWeek(homeTeam, weekNum);
+            if (awayTeam.isAI) optimizeTeamLineupForWeek(awayTeam, weekNum);
+
+            let homeScore = 0, awayScore = 0, homeBox = [], awayBox = [];
+            homeTeam.starters.forEach(p => {
+                let pScore = (p.bye === weekNum) ? 0 : Math.max(0, parseFloat((p.avg + (Math.random() * 6 - 3)).toFixed(1)));
+                homeScore += pScore;
+                homeBox.push({ ...p, weekScore: pScore, status: 'Starter' });
+            });
+            awayTeam.starters.forEach(p => {
+                let pScore = (p.bye === weekNum) ? 0 : Math.max(0, parseFloat((p.avg + (Math.random() * 6 - 3)).toFixed(1)));
+                awayScore += pScore;
+                awayBox.push({ ...p, weekScore: pScore, status: 'Starter' });
+            });
+            homeTeam.bench.forEach(p => homeBox.push({ ...p, weekScore: 0, status: 'Bench' }));
+            awayTeam.bench.forEach(p => awayBox.push({ ...p, weekScore: 0, status: 'Bench' }));
+
+            matchup.homeScore = parseFloat(homeScore.toFixed(1));
+            matchup.awayScore = parseFloat(awayScore.toFixed(1));
+            matchup.homeBox = homeBox;
+            matchup.awayBox = awayBox;
+            matchup.played = true;
+        }
+
+        function simulateCurrentWeek() {
+            (schedule[activeWeekIndex] || []).forEach(m => simulateMatchup(m, activeWeekIndex + 1));
+            updatePlayoffsAndStandings();
+            renderScheduleTab();
+            renderStandings();
+            saveState();
+            alert(`Week ${activeWeekIndex + 1} simulated successfully!`);
+        }
+
+        function simulateWeek15() {
+            if (schedule.length >= 15) {
+                updatePlayoffsAndStandings();
+                schedule[14].forEach(m => simulateMatchup(m, 15));
+                updatePlayoffsAndStandings();
+                renderStandings();
+                renderScheduleTab();
+                saveState();
+                alert("Week 15 Semifinals simulated!");
+            }
+        }
+
+        function simulateWeek16() {
+            if (schedule.length >= 16) {
+                updatePlayoffsAndStandings();
+                schedule[15].forEach(m => simulateMatchup(m, 16));
+                renderStandings();
+                renderScheduleTab();
+                saveState();
+                alert("SGL Championship simulated!");
+            }
+        }
+
+        function simulateFullSeason() {
+            for (let w = 0; w < schedule.length; w++) {
+                (schedule[w] || []).forEach(m => simulateMatchup(m, w + 1));
+                if (w === 13 || w === 14) updatePlayoffsAndStandings();
+            }
+            updatePlayoffsAndStandings();
+            renderScheduleTab();
+            renderStandings();
+            saveState();
+            alert("Full season simulated!");
+        }
+
+        function formatLogoHTML(logoSrc, sizeClass = "h-10 w-10") {
+            if (!logoSrc) return `<div class="${sizeClass} flex items-center justify-center text-2xl">🏈</div>`;
+            if (logoSrc.includes('<img')) return logoSrc;
+            if (logoSrc.startsWith('data:image') || logoSrc.startsWith('http') || logoSrc.endsWith('.png') || logoSrc.endsWith('.jpg') || logoSrc.endsWith('.jpeg')) {
+                return `<img src="${logoSrc}" class="${sizeClass} object-cover rounded-full inline-block">`;
+            }
+            return `<div class="${sizeClass} flex items-center justify-center text-2xl">${logoSrc}</div>`;
+        }
+
+        function renderPlayoffsBracket(sortedTeams) {
+            let team1 = sortedTeams[0] ? getTeamById(sortedTeams[0].id) : null;
+            let team2 = sortedTeams[1] ? getTeamById(sortedTeams[1].id) : null;
+            let team3 = sortedTeams[2] ? getTeamById(sortedTeams[2].id) : null;
+            let team4 = sortedTeams[3] ? getTeamById(sortedTeams[3].id) : null;
+
+            document.getElementById('bracket-seed-1').textContent = team1 ? `1. ${team1.name}` : "1. (TBD)";
+            document.getElementById('bracket-seed-2').textContent = team2 ? `2. ${team2.name}` : "2. (TBD)";
+            document.getElementById('bracket-seed-3').textContent = team3 ? `3. ${team3.name}` : "3. (TBD)";
+            document.getElementById('bracket-seed-4').textContent = team4 ? `4. ${team4.name}` : "4. (TBD)";
+
+            if (schedule.length >= 15) {
+                let sfWeek = schedule[14];
+                const sf1HomeRow = document.getElementById('sf1-row-home');
+                const sf1AwayRow = document.getElementById('sf1-row-away');
+                const sf2HomeRow = document.getElementById('sf2-row-home');
+                const sf2AwayRow = document.getElementById('sf2-row-away');
+
+                [sf1HomeRow, sf1AwayRow, sf2HomeRow, sf2AwayRow].forEach(row => {
+                    if (row) row.className = "flex justify-between items-center bg-slate-900 p-2 rounded-lg transition";
+                });
+
+                if (sfWeek && sfWeek[0]) {
+                    document.getElementById('sf1-score').textContent = sfWeek[0].played ? sfWeek[0].homeScore : "-";
+                    document.getElementById('sf4-score').textContent = sfWeek[0].played ? sfWeek[0].awayScore : "-";
+                    if (sfWeek[0].played) {
+                        let homeWon = sfWeek[0].homeScore >= sfWeek[0].awayScore;
+                        document.getElementById('sf1-winner-badge').textContent = `Winner: ${getTeamById(homeWon ? sfWeek[0].home : sfWeek[0].away).name}`;
+                        if (homeWon) {
+                            if (sf1HomeRow) sf1HomeRow.className = "flex justify-between items-center bg-emerald-950/70 border border-emerald-500/50 p-2 rounded-lg text-emerald-300 font-bold transition";
+                            if (sf1AwayRow) sf1AwayRow.className = "flex justify-between items-center bg-slate-900 p-2 rounded-lg opacity-40 line-through text-slate-500 transition";
+                        } else {
+                            if (sf1AwayRow) sf1AwayRow.className = "flex justify-between items-center bg-emerald-950/70 border border-emerald-500/50 p-2 rounded-lg text-emerald-300 font-bold transition";
+                            if (sf1HomeRow) sf1HomeRow.className = "flex justify-between items-center bg-slate-900 p-2 rounded-lg opacity-40 line-through text-slate-500 transition";
+                        }
+                    } else {
+                        document.getElementById('sf1-winner-badge').textContent = "";
+                    }
+                }
+
+                if (sfWeek && sfWeek[1]) {
+                    document.getElementById('sf2-score').textContent = sfWeek[1].played ? sfWeek[1].homeScore : "-";
+                    document.getElementById('sf3-score').textContent = sfWeek[1].played ? sfWeek[1].awayScore : "-";
+                    if (sfWeek[1].played) {
+                        let homeWon = sfWeek[1].homeScore >= sfWeek[1].awayScore;
+                        document.getElementById('sf2-winner-badge').textContent = `Winner: ${getTeamById(homeWon ? sfWeek[1].home : sfWeek[1].away).name}`;
+                        if (homeWon) {
+                            if (sf2HomeRow) sf2HomeRow.className = "flex justify-between items-center bg-emerald-950/70 border border-emerald-500/50 p-2 rounded-lg text-emerald-300 font-bold transition";
+                            if (sf2AwayRow) sf2AwayRow.className = "flex justify-between items-center bg-slate-900 p-2 rounded-lg opacity-40 line-through text-slate-500 transition";
+                        } else {
+                            if (sf2AwayRow) sf2AwayRow.className = "flex justify-between items-center bg-emerald-950/70 border border-emerald-500/50 p-2 rounded-lg text-emerald-300 font-bold transition";
+                            if (sf2HomeRow) sf2HomeRow.className = "flex justify-between items-center bg-slate-900 p-2 rounded-lg opacity-40 line-through text-slate-500 transition";
+                        }
+                    } else {
+                        document.getElementById('sf2-winner-badge').textContent = "";
+                    }
+                }
+            }
+
+            if (schedule.length >= 16) {
+                let champMatchup = schedule[15][0];
+                if (champMatchup) {
+                    document.getElementById('champ-logo-1').innerHTML = formatLogoHTML(getTeamById(champMatchup.home).logo, "h-16 w-16 sm:h-20 sm:w-20");
+                    document.getElementById('champ-logo-2').innerHTML = formatLogoHTML(getTeamById(champMatchup.away).logo, "h-16 w-16 sm:h-20 sm:w-20");
+                    document.getElementById('champ-score-1').textContent = champMatchup.played ? champMatchup.homeScore : "-";
+                    document.getElementById('champ-score-2').textContent = champMatchup.played ? champMatchup.awayScore : "-";
+                }
+            }
+        }
+
+        function renderStandings() {
+            updatePlayoffsAndStandings();
+            const tbody = document.getElementById('standings-table');
+            if(!tbody) return;
+            tbody.innerHTML = '';
+            
+            let sortedTeams = [...sglTeams].sort((a, b) => (b.w !== a.w ? b.w - a.w : (b.t !== a.t ? b.t - a.t : b.pf - a.pf)));
+            renderPlayoffsBracket(sortedTeams);
+
+            let leaderW = sortedTeams[0].w, leaderL = sortedTeams[0].l;
+            sortedTeams.forEach((team, index) => {
+                let gb = index === 0 ? "-" : (((leaderW - team.w) + (team.l - leaderL)) / 2).toFixed(1);
+                if (gb === "0.0") gb = "0";
+
+                tbody.innerHTML += `
+                    <tr class="hover:bg-slate-800/50 transition border-b border-slate-800/40 text-xs sm:text-sm">
+                        <td class="py-2.5 px-3 flex items-center gap-2">
+                            <span class="font-mono text-xs text-slate-500 w-5">${index + 1}</span>
+                            <span class="font-bold text-white truncate max-w-[140px] sm:max-w-[180px]" title="${team.name}">${team.name}</span>
+                        </td>
+                        <td class="py-2.5 px-2 text-center font-mono font-bold text-slate-200">${team.w}</td>
+                        <td class="py-2.5 px-2 text-center font-mono font-bold text-slate-400">${team.l}</td>
+                        <td class="py-2.5 px-2 text-center font-mono font-bold text-slate-400">${team.t}</td>
+                        <td class="py-2.5 px-2 text-center font-mono text-slate-400">${gb}</td>
+                        <td class="py-2.5 px-3 text-center font-mono text-emerald-400 font-bold">${team.pf.toFixed(1)}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        function renderManagerList() {
+            const container = document.getElementById('manager-sortable-list');
+            if(!container) return;
+            container.innerHTML = '';
+
+            sglTeams.forEach((team, index) => {
+                container.innerHTML += `
+                    <div class="drag-item flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-3 bg-slate-950/90 rounded-2xl border border-slate-800 gap-4 shadow-md"
+                         draggable="true" data-index="${index}"
+                         ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-slate-500 cursor-grab text-xl select-none">☰</span>
+                            <span class="text-xs font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded-lg border border-slate-800">#${index + 1}</span>
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center flex-shrink-0">
+                                ${formatLogoHTML(team.logo, "h-14 w-14 sm:h-16 sm:w-16")}
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <label class="block text-[10px] text-slate-400 uppercase font-mono mb-1">Franchise Name</label>
+                            <input type="text" id="mgr-name-${team.id}" value="${team.name}" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-xs sm:text-sm text-slate-100 font-semibold">
+                        </div>
+                        <div class="w-full sm:w-72 flex flex-col justify-end">
+                            <label class="block text-[10px] text-slate-400 uppercase font-mono mb-1">Logo Filename / URL</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="mgr-logo-${team.id}" value="${team.logo.includes('<img') ? '' : team.logo}" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-2.5 text-xs sm:text-sm text-slate-100">
+                                <label class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2.5 rounded-xl text-xs font-bold cursor-pointer transition flex items-center justify-center flex-shrink-0">
+                                    📁
+                                    <input type="file" accept="image/png, image/jpeg" class="hidden" onchange="handleLogoUpload(event, ${team.id})">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function renderDraftTeamSelector() {
+            const select = document.getElementById('drafting-team-select');
+            if(!select) return;
+            let val = select.value;
+            select.innerHTML = '';
+            sglTeams.forEach(t => select.innerHTML += `<option value="${t.id}">${t.name}</option>`);
+            if (val) select.value = val;
+        }
+
+        function renderTeamRosters() {
+            const container = document.getElementById('all-team-rosters-container');
+            if(!container) return;
+            container.innerHTML = '';
+
+            sglTeams.forEach((team) => {
+                let startersHtml = team.starters.length === 0 ? `<p class="text-xs text-slate-500 italic py-2">No starters.</p>` :
+                    team.starters.map((p, idx) => `
+                        <div class="flex items-center justify-between bg-slate-950 p-2 rounded-xl border border-slate-800 text-xs">
+                            <div class="flex items-center space-x-1.5 truncate">
+                                <span class="bg-emerald-900/60 text-emerald-400 font-mono px-1.5 py-0.5 rounded text-[10px]">${p.pos}</span>
+                                <span class="font-bold text-white truncate max-w-[110px] sm:max-w-[140px]">${p.name}</span>
+                                <span class="text-slate-400 text-[10px]">(${p.team})</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <button onclick="moveToBench(${team.id}, ${idx})" class="bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded text-[10px]">▼</button>
+                                <button onclick="removePlayer(${team.id}, ${idx}, 'starters')" class="text-red-400 font-bold px-1">✕</button>
+                            </div>
+                        </div>
+                    `).join('');
+
+                let benchHtml = team.bench.length === 0 ? `<p class="text-xs text-slate-500 italic py-2">No bench.</p>` :
+                    team.bench.map((p, idx) => `
+                        <div class="flex items-center justify-between bg-slate-950 p-2 rounded-xl border border-slate-800 text-xs">
+                            <div class="flex items-center space-x-1.5 truncate">
+                                <span class="bg-slate-900 text-slate-400 font-mono px-1.5 py-0.5 rounded text-[10px]">${p.pos}</span>
+                                <span class="font-bold text-white truncate max-w-[110px] sm:max-w-[140px]">${p.name}</span>
+                                <span class="text-slate-400 text-[10px]">(${p.team})</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <button onclick="moveToStarters(${team.id}, ${idx})" class="bg-emerald-800 text-white px-1.5 py-0.5 rounded text-[10px]">▲</button>
+                                <button onclick="removePlayer(${team.id}, ${idx}, 'bench')" class="text-red-400 font-bold px-1">✕</button>
+                            </div>
+                        </div>
+                    `).join('');
+
+                container.innerHTML += `
+                    <div class="bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl space-y-3">
+                        <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                            <div class="w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                ${formatLogoHTML(team.logo, "h-10 w-10")}
+                            </div>
+                            <div class="flex-grow min-w-0">
+                                <h3 class="font-black text-white text-sm sm:text-base truncate">${team.name}</h3>
+                                <p class="text-[10px] text-slate-400 font-mono">Starters: ${team.starters.length}/6 | Bench: ${team.bench.length}</p>
+                            </div>
+                            <button onclick="optimizeTeamLineupForWeek(getTeamById(${team.id}), activeWeekIndex + 1); renderTeamRosters();" class="bg-slate-800 text-emerald-400 px-2.5 py-1 rounded-xl text-xs font-bold">Opt</button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="space-y-1.5">
+                                <div class="text-[10px] font-mono text-emerald-400 uppercase">Starters</div>
+                                <div class="space-y-1.5 bg-slate-950/50 p-2 rounded-xl border border-slate-800">${startersHtml}</div>
+                            </div>
+                            <div class="space-y-1.5">
+                                <div class="text-[10px] font-mono text-slate-400 uppercase">Bench</div>
+                                <div class="space-y-1.5 bg-slate-950/50 p-2 rounded-xl border border-slate-800">${benchHtml}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            saveState();
+        }
+
+        function moveToBench(teamId, starterIdx) {
+            let team = getTeamById(teamId);
+            team.bench.push(team.starters.splice(starterIdx, 1)[0]);
+            renderTeamRosters();
+        }
+
+        function moveToStarters(teamId, benchIdx) {
+            let team = getTeamById(teamId);
+            if(team.starters.length >= MAX_STARTERS) return alert("Starters full (6 max)!");
+            team.starters.push(team.bench.splice(benchIdx, 1)[0]);
+            renderTeamRosters();
+        }
+
+        function renderDraftOrderPreview() {
+            const container = document.getElementById('draft-order-preview');
+            if(!container) return;
+            container.innerHTML = '';
+            draftOrderIndices.forEach((teamId, slotIdx) => {
+                container.innerHTML += `
+                    <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 text-center">
+                        <div class="text-[9px] font-mono text-emerald-400">#${slotIdx + 1}</div>
+                        <div class="font-bold text-white text-xs truncate mt-0.5">${getTeamById(teamId).name}</div>
+                    </div>
+                `;
+            });
+        }
+
+        function renderDraftBoard() {
+            const thead = document.getElementById('draft-board-thead');
+            const tbody = document.getElementById('draft-board-tbody');
+            if(!thead || !tbody) return;
+
+            let headerHTML = `<tr class="bg-slate-900 text-slate-300 text-xs uppercase tracking-wider border-b border-slate-800"><th class="p-2 text-center w-12">R</th>`;
+            draftOrderIndices.forEach((teamId, slotIdx) => {
+                headerHTML += `<th class="p-2 text-center min-w-[110px]"><span class="text-emerald-400">#${slotIdx + 1}</span> ${getTeamById(teamId).name}</th>`;
+            });
+            headerHTML += `</tr>`;
+            thead.innerHTML = headerHTML;
+
+            let bodyHTML = '';
+            for (let r = 0; r < 12; r++) {
+                bodyHTML += `<tr class="border-b border-slate-900"><td class="p-2 text-center font-mono font-bold text-emerald-400 bg-slate-900/60">R${r + 1}</td>`;
+                draftOrderIndices.forEach(teamId => {
+                    let pick = draftGridData[r][teamId];
+                    bodyHTML += pick ? `<td class="p-2 text-center bg-slate-900/30">
+                        <div class="font-bold text-white text-xs truncate max-w-[100px]">${pick.name}</div>
+                        <div class="text-[9px] text-slate-400 font-mono">${pick.pos} • ${pick.team}</div>
+                    </td>` : `<td class="p-2 text-center text-slate-700">-</td>`;
+                });
+                bodyHTML += `</tr>`;
+            }
+            tbody.innerHTML = bodyHTML;
+        }
+
+        function renderScheduleTab() {
+            const navContainer = document.getElementById('week-nav-container');
+            const matchupsContainer = document.getElementById('week-matchups-container');
+            if(!navContainer || !matchupsContainer) return;
+
+            navContainer.innerHTML = '';
+            for (let w = 0; w < 16; w++) {
+                let isActive = (w === activeWeekIndex);
+                let label = w === 14 ? "Semis" : (w === 15 ? "Champ" : `W${w + 1}`);
+                navContainer.innerHTML += `
+                    <button onclick="setActiveWeek(${w})" class="px-3 py-1.5 rounded-xl text-xs font-bold transition shadow ${isActive ? 'bg-emerald-600 text-white' : 'bg-slate-950 text-slate-300 border border-slate-800'}">
+                        ${label}
+                    </button>
+                `;
+            }
+
+            document.getElementById('schedule-header-title').textContent = activeWeekIndex === 14 ? "Semifinals (Week 15)" : (activeWeekIndex === 15 ? "Championship (Week 16)" : `Week ${activeWeekIndex + 1} Matchups`);
+            matchupsContainer.innerHTML = '';
+
+            (schedule[activeWeekIndex] || []).forEach((m, mIdx) => {
+                let hTeam = getTeamById(m.home), aTeam = getTeamById(m.away);
+                let scoreDisp = m.played ? `<span class="font-mono text-lg font-black ${m.homeScore > m.awayScore ? 'text-emerald-400' : 'text-slate-300'}">${m.homeScore}</span> - <span class="font-mono text-lg font-black ${m.awayScore > m.homeScore ? 'text-emerald-400' : 'text-slate-300'}">${m.awayScore}</span>` : `<span class="text-xs font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded-full border border-slate-800 font-bold">VS</span>`;
+
+                matchupsContainer.innerHTML += `
+                    <div onclick="openBoxScore(${activeWeekIndex}, ${mIdx})" class="bg-slate-950 p-4 sm:p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition cursor-pointer shadow space-y-3">
+                        <div class="flex justify-between items-center text-[10px] text-slate-400 font-mono border-b border-slate-900 pb-1.5">
+                            <span>Game #${mIdx + 1}</span>
+                            <span class="${m.played ? 'text-emerald-400 font-bold' : 'text-slate-500'}">${m.played ? 'Final' : 'Scheduled'}</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-5/12 flex items-center space-x-2 truncate">
+                                ${formatLogoHTML(hTeam.logo, "h-10 w-10 flex-shrink-0")}
+                                <span class="text-xs font-bold text-white truncate">${hTeam.name}</span>
+                            </div>
+                            <div class="w-2/10 text-center flex justify-center">${scoreDisp}</div>
+                            <div class="w-5/12 flex items-center justify-end space-x-2 truncate">
+                                <span class="text-xs font-bold text-white truncate text-right">${aTeam.name}</span>
+                                ${formatLogoHTML(aTeam.logo, "h-10 w-10 flex-shrink-0")}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function setActiveWeek(wIdx) {
+            activeWeekIndex = wIdx;
+            renderScheduleTab();
+            saveState();
+        }
+
+        function openBoxScore(weekIdx, matchupIdx) {
+            let m = schedule[weekIdx][matchupIdx];
+            if (!m.played) return alert("Simulate this matchup first!");
+            let hTeam = getTeamById(m.home), aTeam = getTeamById(m.away);
+
+            document.getElementById('modal-matchup-title').textContent = weekIdx === 14 ? "Semifinals Box Score" : (weekIdx === 15 ? "Championship Box Score" : `Week ${weekIdx + 1} Box Score`);
+            document.getElementById('modal-matchup-subtitle').textContent = `Score: ${m.homeScore} - ${m.awayScore}`;
+
+            document.getElementById('modal-boxscore-content').innerHTML = `
+                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-2">
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                        <span class="font-bold text-white text-xs">${hTeam.name}</span>
+                        <span class="font-mono text-emerald-400 font-bold">${m.homeScore} PTS</span>
+                    </div>
+                    <div class="space-y-1 max-h-48 overflow-y-auto">
+                        ${m.homeBox.map(p => `<div class="flex justify-between items-center text-xs bg-slate-900 p-1.5 rounded"><span class="text-emerald-400 font-mono">${p.pos}</span> <strong class="text-white truncate max-w-[120px]">${p.name}</strong> <span class="font-mono">${p.weekScore} pts</span></div>`).join('')}
+                    </div>
+                </div>
+                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-2">
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                        <span class="font-bold text-white text-xs">${aTeam.name}</span>
+                        <span class="font-mono text-emerald-400 font-bold">${m.awayScore} PTS</span>
+                    </div>
+                    <div class="space-y-1 max-h-48 overflow-y-auto">
+                        ${m.awayBox.map(p => `<div class="flex justify-between items-center text-xs bg-slate-900 p-1.5 rounded"><span class="text-emerald-400 font-mono">${p.pos}</span> <strong class="text-white truncate max-w-[120px]">${p.name}</strong> <span class="font-mono">${p.weekScore} pts</span></div>`).join('')}
+                    </div>
+                </div>
+            `;
+            document.getElementById('boxscore-modal').classList.remove('hidden');
+        }
+
+        function closeBoxScoreModal() {
+            document.getElementById('boxscore-modal').classList.add('hidden');
+        }
+
+        function randomizeDraftOrder() {
+            draftOrderIndices.sort(() => Math.random() - 0.5);
+            sglTeams.forEach(t => { t.starters = []; t.bench = []; });
+            draftGridData = Array(12).fill(null).map(() => ({}));
+            renderDraftOrderPreview();
+            renderDraftBoard();
+            renderTeamRosters();
+            saveState();
+            alert("Draft order randomized!");
+        }
+
+        function resetApp() {
+            if (confirm("Reset all rosters and records?")) {
+                localStorage.removeItem('sgl_app_state');
+                location.reload();
+            }
+        }
+
+        function draftPlayer(name, pos, team, bye, fpts, avg) {
+            let tId = parseInt(document.getElementById('drafting-team-select').value);
+            let target = getTeamById(tId);
+            if (target.starters.length + target.bench.length >= 12) return alert("Roster full (12 max)!");
+            let pObj = { name, pos, team, bye, fpts, avg };
+            if (!target.starters.some(p => p.pos === pos) && target.starters.length < MAX_STARTERS) {
+                target.starters.push(pObj);
+            } else {
+                target.bench.push(pObj);
+            }
+            renderTeamRosters();
+            renderDraftBoard();
+            saveState();
+            alert(`Drafted ${name} to ${target.name}!`);
+        }
+
+        function removePlayer(teamId, idx, type) {
+            let t = getTeamById(teamId);
+            t[type].splice(idx, 1);
+            renderTeamRosters();
+            renderDraftBoard();
+            saveState();
+        }
+
+        function runSnakeDraft() {
+            sglTeams.forEach(t => { t.starters = []; t.bench = []; });
+            draftGridData = Array(12).fill(null).map(() => ({}));
+            let drafted = new Set();
+
+            for (let round = 1; round <= 12; round++) {
+                let order = round % 2 === 0 ? [...draftOrderIndices].reverse() : [...draftOrderIndices];
+                order.forEach(tId => {
+                    let team = getTeamById(tId);
+                    if (team.starters.length + team.bench.length >= 12) return;
+                    let avail = nflPlayerPool.filter(p => !drafted.has(p.name.toLowerCase()));
+                    avail.sort((a, b) => b.avg - a.avg);
+                    let choice = avail[0];
+                    if (choice) {
+                        let pObj = { name: choice.name, pos: choice.pos, team: choice.team, bye: choice.bye, fpts: choice.fpts, avg: choice.avg };
+                        if (!team.starters.some(p => p.pos === pObj.pos) && team.starters.length < MAX_STARTERS) {
+                            team.starters.push(pObj);
+                        } else {
+                            team.bench.push(pObj);
+                        }
+                        draftGridData[round - 1][team.id] = pObj;
+                        drafted.add(choice.name.toLowerCase());
+                    }
+                });
+            }
+            sglTeams.forEach(t => optimizeTeamLineupForWeek(t, 1));
+            renderTeamRosters();
+            renderDraftBoard();
+            saveState();
+            alert("Snake draft complete!");
+        }
+
+        function handleProjectionUpload(event) {
+            let file = event.target.files[0];
+            if (!file) return;
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let lines = e.target.result.split(/\r\n|\n/);
+                let imported = [];
+                for (let i = 1; i < lines.length; i++) {
+                    let cols = lines[i].split(',');
+                    if (cols.length >= 2 && cols[0]) {
+                        imported.push({ id: `imp_${i}`, name: cols[0].replace(/"/g, '').trim(), pos: cols[1] || 'RB', team: 'FA', bye: 8, fpts: 150, avg: 12.5 });
+                    }
+                }
+                if (imported.length > 0) {
+                    nflPlayerPool = imported;
+                    renderPlayerPool();
+                    saveState();
+                    alert(`Loaded ${imported.length} players!`);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function setPosFilter(pos) {
+            currentPosFilter = pos;
+            document.querySelectorAll('.pos-btn').forEach(btn => {
+                btn.className = btn.textContent === pos ? "pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white transition shadow" : "pos-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 transition";
+            });
+            renderPlayerPool();
+        }
+
+        function filterPlayerPool() { renderPlayerPool(); }
+
+        function renderPlayerPool() {
+            const tbody = document.getElementById('player-pool-tbody');
+            if(!tbody) return;
+            let query = document.getElementById('player-search-input').value.toLowerCase();
+            let sortBy = document.getElementById('player-sort-select').value;
+            tbody.innerHTML = '';
+
+            let filtered = nflPlayerPool.filter(p => (currentPosFilter === 'ALL' || p.pos === currentPosFilter) && p.name.toLowerCase().includes(query));
+            filtered.sort((a, b) => sortBy === 'value' ? b.avg - a.avg : (sortBy === 'name' ? a.name.localeCompare(b.name) : a.team.localeCompare(b.team)));
+
+            filtered.forEach(p => {
+                tbody.innerHTML += `
+                    <tr class="hover:bg-slate-900/60 transition">
+                        <td class="p-3 font-bold text-white truncate max-w-[130px]">${p.name}</td>
+                        <td class="p-3 text-center"><span class="bg-slate-800 text-emerald-400 font-mono px-2 py-0.5 rounded text-[10px]">${p.pos}</span></td>
+                        <td class="p-3 text-center font-mono text-slate-300">${p.team}</td>
+                        <td class="p-3 text-center font-mono text-amber-400">W${p.bye}</td>
+                        <td class="p-3 text-center font-mono text-slate-200">${p.fpts.toFixed(1)}</td>
+                        <td class="p-3 text-center font-mono text-emerald-400 font-bold">${p.avg.toFixed(1)}</td>
+                        <td class="p-3 text-right">
+                            <button onclick="draftPlayer('${p.name}', '${p.pos}', '${p.team}', ${p.bye}, ${p.fpts}, ${p.avg})" class="bg-emerald-600 text-white px-2.5 py-1 rounded-lg text-xs font-bold">Draft</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function handleLogoUpload(event, teamId) {
+            let file = event.target.files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    getTeamById(teamId).logo = e.target.result;
+                    renderManagerList();
+                    renderDraftTeamSelector();
+                    renderTeamRosters();
+                    saveState();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function saveAllFranchises() {
+            sglTeams.forEach(t => {
+                let nIn = document.getElementById(`mgr-name-${t.id}`);
+                let lIn = document.getElementById(`mgr-logo-${t.id}`);
+                if (nIn && nIn.value.trim()) t.name = nIn.value.trim();
+                if (lIn && lIn.value.trim()) t.logo = lIn.value.trim();
+            });
+            renderAll();
+            alert("Franchise changes saved!");
+        }
+
+        function handleDragStart(e) { draggedIndex = parseInt(e.currentTarget.getAttribute('data-index')); }
+        function handleDragOver(e) { e.preventDefault(); e.currentTarget.classList.add('drag-over'); }
+        function handleDragLeave(e) { e.currentTarget.classList.remove('drag-over'); }
+        function handleDrop(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('drag-over');
+            let targetIdx = parseInt(e.currentTarget.getAttribute('data-index'));
+            if (draggedIndex !== null && draggedIndex !== targetIdx) {
+                let moved = sglTeams.splice(draggedIndex, 1)[0];
+                sglTeams.splice(targetIdx, 0, moved);
+                renderAll();
+            }
+        }
+
+        function runAllAIBots() {
+            optimizeAllTeamsLineups();
+            let box = document.getElementById('ai-status-box');
+            if(box) box.innerHTML = `<span class="text-emerald-400 font-bold">> Success! All AI bot lineups optimized.</span>`;
+        }
+
+        function switchTab(tab) {
+            ['standings', 'manager', 'draft', 'rosters', 'schedule'].forEach(t => {
+                document.getElementById(`${t}-view`).classList.add('hidden');
+                document.getElementById(`nav-${t}`).className = "px-2.5 py-1.5 rounded-lg transition text-slate-300 hover:text-white hover:bg-slate-800";
+            });
+            document.getElementById(`${tab}-view`).classList.remove('hidden');
+            document.getElementById(`nav-${tab}`).className = "px-2.5 py-1.5 rounded-lg transition text-emerald-400 font-bold bg-slate-800 border border-slate-700";
+
+            if (tab === 'standings') renderStandings();
+            if (tab === 'manager') renderManagerList();
+            if (tab === 'draft') { renderPlayerPool(); renderDraftOrderPreview(); renderDraftBoard(); }
+            if (tab === 'rosters') renderTeamRosters();
+            if (tab === 'schedule') renderScheduleTab();
+        }
+
+        window.onload = async () => {
+            loadState();
+            try {
+                let res = await fetch('updated_projections.json');
+                if (res.ok) {
+                    let livePool = await res.json();
+                    if (livePool && livePool.length > 0) nflPlayerPool = livePool;
+                }
+            } catch(e) {}
+            renderAll();
+            renderPlayerPool();
+            renderDraftOrderPreview();
+            renderDraftBoard();
+        };
+    </script>
+</body>
+</html>
