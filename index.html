@@ -6,6 +6,13 @@
     <title>Sunday Gridiron League (SGL)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        body {
+            background-image: url('Gemini_Generated_Image_c2zeypc2zeypc2ze.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #0f172a;
+        }
         .drag-item {
             cursor: grab;
             user-select: none;
@@ -36,15 +43,15 @@
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans min-h-screen">
+<body class="text-slate-100 font-sans min-h-screen">
 
     <!-- Header with SGL Main Logo -->
-    <header class="bg-slate-900 border-b border-slate-800 p-3 sm:p-4 shadow-lg sticky top-0 z-50">
+    <header class="bg-slate-900/90 backdrop-blur border-b border-slate-800 p-3 sm:p-4 shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
             <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-start">
                 <div class="flex items-center space-x-3">
                     <img src="logo_sgl_main.png" alt="SGL Logo" class="h-40 sm:h-40 w-auto object-contain">
-                    
+                </div>
             </div>
             <nav class="flex flex-wrap gap-1 sm:gap-2 justify-center text-xs sm:text-sm font-medium">
                 <button onclick="switchTab('standings')" id="nav-standings" class="px-2.5 py-1.5 rounded-lg transition text-emerald-400 font-bold bg-slate-800 border border-slate-700">Standings</button>
@@ -64,22 +71,22 @@
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-slate-900/80 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl backdrop-blur">
                 <div>
                     <h2 class="text-xl sm:text-2xl font-black tracking-wide text-white flex items-center gap-2">
-         League Standings & Postseason Race
+                        League Standings & Postseason Race
                     </h2>
-                    </div>
+                </div>
                 <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                     <button onclick="simulateWeek15()" class="flex-1 sm:flex-none bg-purple-600 hover:bg-purple-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow flex items-center justify-center gap-1.5">
-                         Sim Week 15 (SF)
+                        Sim Week 15 (SF)
                     </button>
                     <button onclick="simulateWeek16()" class="flex-1 sm:flex-none bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow flex items-center justify-center gap-1.5">
-                         Sim Championship
+                        Sim Championship
                     </button>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 <!-- Compact Standings Table with Horizontal Scroll on Mobile -->
-                <div class="lg:col-span-7 bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl p-3 sm:p-4">
+                <div class="lg:col-span-7 bg-slate-900/90 backdrop-blur rounded-2xl overflow-hidden border border-slate-800 shadow-2xl p-3 sm:p-4">
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse min-w-[420px]">
                             <thead>
@@ -100,7 +107,7 @@
                 </div>
 
                 <!-- Postseason Bracket Next to Standings with Clear Winner Highlighting -->
-                <div class="lg:col-span-5 bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-800 shadow-xl space-y-4">
+                <div class="lg:col-span-5 bg-slate-900/90 backdrop-blur rounded-2xl p-4 sm:p-5 border border-slate-800 shadow-xl space-y-4">
                     <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                         <h3 class="font-black text-white text-sm sm:text-base flex items-center gap-2">
                             Semifinals Bracket (Week 15)
@@ -145,12 +152,11 @@
             </div>
 
             <!-- Standalone Larger Championship Showcase -->
-            <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/40 p-4 sm:p-6 rounded-3xl border border-emerald-500/30 shadow-2xl space-y-4">
+            <div class="bg-gradient-to-br from-slate-900/90 via-slate-900/90 to-emerald-950/60 backdrop-blur p-4 sm:p-6 rounded-3xl border border-emerald-500/30 shadow-2xl space-y-4">
                 <div class="flex flex-col sm:flex-row justify-between items-center border-b border-slate-800 pb-4 gap-2 text-center sm:text-left">
                     <div class="flex items-center gap-2">
-                                    <div>
+                        <div>
                             <h3 class="font-black text-white text-base sm:text-lg tracking-wider uppercase text-emerald-400">SGL Championship Game (Week 16)</h3>
-                            
                         </div>
                     </div>
                     <button onclick="simulateWeek16()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow flex items-center gap-2">
@@ -198,7 +204,7 @@
                 </button>
             </div>
 
-            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-2xl space-y-6">
+            <div class="bg-slate-900/90 backdrop-blur p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-2xl space-y-6">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-800 pb-4 gap-3">
                     <div>
                         <h3 class="font-bold text-slate-100 text-sm sm:text-base">Active League Rosters (8 Franchises)</h3>
@@ -218,7 +224,7 @@
                 </button>
             </div>
 
-            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+            <div class="bg-slate-900/90 backdrop-blur p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
                 <h3 class="font-bold text-slate-200 text-xs sm:text-sm tracking-wider uppercase">AI Automated Operations Log</h3>
                 <div id="ai-status-box" class="bg-slate-950 p-4 rounded-xl border border-slate-800/80 text-xs font-mono text-slate-300 space-y-1 overflow-x-auto">
                     > Status: League manager initialized. All 7 AI bot systems online.
@@ -233,7 +239,7 @@
                     <h2 class="text-xl sm:text-2xl font-black tracking-wide text-emerald-400 flex items-center gap-2">
                         NFL Player Pool & Draft Board
                     </h2>
-                    </div>
+                </div>
                 <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                     <button onclick="randomizeDraftOrder()" class="flex-1 sm:flex-none bg-amber-600 hover:bg-amber-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition shadow">
                         Randomize Order
@@ -252,7 +258,7 @@
             </div>
 
             <!-- Draft Order Preview Bar -->
-            <div class="bg-slate-900 p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl space-y-3">
+            <div class="bg-slate-900/90 backdrop-blur p-4 sm:p-5 rounded-2xl border border-slate-800 shadow-xl space-y-3">
                 <h3 class="font-bold text-slate-200 text-xs uppercase tracking-wider flex items-center gap-2">
                     Round 1 Draft Order Sequence
                 </h3>
@@ -262,13 +268,13 @@
             </div>
 
             <!-- Draft Board Matrix Section -->
-            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+            <div class="bg-slate-900/90 backdrop-blur p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                     <div>
                         <h3 class="font-black text-white text-sm sm:text-base flex items-center gap-2">
                             12-Round Snake Draft Board Grid
                         </h3>
-                        </div>
+                    </div>
                 </div>
                 <div class="overflow-x-auto bg-slate-950 rounded-xl border border-slate-800 p-2">
                     <table class="w-full text-left border-collapse text-xs min-w-[700px]">
@@ -283,7 +289,7 @@
             </div>
 
             <!-- Player Pool Table Section -->
-            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+            <div class="bg-slate-900/90 backdrop-blur p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
                 <div class="flex flex-col gap-3 justify-between">
                     <div class="flex flex-col sm:flex-row gap-2 w-full">
                         <input type="text" id="player-search-input" oninput="filterPlayerPool()" placeholder="Search player..." class="bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs sm:text-sm text-slate-100 focus:outline-none focus:border-emerald-500 shadow-inner w-full">
@@ -366,14 +372,14 @@
             </div>
 
             <!-- Week Navigator Tabs -->
-            <div class="bg-slate-900 p-3 sm:p-4 rounded-2xl border border-slate-800 shadow-xl overflow-x-auto">
+            <div class="bg-slate-900/90 backdrop-blur p-3 sm:p-4 rounded-2xl border border-slate-800 shadow-xl overflow-x-auto">
                 <div class="flex gap-2 min-w-max" id="week-nav-container">
                     <!-- Populated dynamically -->
                 </div>
             </div>
 
             <!-- Matchups Grid for Selected Week -->
-            <div class="bg-slate-900 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+            <div class="bg-slate-900/90 backdrop-blur p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                     <h3 id="schedule-header-title" class="font-black text-white text-base sm:text-lg">Week 1 Matchups</h3>
                     <span class="text-[10px] sm:text-xs font-mono text-slate-400">Click any card for box score</span>
