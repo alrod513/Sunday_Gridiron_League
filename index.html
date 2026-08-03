@@ -248,13 +248,6 @@
                         CSV
                         <input type="file" accept=".csv" class="hidden" onchange="handleProjectionUpload(event)">
                     </label>
-
-                    <div class="w-full flex items-center justify-between bg-slate-950 px-3 py-2 rounded-xl border border-slate-800 mt-1 sm:mt-0">
-                        <span class="text-xs font-mono text-slate-400 uppercase">Drafting For:</span>
-                        <select id="drafting-team-select" class="bg-slate-900 text-emerald-400 font-bold text-xs sm:text-sm focus:outline-none cursor-pointer p-1 rounded">
-                            <!-- Populated dynamically -->
-                        </select>
-                    </div>
                 </div>
             </div>
 
@@ -516,7 +509,6 @@
             updatePlayoffsAndStandings();
             renderStandings();
             renderManagerList();
-            renderDraftTeamSelector();
             renderTeamRosters();
             renderDraftOrderPreview();
             renderDraftBoard();
@@ -849,15 +841,6 @@
             });
         }
 
-        function renderDraftTeamSelector() {
-            const select = document.getElementById('drafting-team-select');
-            if(!select) return;
-            let val = select.value;
-            select.innerHTML = '';
-            sglTeams.forEach(t => select.innerHTML += `<option value="${t.id}">${t.name}</option>`);
-            if (val) select.value = val;
-        }
-
         function renderTeamRosters() {
             const container = document.getElementById('all-team-rosters-container');
             if(!container) return;
@@ -1081,8 +1064,7 @@
         }
 
         function draftPlayer(name, pos, team, bye, fpts, avg) {
-            let tId = parseInt(document.getElementById('drafting-team-select').value);
-            let target = getTeamById(tId);
+            let target = sglTeams[0];
             if (target.starters.length + target.bench.length >= 12) return alert("Roster full (12 max)!");
             let pObj = { name, pos, team, bye, fpts, avg };
             if (!target.starters.some(p => p.pos === pos) && target.starters.length < MAX_STARTERS) {
@@ -1203,7 +1185,6 @@
                 reader.onload = function(e) {
                     getTeamById(teamId).logo = e.target.result;
                     renderManagerList();
-                    renderDraftTeamSelector();
                     renderTeamRosters();
                     saveState();
                 };
