@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday Gridiron League (SGL)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('Gemini_Generated_Image_c2zeypc2zeypc2ze.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #051410;
+        }
+        .drag-item {
+            cursor: grab;
+            user-select: none;
+            touch-action: none;
+        }
+        .drag-item:active {
+            cursor: grabbing;
+        }
+        .drag-over {
+            background-color: rgba(20, 184, 166, 0.25) !important;
+            border: 2px dashed #14b8a6 !important;
+        }
+        /* Custom scrollbar for mobile horizontal scrolling */
+        ::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(5, 20, 16, 0.8);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(26, 84, 68, 0.9);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(20, 184, 166, 0.6);
+        }
+    </style>
+</head>
+<body class="text-teal-50 font-sans min-h-screen">
+
+    <!-- Header with SGL Main Logo Superseding the Top-Left Edge -->
+    <header class="bg-gradient-to-r from-[#020b08] via-[#08201a] to-[#0d3027] border-b border-[#134234] px-4 py-3 shadow-2xl sticky top-0 z-50 overflow-visible relative">
+        <!-- Logo positioned further left so its center aligns with your marker -->
+        <div class="absolute -left-20 sm:-left-28 -top-4 sm:-top-6 z-50 pointer-events-none">
+            <img src="logo_sgl_main.png" alt="SGL Logo" class="h-52 sm:h-64 w-auto object-contain drop-shadow-2xl">
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 relative md:pl-48">
+            <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-start">
+                <div class="w-32 sm:w-48 hidden md:block"></div>
+            </div>
+            <nav class="flex flex-wrap gap-1 sm:gap-2 justify-center text-xs sm:text-sm font-medium">
+                <button onclick="switchTab('standings')" id="nav-standings" class="px-2.5 py-1.5 rounded-lg transition text-teal-200 hover:text-white hover:bg-[#10382c]">Standings</button>
+                <button onclick="switchTab('manager')" id="nav-manager" class="px-2.5 py-1.5 rounded-lg transition text-teal-200 hover:text-white hover:bg-[#10382c]">Manager</button>
+                <button onclick="switchTab('draft')" id="nav-draft" class="px-2.5 py-1.5 rounded-lg transition text-teal-200 hover:text-white hover:bg-[#10382c]">Draft Board</button>
+                <button onclick="switchTab('rosters')" id="nav-rosters" class="px-2.5 py-1.5 rounded-lg transition text-teal-200 hover:text-white hover:bg-[#10382c]">Rosters</button>
+                <button onclick="switchTab('schedule')" id="nav-schedule" class="px-2.5 py-1.5 rounded-lg transition text-teal-200 hover:text-white hover:bg-[#10382c]">Schedule</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-[95rem] mx-auto p-3 sm:p-6 space-y-6">
+        
+        <!-- Standings & Playoff Bracket View -->
+        <section id="standings-view" class="space-y-6 hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-[#08201a]/90 p-4 sm:p-5 rounded-2xl border border-[#134234] shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-white flex items-center gap-2">
+                        League Standings & Postseason Race
+                    </h2>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                    <button onclick="simulateWeek15()" class="flex-1 sm:flex-none bg-[#78350f] hover:bg-[#92400e] text-amber-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-amber-600/40 flex items-center justify-center gap-1.5">
+                        Sim Week 15 (SF)
+                    </button>
+                    <button onclick="simulateWeek16()" class="flex-1 sm:flex-none bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-teal-500/40 flex items-center justify-center gap-1.5">
+                        Sim Championship
+                    </button>
+                </div>
+            </div>
+
+            <!-- Side-by-Side Standings & Semifinals Bracket Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <!-- Compact Standings Table (Col span 7) -->
+                <div class="lg:col-span-7 bg-[#071c17]/90 backdrop-blur rounded-2xl overflow-hidden border border-[#134234] shadow-2xl p-3 sm:p-4">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse min-w-[420px]">
+                            <thead>
+                                <tr class="bg-[#0b2b22] text-teal-300 text-xs uppercase tracking-wider border-b border-[#134234] font-mono">
+                                    <th class="py-2 px-3 text-left"></th>
+                                    <th class="py-2 px-2 text-center w-12">W</th>
+                                    <th class="py-2 px-2 text-center w-12">L</th>
+                                    <th class="py-2 px-2 text-center w-12">T</th>
+                                    <th class="py-2 px-2 text-center w-14">GB</th>
+                                    <th class="py-2 px-3 text-center w-24">PF</th>
+                                </tr>
+                            </thead>
+                            <tbody id="standings-table" class="divide-y divide-[#10382c] text-sm">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Semifinals Bracket (Col span 5) -->
+                <div class="lg:col-span-5 bg-[#071c17]/90 backdrop-blur rounded-2xl p-4 sm:p-5 border border-[#134234] shadow-xl space-y-4">
+                    <div class="flex justify-between items-center border-b border-[#134234] pb-3">
+                        <h3 class="font-black text-white text-sm sm:text-base flex items-center gap-2">
+                            Semifinals Bracket (Week 15)
+                        </h3>
+                        <span class="text-xs font-mono text-teal-300 bg-[#04110e] px-2.5 py-1 rounded-full border border-[#134234]">Semifinals</span>
+                    </div>
+
+                    <div class="space-y-3 text-xs">
+                        <!-- Semifinal 1 -->
+                        <div class="bg-[#04110e] p-3 rounded-xl border border-[#134234] space-y-2 shadow-inner">
+                            <div class="text-[10px] font-mono text-teal-400 uppercase tracking-wider flex justify-between">
+                                <span>Semifinal 1 (#1 vs #4)</span>
+                                <span id="sf1-winner-badge" class="text-teal-300 font-bold"></span>
+                            </div>
+                            <div id="sf1-row-home" class="flex justify-between items-center bg-[#071c17] p-2 rounded-lg transition border border-[#10382c]">
+                                <span id="bracket-seed-1" class="font-bold text-white truncate max-w-[180px]">1. (TBD)</span>
+                                <span id="sf1-score" class="font-mono font-bold">-</span>
+                            </div>
+                            <div id="sf1-row-away" class="flex justify-between items-center bg-[#071c17] p-2 rounded-lg transition border border-[#10382c]">
+                                <span id="bracket-seed-4" class="font-bold text-white truncate max-w-[180px]">4. (TBD)</span>
+                                <span id="sf4-score" class="font-mono font-bold">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Semifinal 2 -->
+                        <div class="bg-[#04110e] p-3 rounded-xl border border-[#134234] space-y-2 shadow-inner">
+                            <div class="text-[10px] font-mono text-teal-400 uppercase tracking-wider flex justify-between">
+                                <span>Semifinal 2 (#2 vs #3)</span>
+                                <span id="sf2-winner-badge" class="text-teal-300 font-bold"></span>
+                            </div>
+                            <div id="sf2-row-home" class="flex justify-between items-center bg-[#071c17] p-2 rounded-lg transition border border-[#10382c]">
+                                <span id="bracket-seed-2" class="font-bold text-white truncate max-w-[180px]">2. (TBD)</span>
+                                <span id="sf2-score" class="font-mono font-bold">-</span>
+                            </div>
+                            <div id="sf2-row-away" class="flex justify-between items-center bg-[#071c17] p-2 rounded-lg transition border border-[#10382c]">
+                                <span id="bracket-seed-3" class="font-bold text-white truncate max-w-[180px]">3. (TBD)</span>
+                                <span id="sf3-score" class="font-mono font-bold">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standalone Larger Championship Showcase -->
+            <div class="bg-gradient-to-br from-[#071c17]/90 via-[#071c17]/90 to-[#04261e]/80 backdrop-blur p-4 sm:p-6 rounded-3xl border border-teal-600/30 shadow-2xl space-y-4">
+                <div class="flex flex-col sm:flex-row justify-between items-center border-b border-[#134234] pb-4 gap-2 text-center sm:text-left">
+                    <div class="flex items-center gap-2">
+                        <div>
+                            <h3 class="font-black text-white text-base sm:text-lg tracking-wider uppercase text-teal-300">SGL Championship Game (Week 16)</h3>
+                        </div>
+                    </div>
+                    <button onclick="simulateWeek16()" class="bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-4 py-2 rounded-xl text-xs font-bold transition shadow border border-teal-500/40 flex items-center gap-2">
+                        Simulate Championship
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-around py-6 bg-[#04110e]/70 rounded-2xl border border-[#134234] shadow-inner px-2 sm:px-4">
+                    <!-- Finalist 1 Logo -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <div id="champ-logo-1" class="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-[#071c17] rounded-full border-2 border-teal-500/50 p-2 shadow-lg">
+                            <span class="text-2xl sm:text-3xl text-teal-600">?</span>
+                        </div>
+                        <span id="champ-score-1" class="font-mono text-xl sm:text-2xl font-black text-teal-300">-</span>
+                    </div>
+
+                    <!-- VS / Trophy -->
+                    <div class="flex flex-col items-center space-y-1">
+                        <span class="text-2xl sm:text-3xl font-black text-amber-500">VS</span>
+                        <span class="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-teal-400">Week 16</span>
+                    </div>
+
+                    <!-- Finalist 2 Logo -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <div id="champ-logo-2" class="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-[#071c17] rounded-full border-2 border-teal-500/50 p-2 shadow-lg">
+                            <span class="text-2xl sm:text-3xl text-teal-600">?</span>
+                        </div>
+                        <span id="champ-score-2" class="font-mono text-xl sm:text-2xl font-black text-teal-300">-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Bot Manager View -->
+        <section id="manager-view" class="space-y-6 hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-[#08201a]/90 p-4 sm:p-5 rounded-2xl border border-[#134234] shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-teal-300 flex items-center gap-2">
+                        <span>⚙️</span> League Manager & Customizer
+                    </h2>
+                    <p class="text-xs text-teal-400 mt-1">Edit franchise names, image paths, or upload custom PNGs.</p>
+                </div>
+                <button onclick="runAllAIBots()" class="bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold shadow-lg transition flex items-center gap-2 w-full sm:w-auto justify-center border border-teal-500/40">
+                    Optimize All Lineups
+                </button>
+            </div>
+
+            <div class="bg-[#071c17]/90 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[#134234] shadow-2xl space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-[#134234] pb-4 gap-3">
+                    <div>
+                        <h3 class="font-bold text-teal-100 text-sm sm:text-base">Active League Rosters (8 Franchises)</h3>
+                        <p class="text-xs text-teal-400">Type names/links or upload PNG badges.</p>
+                    </div>
+                    <button onclick="saveAllFranchises()" class="bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold shadow transition w-full sm:w-auto border border-teal-500/40">
+                        Save Changes
+                    </button>
+                </div>
+                
+                <div id="manager-sortable-list" class="space-y-3">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <button onclick="saveAllFranchises()" class="bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-4 py-3 rounded-xl text-sm font-bold shadow-lg transition w-full border border-teal-500/40">
+                    Save All Franchise Changes
+                </button>
+            </div>
+
+            <div class="bg-[#071c17]/90 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[#134234] shadow-xl space-y-4">
+                <h3 class="font-bold text-teal-200 text-xs sm:text-sm tracking-wider uppercase">AI Automated Operations Log</h3>
+                <div id="ai-status-box" class="bg-[#04110e] p-4 rounded-xl border border-[#134234] text-xs font-mono text-teal-300 space-y-1 overflow-x-auto">
+                    > Status: League manager initialized. All 7 AI bot systems online.
+                </div>
+            </div>
+        </section>
+
+        <!-- Draft Board Dashboard View -->
+        <section id="draft-view" class="space-y-6 hidden">
+            <!-- Top Controls Bar -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-[#08201a]/90 backdrop-blur p-4 rounded-2xl border border-[#134234] shadow-xl">
+                <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                    <button onclick="randomizeDraftOrder()" class="bg-[#78350f] hover:bg-[#92400e] text-amber-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-amber-600/40">
+                        Randomize Order
+                    </button>
+                    <button onclick="startInteractiveDraft()" class="bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-teal-500/40">
+                        ▶ Start Live Draft
+                    </button>
+                    <button onclick="runSnakeDraft()" class="bg-[#4c1d95] hover:bg-[#5b21b6] text-purple-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-purple-500/40">
+                        ⚡ Instant Sim Draft
+                    </button>
+                    <button onclick="resetApp()" class="bg-[#991b1b] hover:bg-[#b91c1c] text-red-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-red-600/40">
+                        Reset
+                    </button>
+                    <label class="bg-[#1e3a8a] hover:bg-[#1d4ed8] text-blue-100 px-3 py-2 rounded-xl text-xs font-bold cursor-pointer transition shadow text-center border border-blue-500/40">
+                        CSV Projections
+                        <input type="file" accept=".csv" class="hidden" onchange="handleProjectionUpload(event)">
+                    </label>
+                </div>
+                <div class="flex items-center gap-3 w-full sm:w-auto">
+                    <input type="text" id="player-search-input" oninput="filterPlayerPool()" placeholder="Search available player..." class="bg-[#04110e] border border-[#134234] rounded-xl p-2 text-xs text-teal-100 focus:outline-none focus:border-teal-500 shadow-inner w-full sm:w-60">
+                    <select id="player-sort-select" onchange="filterPlayerPool()" class="bg-[#04110e] border border-[#134234] rounded-xl p-2 text-xs text-teal-300 font-bold focus:outline-none cursor-pointer">
+                        <option value="value">Sort: AVG (High)</option>
+                        <option value="name">Sort: Name (A-Z)</option>
+                        <option value="team">Sort: Team (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Master Draft Board Panel -->
+            <div class="bg-[#04110e] border border-[#134234] rounded-2xl shadow-2xl overflow-hidden">
+                <!-- Board Top Header Banner -->
+                <div class="bg-[#08201a]/90 border-b border-[#134234] px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-2xl">🏈</span>
+                        <div>
+                            <div class="text-[10px] font-mono tracking-widest text-teal-400 uppercase">Sunday Gridiron</div>
+                            <h2 class="text-white font-black text-sm sm:text-base tracking-wide uppercase">League Draft Board</h2>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-[#051410] px-4 py-2 rounded-xl border border-[#134234] text-xs font-mono">
+                        <span class="text-teal-400 flex items-center gap-1">⏱️ CLOCK: <strong id="draft-clock-display" class="text-white">2:17</strong></span>
+                        <span class="text-teal-300 font-bold">CURRENT PICK: ROUND <span id="current-round-indicator">1</span></span>
+                    </div>
+                </div>
+
+                <!-- Main Draft Matrix & Sidebar Layout (Increased Width for Draft Board Grid) -->
+                <div class="grid grid-cols-1 xl:grid-cols-12 p-3 sm:p-4 gap-4 items-start">
+                    
+                    <!-- Team Draft Grid (Cols 1 to 10 - Increased width) -->
+                    <div class="xl:col-span-10 overflow-x-auto bg-[#051410]/70 rounded-xl border border-[#134234] p-2">
+                        <table class="w-full text-left border-collapse text-xs min-w-[1150px]">
+                            <thead id="draft-board-thead">
+                                <!-- Populated dynamically -->
+                            </thead>
+                            <tbody id="draft-board-tbody" class="divide-y divide-[#0b2b22]/60">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Available Players Sidebar (Cols 11 to 12) -->
+                    <div class="xl:col-span-2 bg-[#051410]/90 rounded-xl border border-[#134234] p-3 space-y-3 flex flex-col h-[650px]">
+                        <div class="flex justify-between items-center border-b border-[#134234] pb-2">
+                            <h3 class="text-xs font-black text-white uppercase tracking-wider">Available</h3>
+                            <div class="flex flex-wrap gap-1">
+                                <button onclick="setPosFilter('ALL')" class="pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0d5c47] text-teal-100 transition border border-teal-500/40">ALL</button>
+                                <button onclick="setPosFilter('QB')" class="pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0b2b22] text-teal-300 hover:bg-[#10382c] border border-[#134234]">QB</button>
+                                <button onclick="setPosFilter('RB')" class="pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0b2b22] text-teal-300 hover:bg-[#10382c] border border-[#134234]">RB</button>
+                                <button onclick="setPosFilter('WR')" class="pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0b2b22] text-teal-300 hover:bg-[#10382c] border border-[#134234]">WR</button>
+                                <button onclick="setPosFilter('TE')" class="pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0b2b22] text-teal-300 hover:bg-[#10382c] border border-[#134234]">TE</button>
+                                <button onclick="setPosFilter('K')" class="pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0b2b22] text-teal-300 hover:bg-[#10382c] border border-[#134234]">K</button>
+                                <button onclick="setPosFilter('DST')" class="pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0b2b22] text-teal-300 hover:bg-[#10382c] border border-[#134234]">DST</button>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Player Pool List -->
+                        <div class="flex-grow overflow-y-auto space-y-2 pr-1" id="player-pool-sidebar-list">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Rosters & Starters/Bench Side-by-Side View -->
+        <section id="rosters-view" class="space-y-6 hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 bg-[#08201a]/90 p-4 sm:p-5 rounded-2xl border border-[#134234] shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-white flex items-center gap-2">
+                        <span>👥</span> Starters (6) & Bench Management
+                    </h2>
+                    <p class="text-xs text-teal-400 mt-1">Requires 1 QB, 1 RB, 1 WR, 1 TE, 1 K, 1 DST.</p>
+                </div>
+                <button onclick="optimizeAllTeamsLineups()" class="bg-[#4c1d95] hover:bg-[#5b21b6] text-purple-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-purple-500/40 w-full sm:w-auto">
+                    <span>⚡</span> Optimize All Lineups
+                </button>
+            </div>
+
+            <div id="all-team-rosters-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <!-- Populated dynamically -->
+            </div>
+        </section>
+
+        <!-- Schedule & Box Scores View -->
+        <section id="schedule-view" class="space-y-6 hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-[#08201a]/90 p-4 sm:p-5 rounded-2xl border border-[#134234] shadow-xl backdrop-blur">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black tracking-wide text-teal-300 flex items-center gap-2">
+                        <span>🏈</span> Schedule & Postseason
+                    </h2>
+                    <p class="text-xs text-teal-400 mt-1">Simulate regular season (Weeks 1-14), Semifinals (15), and Championship (16).</p>
+                </div>
+                <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                    <button onclick="simulateCurrentWeek()" class="flex-1 sm:flex-none bg-[#4c1d95] hover:bg-[#5b21b6] text-purple-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-purple-500/40">
+                        ⚡ Sim Active Week
+                    </button>
+                    <button onclick="simulateRegularSeason()" class="flex-1 sm:flex-none bg-[#1e3a8a] hover:bg-[#1d4ed8] text-blue-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-blue-500/40">
+                        📅 Sim Regular Season (W1-14)
+                    </button>
+                    <button onclick="simulateFullSeason()" class="flex-1 sm:flex-none bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-3 py-2 rounded-xl text-xs font-bold transition shadow border border-teal-500/40">
+                        🚀 Sim Full Season
+                    </button>
+                </div>
+            </div>
+
+            <!-- Week Navigator Tabs -->
+            <div class="bg-[#071c17]/90 backdrop-blur p-3 sm:p-4 rounded-2xl border border-[#134234] shadow-xl overflow-x-auto">
+                <div class="flex gap-2 min-w-max" id="week-nav-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Matchups Grid for Selected Week -->
+            <div class="bg-[#071c17]/90 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[#134234] shadow-xl space-y-4">
+                <div class="flex justify-between items-center border-b border-[#134234] pb-3">
+                    <h3 id="schedule-header-title" class="font-black text-white text-base sm:text-lg">Week 1 Matchups</h3>
+                    <span class="text-[10px] sm:text-xs font-mono text-teal-400">Click any card for box score</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="week-matchups-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Box Score Modal -->
+    <div id="boxscore-modal" class="fixed inset-0 bg-[#020b08]/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 hidden">
+        <div class="bg-[#071c17] border border-[#134234] rounded-2xl max-w-4xl w-full p-4 sm:p-6 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-[#134234] pb-4">
+                <div>
+                    <h3 id="modal-matchup-title" class="text-lg sm:text-xl font-black text-white">Box Score</h3>
+                    <p id="modal-matchup-subtitle" class="text-xs text-teal-400 font-mono">Head-to-Head Detailed Performance</p>
+                </div>
+                <button onclick="closeBoxScoreModal()" class="bg-[#0b2b22] hover:bg-[#10382c] text-teal-300 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-[#134234]">✕ Close</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6" id="modal-boxscore-content">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        let sglTeams = [
+            { id: 0, rank: 1, name: "Gridiron Kings", logo: "logo_gridiron_kings.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 1, rank: 2, name: "MCFC", logo: "logo_mcfc.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: false, starters: [], bench: [] },
+            { id: 2, rank: 3, name: "Bay City Bombers", logo: "logo_bay_city_bombers.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 3, rank: 4, name: "Third & Long", logo: "logo_third_and_long.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 4, rank: 5, name: "Red Zone Dynamos", logo: "logo_red_zone_dynamos.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 5, rank: 6, name: "Metro Blitz", logo: "logo_metro_blitz.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 6, rank: 7, name: "Sunday Gunners", logo: "logo_sunday_gunners.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] },
+            { id: 7, rank: 8, name: "Steel Curtain", logo: "logo_steel_curtain.png", w: 0, l: 0, t: 0, gb: "-", pf: 0.0, isAI: true, starters: [], bench: [] }
+        ];
+
+        let draftOrderIndices = [0, 1, 2, 3, 4, 5, 6, 7];
+        let schedule = []; 
+        let activeWeekIndex = 0; 
+        const MAX_STARTERS = 6;
+        const posRank = { 'QB': 1, 'RB': 2, 'WR': 3, 'TE': 4, 'K': 5, 'DST': 6 };
+
+        let interactiveDraft = {
+            active: false,
+            round: 1,
+            pick: 0,
+            secondsLeft: 137,
+            timer: null
+        };
+
+        const nflByeWeeks = {
+            "ARI": 14, "ATL": 11, "BAL": 13, "BUF": 7, "CAR": 5, "CHI": 10,
+            "CIN": 6, "CLE": 11, "DAL": 14, "DEN": 10, "DET": 6, "GB": 11,
+            "HOU": 8, "IND": 13, "JAX": 7, "KC": 5, "LAC": 7, "LAR": 11,
+            "LV": 13, "MIA": 6, "MIN": 6, "NE": 11, "NO": 8, "NYG": 8,
+            "NYJ": 13, "PHI": 10, "PIT": 9, "SEA": 11, "SF": 8, "TB": 10,
+            "TEN": 9, "WAS": 7
+        };
+
+        let nflPlayerPool = [
+            { id: "1", name: "Patrick Mahomes", pos: "QB", team: "KC", bye: 5, fpts: 344.0, avg: 21.5 },
+            { id: "2", name: "Josh Allen", pos: "QB", team: "BUF", bye: 7, fpts: 339.2, avg: 21.2 },
+            { id: "3", name: "Lamar Jackson", pos: "QB", team: "BAL", bye: 13, fpts: 326.4, avg: 20.4 },
+            { id: "4", name: "Joe Burrow", pos: "QB", team: "CIN", bye: 6, fpts: 310.0, avg: 19.4 },
+            { id: "5", name: "Jalen Hurts", pos: "QB", team: "PHI", bye: 10, fpts: 318.0, avg: 19.9 },
+            { id: "6", name: "Christian McCaffrey", pos: "RB", team: "SF", bye: 8, fpts: 332.8, avg: 20.8 },
+            { id: "7", name: "Saquon Barkley", pos: "RB", team: "PHI", bye: 10, fpts: 305.0, avg: 19.1 },
+            { id: "8", name: "Breece Hall", pos: "RB", team: "NYJ", bye: 13, fpts: 280.0, avg: 17.5 },
+            { id: "9", name: "Bijan Robinson", pos: "RB", team: "ATL", bye: 11, fpts: 289.6, avg: 18.1 },
+            { id: "10", name: "Justin Jefferson", pos: "WR", team: "MIN", bye: 6, fpts: 302.4, avg: 18.9 },
+            { id: "11", name: "CeeDee Lamb", pos: "WR", team: "DAL", bye: 14, fpts: 310.4, avg: 19.4 },
+            { id: "12", name: "Tyreek Hill", pos: "WR", team: "MIA", bye: 6, fpts: 305.6, avg: 19.1 },
+            { id: "13", name: "Travis Kelce", pos: "TE", team: "KC", bye: 5, fpts: 227.2, avg: 14.2 },
+            { id: "14", name: "Sam LaPorta", pos: "TE", team: "DET", bye: 6, fpts: 204.8, avg: 12.8 },
+            { id: "15", name: "Justin Tucker", pos: "K", team: "BAL", bye: 13, fpts: 136.0, avg: 8.5 },
+            { id: "16", name: "San Francisco DST", pos: "DST", team: "SF", bye: 8, fpts: 140.8, avg: 8.8 }
+        ];
+
+        let draftGridData = Array(12).fill(null).map(() => ({}));
+        let currentPosFilter = 'ALL';
+        let draggedIndex = null;
+
+        function getTeamById(id) {
+            return sglTeams.find(t => t.id === id) || sglTeams[0];
+        }
+
+        function saveState() {
+            const data = { sglTeams, nflPlayerPool, draftGridData, draftOrderIndices, schedule, activeWeekIndex };
+            localStorage.setItem('sgl_app_state', JSON.stringify(data));
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem('sgl_app_state');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    if (data.sglTeams) {
+                        sglTeams = data.sglTeams;
+                        sglTeams.forEach((t, idx) => {
+                            if (t.id === undefined) t.id = idx;
+                            if (!t.starters) t.starters = [];
+                            if (!t.bench) t.bench = [];
+                        });
+                    }
+                    if (data.nflPlayerPool && data.nflPlayerPool.length > 0) {
+                        nflPlayerPool = data.nflPlayerPool;
+                    }
+                    if (data.draftGridData) draftGridData = data.draftGridData;
+                    if (data.draftOrderIndices) draftOrderIndices = data.draftOrderIndices;
+                    if (data.schedule) schedule = data.schedule;
+                    if (data.activeWeekIndex !== undefined) activeWeekIndex = data.activeWeekIndex;
+                    enforceUserTeam();
+                    return true;
+                } catch(e) {
+                    console.error("Failed to load saved state", e);
+                }
+            }
+            enforceUserTeam();
+            return false;
+        }
+
+        function enforceUserTeam() {
+            sglTeams.forEach(t => {
+                if (t.name.toLowerCase() === "mcfc") {
+                    t.isAI = false;
+                } else {
+                    t.isAI = true;
+                }
+            });
+        }
+
+        function renderAll() {
+            enforceUserTeam();
+            if (schedule.length < 16) generateSchedule();
+            updatePlayoffsAndStandings();
+            renderStandings();
+            renderManagerList();
+            renderTeamRosters();
+            renderDraftBoard();
+            renderPlayerSidebarList();
+            renderScheduleTab();
+            saveState();
+        }
+
+        function generateSchedule() {
+            schedule = [];
+            let tIds = sglTeams.map(t => t.id);
+            let rounds = 7;
+            for (let w = 0; w < rounds; w++) {
+                let weekMatchups = [];
+                for (let i = 0; i < 4; i++) {
+                    weekMatchups.push({ home: tIds[i], away: tIds[7 - i], homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] });
+                }
+                schedule.push(weekMatchups);
+                let temp = tIds.pop();
+                tIds.splice(1, 0, temp);
+            }
+            for (let w = 0; w < rounds; w++) {
+                let firstHalf = schedule[w];
+                let secondHalf = firstHalf.map(m => ({ home: m.away, away: m.home, homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] }));
+                schedule.push(secondHalf);
+            }
+            schedule.push([
+                { home: sglTeams[0].id, away: sglTeams[3].id, homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] },
+                { home: sglTeams[1].id, away: sglTeams[2].id, homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] }
+            ]);
+            schedule.push([
+                { home: sglTeams[0].id, away: sglTeams[1].id, homeScore: 0.0, awayScore: 0.0, played: false, homeBox: [], awayBox: [] }
+            ]);
+        }
+
+        function updatePlayoffsAndStandings() {
+            sglTeams.forEach(t => { t.w = 0; t.l = 0; t.t = 0; t.pf = 0.0; });
+            for (let w = 0; w < 14 && w < schedule.length; w++) {
+                schedule[w].forEach(m => {
+                    if (!m.played) return;
+                    let home = getTeamById(m.home);
+                    let away = getTeamById(m.away);
+                    home.pf += m.homeScore;
+                    away.pf += m.awayScore;
+                    if (m.homeScore > m.awayScore) { home.w++; away.l++; }
+                    else if (m.homeScore < m.awayScore) { away.w++; home.l++; }
+                    else { home.t++; away.t++; }
+                });
+            }
+
+            let sorted = [...sglTeams].sort((a, b) => {
+                if (b.w !== a.w) return b.w - a.w;
+                if (b.t !== a.t) return b.t - a.t;
+                return b.pf - a.pf;
+            });
+
+            if (schedule.length >= 15) {
+                let sfWeek = schedule[14];
+                if (sfWeek && sfWeek.length >= 2) {
+                    sfWeek[0].home = sorted[0]?.id || sglTeams[0].id;
+                    sfWeek[0].away = sorted[3]?.id || sglTeams[3].id;
+                    sfWeek[1].home = sorted[1]?.id || sglTeams[1].id;
+                    sfWeek[1].away = sorted[2]?.id || sglTeams[2].id;
+                }
+            }
+
+            if (schedule.length >= 16) {
+                let champWeek = schedule[15];
+                let sfWeek = schedule[14];
+                if (champWeek && champWeek.length > 0 && sfWeek && sfWeek.length >= 2) {
+                    let sf1Winner = sfWeek[0].played ? (sfWeek[0].homeScore >= sfWeek[0].awayScore ? sfWeek[0].home : sfWeek[0].away) : sorted[0]?.id || sglTeams[0].id;
+                    let sf2Winner = sfWeek[1].played ? (sfWeek[1].homeScore >= sfWeek[1].awayScore ? sfWeek[1].home : sfWeek[1].away) : sorted[1]?.id || sglTeams[1].id;
+                    champWeek[0].home = sf1Winner;
+                    champWeek[0].away = sf2Winner;
+                }
+            }
+        }
+
+        function sortRosterList(list) {
+            list.sort((a, b) => {
+                let rA = posRank[a.pos] || 99;
+                let rB = posRank[b.pos] || 99;
+                if (rA !== rB) return rA - rB;
+                return (parseFloat(b.avg) || 0) - (parseFloat(a.avg) || 0);
+            });
+        }
+
+        function optimizeTeamLineupForWeek(team, weekNum) {
+            let allPlayers = [...team.starters, ...team.bench];
+            if (allPlayers.length === 0) return;
+            let requiredPositions = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
+            let newStarters = [];
+            let remaining = [...allPlayers];
+
+            function getPlayerScore(p) {
+                if (p.bye === weekNum) return -999;
+                return parseFloat(p.avg) || 0;
+            }
+
+            requiredPositions.forEach(pos => {
+                let pool = remaining.filter(p => p.pos === pos);
+                if (pool.length > 0) {
+                    pool.sort((a, b) => getPlayerScore(b) - getPlayerScore(a));
+                    let best = pool[0];
+                    newStarters.push(best);
+                    let idx = remaining.indexOf(best);
+                    if (idx !== -1) remaining.splice(idx, 1);
+                }
+            });
+
+            while (newStarters.length < MAX_STARTERS && remaining.length > 0) {
+                remaining.sort((a, b) => getPlayerScore(b) - getPlayerScore(a));
+                newStarters.push(remaining.shift());
+            }
+
+            sortRosterList(newStarters);
+            sortRosterList(remaining);
+            team.starters = newStarters;
+            team.bench = remaining;
+            saveState();
+        }
+
+        function optimizeAllTeamsLineups() {
+            sglTeams.forEach(team => optimizeTeamLineupForWeek(team, activeWeekIndex + 1));
+            renderTeamRosters();
+            alert("All team starting lineups optimized successfully!");
+        }
+
+        function simulateMatchup(matchup, weekNum) {
+            let homeTeam = getTeamById(matchup.home);
+            let awayTeam = getTeamById(matchup.away);
+            
+            // Auto-optimize lineups for all teams including user team (MCFC) during simulation test runs
+            optimizeTeamLineupForWeek(homeTeam, weekNum);
+            optimizeTeamLineupForWeek(awayTeam, weekNum);
+
+            let homeScore = 0, awayScore = 0, homeBox = [], awayBox = [];
+            homeTeam.starters.forEach(p => {
+                let pScore = (p.bye === weekNum) ? 0 : Math.max(0, parseFloat((p.avg + (Math.random() * 6 - 3)).toFixed(1)));
+                homeScore += pScore;
+                homeBox.push({ ...p, weekScore: pScore, status: 'Starter' });
+            });
+            awayTeam.starters.forEach(p => {
+                let pScore = (p.bye === weekNum) ? 0 : Math.max(0, parseFloat((p.avg + (Math.random() * 6 - 3)).toFixed(1)));
+                awayScore += pScore;
+                awayBox.push({ ...p, weekScore: pScore, status: 'Starter' });
+            });
+            homeTeam.bench.forEach(p => homeBox.push({ ...p, weekScore: 0, status: 'Bench' }));
+            awayTeam.bench.forEach(p => awayBox.push({ ...p, weekScore: 0, status: 'Bench' }));
+
+            matchup.homeScore = parseFloat(homeScore.toFixed(1));
+            matchup.awayScore = parseFloat(awayScore.toFixed(1));
+            matchup.homeBox = homeBox;
+            matchup.awayBox = awayBox;
+            matchup.played = true;
+        }
+
+        function simulateCurrentWeek() {
+            (schedule[activeWeekIndex] || []).forEach(m => simulateMatchup(m, activeWeekIndex + 1));
+            updatePlayoffsAndStandings();
+            renderScheduleTab();
+            renderStandings();
+            saveState();
+            alert(`Week ${activeWeekIndex + 1} simulated successfully!`);
+        }
+
+        function simulateRegularSeason() {
+            for (let w = 0; w < 14 && w < schedule.length; w++) {
+                (schedule[w] || []).forEach(m => simulateMatchup(m, w + 1));
+            }
+            updatePlayoffsAndStandings();
+            renderScheduleTab();
+            renderStandings();
+            saveState();
+            alert("Regular season (Weeks 1-14) simulated successfully!");
+        }
+
+        function simulateWeek15() {
+            if (schedule.length >= 15) {
+                updatePlayoffsAndStandings();
+                schedule[14].forEach(m => simulateMatchup(m, 15));
+                updatePlayoffsAndStandings();
+                renderStandings();
+                renderScheduleTab();
+                saveState();
+                alert("Week 15 Semifinals simulated!");
+            }
+        }
+
+        function simulateWeek16() {
+            if (schedule.length >= 16) {
+                updatePlayoffsAndStandings();
+                schedule[15].forEach(m => simulateMatchup(m, 16));
+                renderStandings();
+                renderScheduleTab();
+                saveState();
+                alert("SGL Championship simulated!");
+            }
+        }
+
+        function simulateFullSeason() {
+            for (let w = 0; w < schedule.length; w++) {
+                (schedule[w] || []).forEach(m => simulateMatchup(m, w + 1));
+                if (w === 13 || w === 14) updatePlayoffsAndStandings();
+            }
+            updatePlayoffsAndStandings();
+            renderScheduleTab();
+            renderStandings();
+            saveState();
+            alert("Full season simulated!");
+        }
+
+        function formatLogoHTML(logoSrc, sizeClass = "h-10 w-10") {
+            if (!logoSrc) return `<div class="${sizeClass} flex items-center justify-center text-2xl">🏈</div>`;
+            if (logoSrc.includes('<img')) return logoSrc;
+            if (logoSrc.startsWith('data:image') || logoSrc.startsWith('http') || logoSrc.endsWith('.png') || logoSrc.endsWith('.jpg') || logoSrc.endsWith('.jpeg')) {
+                return `<img src="${logoSrc}" class="${sizeClass} object-cover rounded-full inline-block">`;
+            }
+            return `<div class="${sizeClass} flex items-center justify-center text-2xl">${logoSrc}</div>`;
+        }
+
+        function renderPlayoffsBracket(sortedTeams) {
+            let team1 = sortedTeams[0] ? getTeamById(sortedTeams[0].id) : null;
+            let team2 = sortedTeams[1] ? getTeamById(sortedTeams[1].id) : null;
+            let team3 = sortedTeams[2] ? getTeamById(sortedTeams[2].id) : null;
+            let team4 = sortedTeams[3] ? getTeamById(sortedTeams[3].id) : null;
+
+            document.getElementById('bracket-seed-1').textContent = team1 ? `1. ${team1.name}` : "1. (TBD)";
+            document.getElementById('bracket-seed-2').textContent = team2 ? `2. ${team2.name}` : "2. (TBD)";
+            document.getElementById('bracket-seed-3').textContent = team3 ? `3. ${team3.name}` : "3. (TBD)";
+            document.getElementById('bracket-seed-4').textContent = team4 ? `4. ${team4.name}` : "4. (TBD)";
+
+            if (schedule.length >= 15) {
+                let sfWeek = schedule[14];
+                const sf1HomeRow = document.getElementById('sf1-row-home');
+                const sf1AwayRow = document.getElementById('sf1-row-away');
+                const sf2HomeRow = document.getElementById('sf2-row-home');
+                const sf2AwayRow = document.getElementById('sf2-row-away');
+
+                [sf1HomeRow, sf1AwayRow, sf2HomeRow, sf2AwayRow].forEach(row => {
+                    if (row) row.className = "flex justify-between items-center bg-[#071c17] p-2 rounded-lg transition border border-[#10382c]";
+                });
+
+                if (sfWeek && sfWeek[0]) {
+                    document.getElementById('sf1-score').textContent = sfWeek[0].played ? sfWeek[0].homeScore : "-";
+                    document.getElementById('sf4-score').textContent = sfWeek[0].played ? sfWeek[0].awayScore : "-";
+                    if (sfWeek[0].played) {
+                        let homeWon = sfWeek[0].homeScore >= sfWeek[0].awayScore;
+                        document.getElementById('sf1-winner-badge').textContent = `Winner: ${getTeamById(homeWon ? sfWeek[0].home : sfWeek[0].away).name}`;
+                        if (homeWon) {
+                            if (sf1HomeRow) sf1HomeRow.className = "flex justify-between items-center bg-[#0e3b2e] border border-teal-500/50 p-2 rounded-lg text-teal-200 font-bold transition";
+                            if (sf1AwayRow) sf1AwayRow.className = "flex justify-between items-center bg-[#071c17] p-2 rounded-lg opacity-40 line-through text-teal-600 transition border border-[#10382c]";
+                        } else {
+                            if (sf1AwayRow) sf1AwayRow.className = "flex justify-between items-center bg-[#0e3b2e] border border-teal-500/50 p-2 rounded-lg text-teal-200 font-bold transition";
+                            if (sf1HomeRow) sf1HomeRow.className = "flex justify-between items-center bg-[#071c17] p-2 rounded-lg opacity-40 line-through text-teal-600 transition border border-[#10382c]";
+                        }
+                    } else {
+                        document.getElementById('sf1-winner-badge').textContent = "";
+                    }
+                }
+
+                if (sfWeek && sfWeek[1]) {
+                    document.getElementById('sf2-score').textContent = sfWeek[1].played ? sfWeek[1].homeScore : "-";
+                    document.getElementById('sf3-score').textContent = sfWeek[1].played ? sfWeek[1].awayScore : "-";
+                    if (sfWeek[1].played) {
+                        let homeWon = sfWeek[1].homeScore >= sfWeek[1].awayScore;
+                        document.getElementById('sf2-winner-badge').textContent = `Winner: ${getTeamById(homeWon ? sfWeek[1].home : sfWeek[1].away).name}`;
+                        if (homeWon) {
+                            if (sf2HomeRow) sf2HomeRow.className = "flex justify-between items-center bg-[#0e3b2e] border border-teal-500/50 p-2 rounded-lg text-teal-200 font-bold transition";
+                            if (sf2AwayRow) sf2AwayRow.className = "flex justify-between items-center bg-[#071c17] p-2 rounded-lg opacity-40 line-through text-teal-600 transition border border-[#10382c]";
+                        } else {
+                            if (sf2AwayRow) sf2AwayRow.className = "flex justify-between items-center bg-[#0e3b2e] border border-teal-500/50 p-2 rounded-lg text-teal-200 font-bold transition";
+                            if (sf2HomeRow) sf2HomeRow.className = "flex justify-between items-center bg-[#071c17] p-2 rounded-lg opacity-40 line-through text-teal-600 transition border border-[#10382c]";
+                        }
+                    } else {
+                        document.getElementById('sf2-winner-badge').textContent = "";
+                    }
+                }
+            }
+
+            if (schedule.length >= 16) {
+                let champMatchup = schedule[15][0];
+                if (champMatchup) {
+                    document.getElementById('champ-logo-1').innerHTML = formatLogoHTML(getTeamById(champMatchup.home).logo, "h-16 w-16 sm:h-20 sm:w-20");
+                    document.getElementById('champ-logo-2').innerHTML = formatLogoHTML(getTeamById(champMatchup.away).logo, "h-16 w-16 sm:h-20 sm:w-20");
+                    document.getElementById('champ-score-1').textContent = champMatchup.played ? champMatchup.homeScore : "-";
+                    document.getElementById('champ-score-2').textContent = champMatchup.played ? champMatchup.awayScore : "-";
+                }
+            }
+        }
+
+        function renderStandings() {
+            updatePlayoffsAndStandings();
+            const tbody = document.getElementById('standings-table');
+            if(!tbody) return;
+            tbody.innerHTML = '';
+            
+            let sortedTeams = [...sglTeams].sort((a, b) => (b.w !== a.w ? b.w - a.w : (b.t !== a.t ? b.t - a.t : b.pf - a.pf)));
+            renderPlayoffsBracket(sortedTeams);
+
+            let leaderW = sortedTeams[0].w, leaderL = sortedTeams[0].l;
+            sortedTeams.forEach((team, index) => {
+                let gb = index === 0 ? "-" : (((leaderW - team.w) + (team.l - leaderL)) / 2).toFixed(1);
+                if (gb === "0.0") gb = "0";
+
+                tbody.innerHTML += `
+                    <tr class="hover:bg-[#10382c]/50 transition border-b border-[#10382c]/60 text-xs sm:text-sm">
+                        <td class="py-2.5 px-3 flex items-center gap-2">
+                            <span class="font-mono text-xs text-teal-500 w-5">${index + 1}</span>
+                            <span class="font-bold text-white truncate max-w-[140px] sm:max-w-[180px]" title="${team.name}">${team.name}</span>
+                        </td>
+                        <td class="py-2.5 px-2 text-center font-mono font-bold text-teal-100">${team.w}</td>
+                        <td class="py-2.5 px-2 text-center font-mono font-bold text-teal-400">${team.l}</td>
+                        <td class="py-2.5 px-2 text-center font-mono font-bold text-teal-400">${team.t}</td>
+                        <td class="py-2.5 px-2 text-center font-mono text-teal-400">${gb}</td>
+                        <td class="py-2.5 px-3 text-center font-mono text-teal-300 font-bold">${team.pf.toFixed(1)}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        function renderManagerList() {
+            const container = document.getElementById('manager-sortable-list');
+            if(!container) return;
+            container.innerHTML = '';
+
+            sglTeams.forEach((team, index) => {
+                container.innerHTML += `
+                    <div class="drag-item flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-3 bg-[#04110e]/90 rounded-2xl border border-[#134234] gap-4 shadow-md"
+                         draggable="true" data-index="${index}"
+                         ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-teal-600 cursor-grab text-xl select-none">☰</span>
+                            <span class="text-xs font-mono bg-[#071c17] text-teal-300 px-2.5 py-1 rounded-lg border border-[#134234]">#${index + 1}</span>
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center flex-shrink-0">
+                                ${formatLogoHTML(team.logo, "h-14 w-14 sm:h-16 sm:w-16")}
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <label class="block text-[10px] text-teal-400 uppercase font-mono mb-1">Franchise Name</label>
+                            <input type="text" id="mgr-name-${team.id}" value="${team.name}" class="w-full bg-[#071c17] border border-[#134234] rounded-xl p-2.5 text-xs sm:text-sm text-teal-100 font-semibold focus:outline-none focus:border-teal-500">
+                        </div>
+                        <div class="w-full sm:w-72 flex flex-col justify-end">
+                            <label class="block text-[10px] text-teal-400 uppercase font-mono mb-1">Logo Filename / URL</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="mgr-logo-${team.id}" value="${team.logo.includes('<img') ? '' : team.logo}" class="w-full bg-[#071c17] border border-[#134234] rounded-xl p-2.5 text-xs sm:text-sm text-teal-100 focus:outline-none focus:border-teal-500">
+                                <label class="bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-3 py-2.5 rounded-xl text-xs font-bold cursor-pointer transition flex items-center justify-center flex-shrink-0 border border-teal-500/40">
+                                    📁
+                                    <input type="file" accept="image/png, image/jpeg" class="hidden" onchange="handleLogoUpload(event, ${team.id})">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function renderTeamRosters() {
+            const container = document.getElementById('all-team-rosters-container');
+            if(!container) return;
+            container.innerHTML = '';
+
+            sglTeams.forEach((team) => {
+                sortRosterList(team.starters);
+                sortRosterList(team.bench);
+
+                let startersHtml = team.starters.length === 0 ? `<p class="text-xs text-teal-600 italic py-2">No starters.</p>` :
+                    team.starters.map((p, idx) => `
+                        <div class="flex items-center justify-between bg-[#04110e] p-2 rounded-xl border border-[#134234] text-xs">
+                            <div class="flex items-center space-x-1.5 truncate">
+                                <span class="bg-[#083327] text-teal-300 font-mono px-1.5 py-0.5 rounded text-[10px] border border-teal-600/30">${p.pos}</span>
+                                <span class="font-bold text-white truncate max-w-[110px] sm:max-w-[140px]">${p.name}</span>
+                                <span class="text-teal-400 text-[10px]">(${p.team} - Bye ${p.bye})</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <button onclick="moveToBench(${team.id}, ${idx})" class="bg-[#071c17] text-teal-300 px-1.5 py-0.5 rounded text-[10px] border border-[#134234]">▼</button>
+                                <button onclick="removePlayer(${team.id}, ${idx}, 'starters')" class="text-red-400 font-bold px-1">✕</button>
+                            </div>
+                        </div>
+                    `).join('');
+
+                let benchHtml = team.bench.length === 0 ? `<p class="text-xs text-teal-600 italic py-2">No bench.</p>` :
+                    team.bench.map((p, idx) => `
+                        <div class="flex items-center justify-between bg-[#04110e] p-2 rounded-xl border border-[#134234] text-xs">
+                            <div class="flex items-center space-x-1.5 truncate">
+                                <span class="bg-[#071c17] text-teal-400 font-mono px-1.5 py-0.5 rounded text-[10px] border border-[#134234]">${p.pos}</span>
+                                <span class="font-bold text-white truncate max-w-[110px] sm:max-w-[140px]">${p.name}</span>
+                                <span class="text-teal-400 text-[10px]">(${p.team} - Bye ${p.bye})</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <button onclick="moveToStarters(${team.id}, ${idx})" class="bg-[#0d5c47] text-teal-100 px-1.5 py-0.5 rounded text-[10px] border border-teal-500/40">▲</button>
+                                <button onclick="removePlayer(${team.id}, ${idx}, 'bench')" class="text-red-400 font-bold px-1">✕</button>
+                            </div>
+                        </div>
+                    `).join('');
+
+                container.innerHTML += `
+                    <div class="bg-[#071c17] p-4 sm:p-5 rounded-2xl border border-[#134234] shadow-xl space-y-3">
+                        <div class="flex items-center space-x-3 border-b border-[#134234] pb-3">
+                            <div class="w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                ${formatLogoHTML(team.logo, "h-10 w-10")}
+                            </div>
+                            <div class="flex-grow min-w-0">
+                                <h3 class="font-black text-white text-sm sm:text-base truncate">${team.name} ${team.name.toLowerCase() === 'mcfc' ? '(You)' : ''}</h3>
+                                <p class="text-[10px] text-teal-400 font-mono">Starters: ${team.starters.length}/6 | Bench: ${team.bench.length}</p>
+                            </div>
+                            <button onclick="optimizeTeamLineupForWeek(getTeamById(${team.id}), activeWeekIndex + 1); renderTeamRosters();" class="bg-[#0b2b22] text-teal-300 px-2.5 py-1 rounded-xl text-xs font-bold border border-[#134234]">Opt</button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="space-y-1.5">
+                                <div class="text-[10px] font-mono text-teal-300 uppercase">Starters</div>
+                                <div class="space-y-1.5 bg-[#04110e]/50 p-2 rounded-xl border border-[#134234]">${startersHtml}</div>
+                            </div>
+                            <div class="space-y-1.5">
+                                <div class="text-[10px] font-mono text-teal-300 uppercase">Bench</div>
+                                <div class="space-y-1.5 bg-[#04110e]/50 p-2 rounded-xl border border-[#134234]">${benchHtml}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            saveState();
+        }
+
+        function moveToBench(teamId, starterIdx) {
+            let team = getTeamById(teamId);
+            team.bench.push(team.starters.splice(starterIdx, 1)[0]);
+            sortRosterList(team.starters);
+            sortRosterList(team.bench);
+            renderTeamRosters();
+        }
+
+        function moveToStarters(teamId, benchIdx) {
+            let team = getTeamById(teamId);
+            if(team.starters.length >= MAX_STARTERS) return alert("Starters full (6 max)!");
+            team.starters.push(team.bench.splice(benchIdx, 1)[0]);
+            sortRosterList(team.starters);
+            sortRosterList(team.bench);
+            renderTeamRosters();
+        }
+
+        function getPositionColorClass(pos) {
+            switch(pos) {
+                case 'QB': return 'bg-[#042f38]/90 border-cyan-700/60 text-cyan-200';
+                case 'RB': return 'bg-[#063321]/90 border-emerald-700/60 text-emerald-200';
+                case 'WR': return 'bg-[#3b2707]/90 border-amber-700/60 text-amber-200';
+                case 'TE': return 'bg-[#2e1065]/90 border-purple-700/60 text-purple-200';
+                case 'K': return 'bg-[#172554]/90 border-blue-700/60 text-blue-200';
+                case 'DST': return 'bg-[#4c0519]/90 border-rose-700/60 text-rose-200';
+                default: return 'bg-[#071c17] border-[#134234] text-teal-300';
+            }
+        }
+
+        function renderDraftBoard() {
+            const thead = document.getElementById('draft-board-thead');
+            const tbody = document.getElementById('draft-board-tbody');
+            if(!thead || !tbody) return;
+
+            let headerHTML = `<tr class="bg-[#08201a]/90 text-teal-300 text-xs uppercase tracking-wider border-b border-[#134234]"><th class="p-2 text-center w-12 font-mono text-[15px] text-teal-400">R</th>`;
+            draftOrderIndices.forEach((teamId, slotIdx) => {
+                let team = getTeamById(teamId);
+                let isUser = !team.isAI;
+                headerHTML += `<th class="p-2 text-center min-w-[100px] ${isUser ? 'bg-[#0e3b2e] border-b-2 border-teal-400' : ''}">
+                    <div class="text-[15px] font-mono text-teal-400">#${slotIdx + 1}</div>
+                    <div class="font-bold ${isUser ? 'text-teal-200' : 'text-white'} truncate max-w-[100px]">${team.name} ${isUser ? '(You)' : ''}</div>
+                </th>`;
+            });
+            headerHTML += `</tr>`;
+            thead.innerHTML = headerHTML;
+
+            let bodyHTML = '';
+            for (let r = 0; r < 12; r++) {
+                bodyHTML += `<tr class="border-b border-[#0b2b22]/50"><td class="p-2 text-center font-mono font-bold text-teal-400 bg-[#08201a]/40 text-xs">R${r + 1}</td>`;
+                draftOrderIndices.forEach(teamId => {
+                    let team = getTeamById(teamId);
+                    let pick = draftGridData[r][team.id];
+                    if (pick) {
+                        let badgeColor = getPositionColorClass(pick.pos);
+                        bodyHTML += `<td class="p-1.5 text-center">
+                            <div class="p-2 rounded-xl border ${badgeColor} shadow-inner text-left space-y-0.5">
+                                <div class="text-[10px] font-mono uppercase tracking-wider opacity-90">${pick.pos} • ${pick.team} (Bye ${pick.bye})</div>
+                                <div class="font-bold text-white text-xs truncate" title="${pick.name}">${pick.name}</div>
+                            </div>
+                        </td>`;
+                    } else {
+                        bodyHTML += `<td class="p-1.5 text-center">
+                            <div class="p-2 rounded-xl bg-[#04110e]/40 border border-[#134234]/60 text-teal-700 text-[11px] font-mono">-</div>
+                        </td>`;
+                    }
+                });
+                bodyHTML += `</tr>`;
+            }
+            tbody.innerHTML = bodyHTML;
+            document.getElementById('current-round-indicator').textContent = interactiveDraft.round;
+        }
+
+        function renderPlayerSidebarList() {
+            const container = document.getElementById('player-pool-sidebar-list');
+            if(!container) return;
+            let query = document.getElementById('player-search-input').value.toLowerCase();
+            let sortBy = document.getElementById('player-sort-select').value;
+            container.innerHTML = '';
+
+            let draftedNames = new Set();
+            sglTeams.forEach(t => {
+                if (t.starters) t.starters.forEach(p => draftedNames.add(p.name.toLowerCase()));
+                if (t.bench) t.bench.forEach(p => draftedNames.add(p.name.toLowerCase()));
+            });
+
+            let filtered = nflPlayerPool.filter(p => 
+                !draftedNames.has(p.name.toLowerCase()) && 
+                (currentPosFilter === 'ALL' || p.pos === currentPosFilter) && 
+                p.name.toLowerCase().includes(query)
+            );
+            filtered.sort((a, b) => sortBy === 'value' ? b.avg - a.avg : (sortBy === 'name' ? a.name.localeCompare(b.name) : a.team.localeCompare(b.team)));
+
+            filtered.forEach(p => {
+                let badgeColor = getPositionColorClass(p.pos);
+                let safeName = p.name.replace(/'/g, "\\'");
+                container.innerHTML += `
+                    <div class="flex items-center justify-between p-2 rounded-xl border ${badgeColor} shadow-sm text-xs">
+                        <div class="truncate pr-2">
+                            <div class="font-bold text-white truncate">${p.name}</div>
+                            <div class="text-[9px] font-mono opacity-90">${p.pos} - ${p.team} (Bye ${p.bye}) | AVG: ${p.avg.toFixed(1)}</div>
+                        </div>
+                        <button onclick="draftPlayer('${safeName}', '${p.pos}', '${p.team}', ${p.bye}, ${p.fpts}, ${p.avg})" class="bg-[#0d5c47] hover:bg-[#117a5d] text-teal-100 px-2 py-1 rounded-lg text-[10px] font-bold flex-shrink-0 border border-teal-500/40">ADD</button>
+                    </div>
+                `;
+            });
+        }
+
+        function renderScheduleTab() {
+            const navContainer = document.getElementById('week-nav-container');
+            const matchupsContainer = document.getElementById('week-matchups-container');
+            if(!navContainer || !matchupsContainer) return;
+
+            navContainer.innerHTML = '';
+            for (let w = 0; w < 16; w++) {
+                let isActive = (w === activeWeekIndex);
+                let label = w === 14 ? "Semis" : (w === 15 ? "Champ" : `W${w + 1}`);
+                navContainer.innerHTML += `
+                    <button onclick="setActiveWeek(${w})" class="px-3 py-1.5 rounded-xl text-xs font-bold transition shadow ${isActive ? 'bg-[#0d5c47] text-teal-100 border border-teal-500/50' : 'bg-[#04110e] text-teal-300 border border-[#134234]'}">
+                        ${label}
+                    </button>
+                `;
+            }
+
+            document.getElementById('schedule-header-title').textContent = activeWeekIndex === 14 ? "Semifinals (Week 15)" : (activeWeekIndex === 15 ? "Championship (Week 16)" : `Week ${activeWeekIndex + 1} Matchups`);
+            matchupsContainer.innerHTML = '';
+
+            (schedule[activeWeekIndex] || []).forEach((m, mIdx) => {
+                let hTeam = getTeamById(m.home), aTeam = getTeamById(m.away);
+                let scoreDisp = m.played ? `<span class="font-mono text-lg font-black ${m.homeScore > m.awayScore ? 'text-teal-300' : 'text-teal-500'}">${m.homeScore}</span> - <span class="font-mono text-lg font-black ${m.awayScore > m.homeScore ? 'text-teal-300' : 'text-teal-500'}">${m.awayScore}</span>` : `<span class="text-xs font-mono bg-[#071c17] text-teal-400 px-3 py-1 rounded-full border border-[#134234] font-bold">VS</span>`;
+
+                matchupsContainer.innerHTML += `
+                    <div onclick="openBoxScore(${activeWeekIndex}, ${mIdx})" class="bg-[#04110e] p-4 sm:p-5 rounded-2xl border border-[#134234] hover:border-teal-500/50 transition cursor-pointer shadow space-y-3">
+                        <div class="flex justify-between items-center text-[10px] text-teal-400 font-mono border-b border-[#0b2b22] pb-1.5">
+                            <span>Game #${mIdx + 1}</span>
+                            <span class="${m.played ? 'text-teal-300 font-bold' : 'text-teal-600'}">${m.played ? 'Final' : 'Scheduled'}</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="w-5/12 flex items-center space-x-2 truncate">
+                                ${formatLogoHTML(hTeam.logo, "h-10 w-10 flex-shrink-0")}
+                                <span class="text-xs font-bold text-white truncate">${hTeam.name}</span>
+                            </div>
+                            <div class="w-2/10 text-center flex justify-center">${scoreDisp}</div>
+                            <div class="w-5/12 flex items-center justify-end space-x-2 truncate">
+                                <span class="text-xs font-bold text-white truncate text-right">${aTeam.name}</span>
+                                ${formatLogoHTML(aTeam.logo, "h-10 w-10 flex-shrink-0")}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function setActiveWeek(wIdx) {
+            activeWeekIndex = wIdx;
+            renderScheduleTab();
+            saveState();
+        }
+
+        function openBoxScore(weekIdx, matchupIdx) {
+            let m = schedule[weekIdx][matchupIdx];
+            if (!m.played) return alert("Simulate this matchup first!");
+            let hTeam = getTeamById(m.home), aTeam = getTeamById(m.away);
+
+            document.getElementById('modal-matchup-title').textContent = weekIdx === 14 ? "Semifinals Box Score" : (weekIdx === 15 ? "Championship Box Score" : `Week ${weekIdx + 1} Box Score`);
+            document.getElementById('modal-matchup-subtitle').textContent = `Score: ${m.homeScore} - ${m.awayScore}`;
+
+            document.getElementById('modal-boxscore-content').innerHTML = `
+                <div class="bg-[#04110e] p-3 rounded-xl border border-[#134234] space-y-2">
+                    <div class="flex justify-between items-center border-b border-[#134234] pb-2">
+                        <span class="font-bold text-white text-xs">${hTeam.name}</span>
+                        <span class="font-mono text-teal-300 font-bold">${m.homeScore} PTS</span>
+                    </div>
+                    <div class="space-y-1 max-h-48 overflow-y-auto">
+                        ${m.homeBox.map(p => `<div class="flex justify-between items-center text-xs bg-[#071c17] p-1.5 rounded border border-[#10382c]"><span class="text-teal-400 font-mono">${p.pos}</span> <strong class="text-white truncate max-w-[120px]">${p.name}</strong> <span class="font-mono text-teal-200">${p.weekScore} pts</span></div>`).join('')}
+                    </div>
+                </div>
+                <div class="bg-[#04110e] p-3 rounded-xl border border-[#134234] space-y-2">
+                    <div class="flex justify-between items-center border-b border-[#134234] pb-2">
+                        <span class="font-bold text-white text-xs">${aTeam.name}</span>
+                        <span class="font-mono text-teal-300 font-bold">${m.awayScore} PTS</span>
+                    </div>
+                    <div class="space-y-1 max-h-48 overflow-y-auto">
+                        ${m.awayBox.map(p => `<div class="flex justify-between items-center text-xs bg-[#071c17] p-1.5 rounded border border-[#10382c]"><span class="text-teal-400 font-mono">${p.pos}</span> <strong class="text-white truncate max-w-[120px]">${p.name}</strong> <span class="font-mono text-teal-200">${p.weekScore} pts</span></div>`).join('')}
+                    </div>
+                </div>
+            `;
+            document.getElementById('boxscore-modal').classList.remove('hidden');
+        }
+
+        function closeBoxScoreModal() {
+            document.getElementById('boxscore-modal').classList.add('hidden');
+        }
+
+        function randomizeDraftOrder() {
+            draftOrderIndices.sort(() => Math.random() - 0.5);
+            sglTeams.forEach(t => { t.starters = []; t.bench = []; });
+            draftGridData = Array(12).fill(null).map(() => ({}));
+            renderDraftBoard();
+            renderPlayerSidebarList();
+            renderTeamRosters();
+            saveState();
+            let userTeam = sglTeams.find(t => !t.isAI);
+            let userSlot = draftOrderIndices.indexOf(userTeam.id) + 1;
+            alert(`Draft order randomized successfully! You (MCFC) are drafting from slot #${userSlot}.`);
+        }
+
+        function resetApp() {
+            if (confirm("Reset all rosters and records?")) {
+                stopDraftClock();
+                interactiveDraft.active = false;
+                sglTeams.forEach(t => { t.w = 0; t.l = 0; t.t = 0; t.pf = 0.0; t.starters = []; t.bench = []; });
+                draftGridData = Array(12).fill(null).map(() => ({}));
+                schedule = [];
+                generateSchedule();
+                renderAll();
+                renderDraftBoard();
+                renderPlayerSidebarList();
+                saveState();
+                alert("App reset successfully!");
+            }
+        }
+
+        // Shared smart logic to get available draft choices for any team in a given round
+        function getSmartDraftChoices(team, roundNum, draftedNames) {
+            let allTeamPlayers = [...team.starters, ...team.bench];
+            let counts = { QB: 0, RB: 0, WR: 0, TE: 0, K: 0, DST: 0 };
+            allTeamPlayers.forEach(p => { if (counts[p.pos] !== undefined) counts[p.pos]++; });
+
+            let avail = nflPlayerPool.filter(p => !draftedNames.has(p.name.toLowerCase()));
+
+            // Strict positional cap: never exceed 2 per position
+            avail = avail.filter(p => counts[p.pos] < 2);
+
+            if (roundNum <= 8) {
+                // Rounds 1-8: Exclude K and DST completely
+                avail = avail.filter(p => p.pos !== 'K' && p.pos !== 'DST');
+
+                // Prioritize filling core starting positions (count === 0) if available
+                let starterNeeds = avail.filter(p => counts[p.pos] === 0);
+                if (starterNeeds.length > 0) {
+                    avail = starterNeeds;
+                }
+            } else {
+                // Rounds 9-12: All skill positions set to 0 (excluded), ONLY K and DST are allowed
+                avail = avail.filter(p => p.pos === 'K' || p.pos === 'DST');
+            }
+
+            if (avail.length === 0) {
+                avail = nflPlayerPool.filter(p => !draftedNames.has(p.name.toLowerCase()));
+                if (roundNum <= 8) avail = avail.filter(p => p.pos !== 'K' && p.pos !== 'DST');
+                else avail = avail.filter(p => p.pos === 'K' || p.pos === 'DST');
+            }
+
+            avail.sort((a, b) => (parseFloat(b.avg) || 0) - (parseFloat(a.avg) || 0));
+            return avail;
+        }
+
+        // Interactive Live Draft Functions
+        function startInteractiveDraft() {
+            stopDraftClock();
+            enforceUserTeam();
+            sglTeams.forEach(t => { t.starters = []; t.bench = []; });
+            draftGridData = Array(12).fill(null).map(() => ({}));
+            interactiveDraft.active = true;
+            interactiveDraft.round = 1;
+            interactiveDraft.pick = 0;
+            let userTeam = sglTeams.find(t => !t.isAI);
+            let userSlot = draftOrderIndices.indexOf(userTeam.id) + 1;
+            document.getElementById('ai-status-box').innerHTML = `> Live interactive draft started. You (MCFC) are in slot #${userSlot}. AI teams picking...`;
+            runInteractiveDraftStep();
+        }
+
+        function runInteractiveDraftStep() {
+            if (!interactiveDraft.active) return;
+            if (interactiveDraft.round > 12) {
+                interactiveDraft.active = false;
+                stopDraftClock();
+                document.getElementById('ai-status-box').innerHTML = `> Draft Complete! All rosters filled.`;
+                alert("Live draft complete!");
+                renderAll();
+                return;
+            }
+
+            let order = interactiveDraft.round % 2 === 0 ? [...draftOrderIndices].reverse() : [...draftOrderIndices];
+            let tId = order[interactiveDraft.pick];
+            let team = getTeamById(tId);
+
+            document.getElementById('current-round-indicator').textContent = interactiveDraft.round;
+
+            if (team.isAI) {
+                stopDraftClock();
+                setTimeout(() => {
+                    if (!interactiveDraft.active) return;
+                    makePickForTeam(team, interactiveDraft.round);
+                    advanceDraftPointer();
+                    runInteractiveDraftStep();
+                }, 300);
+            } else {
+                // User Turn
+                document.getElementById('ai-status-box').innerHTML = `<span class="text-teal-300 font-bold">> IT IS YOUR TURN (MCFC - Pick #${interactiveDraft.pick + 1} of Round ${interactiveDraft.round})! Make your selection from the sidebar.</span>`;
+                startDraftClock(() => {
+                    // Time expired, auto pick best available for user based on smart logic
+                    makePickForTeam(team, interactiveDraft.round);
+                    advanceDraftPointer();
+                    runInteractiveDraftStep();
+                });
+            }
+        }
+
+        function advanceDraftPointer() {
+            interactiveDraft.pick++;
+            if (interactiveDraft.pick >= 8) {
+                interactiveDraft.pick = 0;
+                interactiveDraft.round++;
+            }
+        }
+
+        function makePickForTeam(team, roundNum) {
+            let draftedNames = new Set();
+            sglTeams.forEach(t => {
+                if (t.starters) t.starters.forEach(p => draftedNames.add(p.name.toLowerCase()));
+                if (t.bench) t.bench.forEach(p => draftedNames.add(p.name.toLowerCase()));
+            });
+
+            let avail = getSmartDraftChoices(team, roundNum, draftedNames);
+
+            // Add slight variety among top choices for AI
+            let topChoices = avail.slice(0, team.isAI ? 3 : 1);
+            let choice = topChoices[Math.floor(Math.random() * topChoices.length)] || avail[0];
+
+            if (choice) {
+                let pObj = { name: choice.name, pos: choice.pos, team: choice.team, bye: choice.bye || 8, fpts: parseFloat(choice.fpts) || 150.0, avg: parseFloat(choice.avg) || 12.5 };
+                let posAlreadyStarted = team.starters.some(p => p.pos === pObj.pos);
+                if (!posAlreadyStarted && team.starters.length < MAX_STARTERS) {
+                    team.starters.push(pObj);
+                } else {
+                    team.bench.push(pObj);
+                }
+                sortRosterList(team.starters);
+                sortRosterList(team.bench);
+                draftGridData[roundNum - 1][team.id] = pObj;
+            }
+            renderTeamRosters();
+            renderDraftBoard();
+            renderPlayerSidebarList();
+        }
+
+        function startDraftClock(onExpire) {
+            interactiveDraft.secondsLeft = 137;
+            updateClockDisplay();
+            if (interactiveDraft.timer) clearInterval(interactiveDraft.timer);
+            interactiveDraft.timer = setInterval(() => {
+                interactiveDraft.secondsLeft--;
+                updateClockDisplay();
+                if (interactiveDraft.secondsLeft <= 0) {
+                    stopDraftClock();
+                    if (onExpire) onExpire();
+                }
+            }, 1000);
+        }
+
+        function stopDraftClock() {
+            if (interactiveDraft.timer) {
+                clearInterval(interactiveDraft.timer);
+                interactiveDraft.timer = null;
+            }
+        }
+
+        function updateClockDisplay() {
+            let mins = Math.floor(interactiveDraft.secondsLeft / 60);
+            let secs = interactiveDraft.secondsLeft % 60;
+            let display = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+            let clockEl = document.getElementById('draft-clock-display');
+            if (clockEl) clockEl.textContent = display;
+        }
+
+        function draftPlayer(name, pos, teamCode, bye, fpts, avg) {
+            let userTeam = sglTeams.find(t => !t.isAI) || sglTeams[1];
+            let targetTeamId = userTeam.id;
+
+            if (interactiveDraft.active) {
+                let order = interactiveDraft.round % 2 === 0 ? [...draftOrderIndices].reverse() : [...draftOrderIndices];
+                targetTeamId = order[interactiveDraft.pick];
+                let targetTeam = getTeamById(targetTeamId);
+                if (targetTeam.isAI) return alert("Please wait for your turn!");
+            }
+
+            let target = getTeamById(targetTeamId);
+            if (target.starters.length + target.bench.length >= 12) return alert("Roster full (12 max)!");
+
+            let allTeamPlayers = [...target.starters, ...target.bench];
+            let posCount = allTeamPlayers.filter(p => p.pos === pos).length;
+            if (posCount >= 2) return alert(`Your roster already has the maximum of 2 ${pos}s!`);
+
+            if (interactiveDraft.active) {
+                if (interactiveDraft.round <= 8 && (pos === 'K' || pos === 'DST')) {
+                    return alert("Kickers and Defenses cannot be drafted until rounds 9-12!");
+                }
+                if (interactiveDraft.round >= 9 && pos !== 'K' && pos !== 'DST') {
+                    return alert("Rounds 9-12 are reserved strictly for Kickers and Defenses!");
+                }
+            }
+
+            let pObj = { name, pos, team: teamCode, bye, fpts, avg };
+            let posAlreadyStarted = target.starters.some(p => p.pos === pos);
+            if (!posAlreadyStarted && target.starters.length < MAX_STARTERS) {
+                target.starters.push(pObj);
+            } else {
+                target.bench.push(pObj);
+            }
+            sortRosterList(target.starters);
+            sortRosterList(target.bench);
+
+            if (interactiveDraft.active) {
+                draftGridData[interactiveDraft.round - 1][target.id] = pObj;
+                stopDraftClock();
+                advanceDraftPointer();
+                renderTeamRosters();
+                renderDraftBoard();
+                renderPlayerSidebarList();
+                saveState();
+                runInteractiveDraftStep();
+            } else {
+                for(let r=0; r<12; r++) {
+                    if(!draftGridData[r][target.id]) {
+                        draftGridData[r][target.id] = pObj;
+                        break;
+                    }
+                }
+                renderTeamRosters();
+                renderDraftBoard();
+                renderPlayerSidebarList();
+                saveState();
+                alert(`Drafted ${name} to ${target.name}!`);
+            }
+        }
+
+        // Instant Full Sim Draft with Smart AI & Positional Caps
+        function runSnakeDraft() {
+            stopDraftClock();
+            enforceUserTeam();
+            interactiveDraft.active = false;
+            sglTeams.forEach(t => { t.starters = []; t.bench = []; });
+            draftGridData = Array(12).fill(null).map(() => ({}));
+            let drafted = new Set();
+            let teamDraftedPlayers = {};
+            sglTeams.forEach(t => teamDraftedPlayers[t.id] = []);
+
+            for (let round = 1; round <= 12; round++) {
+                let order = round % 2 === 0 ? [...draftOrderIndices].reverse() : [...draftOrderIndices];
+                order.forEach(tId => {
+                    let team = getTeamById(tId);
+                    let draftedList = teamDraftedPlayers[team.id];
+                    if (draftedList.length >= 12) return;
+
+                    let avail = getSmartDraftChoices(team, round, drafted);
+                    let topChoices = avail.slice(0, 3);
+                    let choice = topChoices[Math.floor(Math.random() * topChoices.length)] || avail[0];
+
+                    if (choice) {
+                        let pObj = { name: choice.name, pos: choice.pos, team: choice.team, bye: choice.bye || 8, fpts: parseFloat(choice.fpts) || 150.0, avg: parseFloat(choice.avg) || 12.5 };
+                        draftedList.push(pObj);
+                        draftGridData[round - 1][team.id] = pObj;
+                        drafted.add(choice.name.toLowerCase());
+                    }
+                });
+            }
+
+            sglTeams.forEach(team => {
+                let all = [...teamDraftedPlayers[team.id]];
+                let starters = [];
+                let required = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
+                
+                required.forEach(pos => {
+                    let pool = all.filter(p => p.pos === pos);
+                    pool.sort((a, b) => (parseFloat(b.avg) || 0) - (parseFloat(a.avg) || 0));
+                    if (pool.length > 0) {
+                        let best = pool[0];
+                        starters.push(best);
+                        let idx = all.indexOf(best);
+                        if (idx !== -1) all.splice(idx, 1);
+                    }
+                });
+
+                while (starters.length < MAX_STARTERS && all.length > 0) {
+                    all.sort((a, b) => (parseFloat(b.avg) || 0) - (parseFloat(a.avg) || 0));
+                    starters.push(all.shift());
+                }
+
+                sortRosterList(starters);
+                sortRosterList(all);
+                team.starters = starters;
+                team.bench = all;
+            });
+
+            sglTeams.forEach(t => optimizeTeamLineupForWeek(t, 1));
+            renderTeamRosters();
+            renderDraftBoard();
+            renderPlayerSidebarList();
+            saveState();
+            alert("Instant draft complete! Logical team-need drafting applied with strict round 9-12 kicker/defense rules.");
+        }
+
+        function handleProjectionUpload(event) {
+            let file = event.target.files[0];
+            if (!file) return;
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let lines = e.target.result.split(/\r\n|\n/);
+                let imported = [];
+                for (let i = 1; i < lines.length; i++) {
+                    let line = lines[i].trim();
+                    if (!line) continue;
+                    let cols = line.split(',').map(c => c.replace(/"/g, '').trim());
+                    if (cols.length >= 5) {
+                        let name = cols[0];
+                        let rawPos = (cols[1] || 'RB').toUpperCase();
+                        let pos = (rawPos === 'DEF' || rawPos === 'D/ST') ? 'DST' : rawPos;
+                        let team = (cols[2] || 'FA').toUpperCase();
+                        
+                        if (name.toLowerCase().includes('charger')) {
+                            team = 'LAC';
+                        } else if (name.toLowerCase().includes('ram')) {
+                            team = 'LAR';
+                        }
+
+                        let fpts = parseFloat(cols[3]) || 150.0;
+                        let avg = parseFloat(cols[4]) || (fpts / 16);
+                        let bye = nflByeWeeks[team] || 8;
+                        
+                        if (name && isNaN(name)) {
+                            imported.push({
+                                id: `imp_${i}`,
+                                name: name,
+                                pos: pos,
+                                team: team,
+                                bye: bye,
+                                fpts: fpts,
+                                avg: avg
+                            });
+                        }
+                    }
+                }
+                if (imported.length > 0) {
+                    nflPlayerPool = imported;
+                    renderPlayerSidebarList();
+                    saveState();
+                    alert(`Successfully loaded all ${imported.length} players from your CSV!`);
+                } else {
+                    alert("Could not parse players. Please check your CSV layout.");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function setPosFilter(pos) {
+            currentPosFilter = pos;
+            document.querySelectorAll('.pos-btn').forEach(btn => {
+                btn.className = btn.textContent === pos ? "pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0d5c47] text-teal-100 transition border border-teal-500/40" : "pos-btn px-2 py-0.5 rounded text-[10px] font-bold bg-[#0b2b22] text-teal-300 hover:bg-[#10382c] border border-[#134234]";
+            });
+            renderPlayerSidebarList();
+        }
+
+        function filterPlayerPool() { renderPlayerSidebarList(); }
+
+        function handleLogoUpload(event, teamId) {
+            let file = event.target.files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    getTeamById(teamId).logo = e.target.result;
+                    renderManagerList();
+                    renderTeamRosters();
+                    saveState();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function saveAllFranchises() {
+            sglTeams.forEach(t => {
+                let nIn = document.getElementById(`mgr-name-${t.id}`);
+                let lIn = document.getElementById(`mgr-logo-${t.id}`);
+                if (nIn && nIn.value.trim()) t.name = nIn.value.trim();
+                if (lIn && lIn.value.trim()) t.logo = lIn.value.trim();
+            });
+            renderAll();
+            alert("Franchise changes saved!");
+        }
+
+        function handleDragStart(e) { draggedIndex = parseInt(e.currentTarget.getAttribute('data-index')); }
+        function handleDragOver(e) { e.preventDefault(); e.currentTarget.classList.add('drag-over'); }
+        function handleDragLeave(e) { e.currentTarget.classList.remove('drag-over'); }
+        function handleDrop(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('drag-over');
+            let targetIdx = parseInt(e.currentTarget.getAttribute('data-index'));
+            if (draggedIndex !== null && draggedIndex !== targetIdx) {
+                let moved = sglTeams.splice(draggedIndex, 1)[0];
+                sglTeams.splice(targetIdx, 0, moved);
+                renderAll();
+            }
+        }
+
+        function runAllAIBots() {
+            optimizeAllTeamsLineups();
+            let box = document.getElementById('ai-status-box');
+            if(box) box.innerHTML = `<span class="text-teal-300 font-bold">> Success! All AI bot lineups optimized.</span>`;
+        }
+
+        function switchTab(tab) {
+            ['standings', 'manager', 'draft', 'rosters', 'schedule'].forEach(t => {
+                let viewEl = document.getElementById(`${t}-view`);
+                if(viewEl) viewEl.classList.add('hidden');
+                let navEl = document.getElementById(`nav-${t}`);
+                if(navEl) navEl.className = "px-2.5 py-1.5 rounded-lg transition text-teal-200 hover:text-white hover:bg-[#10382c]";
+            });
+            let targetView = document.getElementById(`${tab}-view`);
+            if(targetView) targetView.classList.remove('hidden');
+            let targetNav = document.getElementById(`nav-${tab}`);
+            if(targetNav) targetNav.className = "px-2.5 py-1.5 rounded-lg transition text-teal-200 font-bold bg-[#0d5c47] border border-teal-500/50";
+
+            if (tab === 'standings') renderStandings();
+            if (tab === 'manager') renderManagerList();
+            if (tab === 'draft') { renderDraftBoard(); renderPlayerSidebarList(); }
+            if (tab === 'rosters') renderTeamRosters();
+            if (tab === 'schedule') renderScheduleTab();
+
+            localStorage.setItem('sgl_active_tab', tab);
+        }
+
+        window.onload = async () => {
+            loadState();
+            let savedTab = localStorage.getItem('sgl_active_tab') || 'standings';
+
+            try {
+                let res = await fetch('updated_projections.json?v=' + new Date().getTime());
+                if (res.ok) {
+                    let livePool = await res.json();
+                    if (livePool && livePool.length > 0) nflPlayerPool = livePool;
+                }
+            } catch(e) {}
+
+            renderAll();
+            renderDraftBoard();
+            renderPlayerSidebarList();
+            switchTab(savedTab);
+        };
+    </script>
+</body>
+</html>
